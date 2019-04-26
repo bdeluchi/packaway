@@ -1,21 +1,27 @@
 import React from 'react';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import POISearch from './pages/POISearch'
+import EditPack from './pages/packs/EditPack'
+import PackOverview from './pages/packs/PackOverview'
+import ViewPack from './pages/packs/ViewPack'
 
-function App() {
+
+
+const App = () => {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Router>
+       <Switch>
+         <Route exact path="/" component={Home} />
+         <Route path="/login" component={Login} />
+         <Route path="/poisearch" component={POISearch} />
+         <Route path="/packs/edit" component={EditPack} />
+         <Route path="/packs/view" component={ViewPack} />
+         <Route path="/packs" component={PackOverview} />
+       </Switch>
+     </Router>
     </div>
   );
 }

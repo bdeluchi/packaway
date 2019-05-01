@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-export default class PackOverview extends Component {
+export default class PackOverviewPage extends Component {
 
   render() {
     return (

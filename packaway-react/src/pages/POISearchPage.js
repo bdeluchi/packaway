@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-export default class POISearch extends Component {
+export default class POISearchPage extends Component {
 
   render() {
     return (
       <div>
-        pois go here
+        search for pois
       </div>
     )
   }

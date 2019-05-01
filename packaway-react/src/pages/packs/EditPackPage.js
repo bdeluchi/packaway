@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-export default class ViewPack extends Component {
+export default class EditPackPage extends Component {
 
   render() {
     return (
       <div>
-        here is you final pack
+        editing my pack
       </div>
     )
   }

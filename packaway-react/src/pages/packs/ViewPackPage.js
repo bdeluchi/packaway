@@ -1,11 +1,11 @@
 import React, { Component } from 'react'
 
-export default class Home extends Component {
+export default class ViewPackPage extends Component {
 
   render() {
     return (
       <div>
-        Homeeee
+        here is your final pack
       </div>
     )
   }

@@ -1,11 +1,12 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
-import Home from './pages/Home'
-import Login from './pages/Login'
-import POISearch from './pages/POISearch'
-import EditPack from './pages/packs/EditPack'
-import PackOverview from './pages/packs/PackOverview'
-import ViewPack from './pages/packs/ViewPack'
+import HomePage from './pages/HomePage'
+import LoginPage from './pages/LoginPage'
+import POISearchPage from './pages/POISearchPage'
+import EditPackPage from './pages/packs/EditPackPage'
+import PackOverviewPage from './pages/packs/PackOverviewPage'
+import ViewPackPage from './pages/packs/ViewPackPage'
+import Navbar from './components/Navbar/Navbar';
 
 
 
@@ -13,13 +14,14 @@ const App = () => {
   return (
     <div className="App">
      <Router>
+       <Navbar />
        <Switch>
-         <Route exact path="/" component={Home} />
-         <Route path="/login" component={Login} />
-         <Route path="/poisearch" component={POISearch} />
-         <Route path="/packs/edit" component={EditPack} />
-         <Route path="/packs/view" component={ViewPack} />
-         <Route path="/packs" component={PackOverview} />
+         <Route exact path="/" component={HomePage} />
+         <Route path="/login" component={LoginPage} />
+         <Route path="/poisearch" component={POISearchPage} />
+         <Route path="/packs/edit" component={EditPackPage} />
+         <Route path="/packs/view" component={ViewPackPage} />
+         <Route path="/packs" component={PackOverviewPage} />
        </Switch>
      </Router>
     </div>

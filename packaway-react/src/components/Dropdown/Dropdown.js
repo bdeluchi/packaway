@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { userLoggedIn } from "../../redux/actions/login_actions";
 //hooks
 
 class Dropdown extends Component {
@@ -25,26 +27,27 @@ class Dropdown extends Component {
   };
 
   render() {
-    const userStatus = false; //handle this via redux
+    const {userLoggedIn} = this.props;
+    console.log(userLoggedIn)
     return (
       <div className="dropdown">
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
           My account
         </div>
         {this.state.displayMenu ? (
-          userStatus ? (
-            <ul>
-              <li>
-                <Link to="/login">Login</Link>
-              </li>
-            </ul>
-          ) : (
+          userLoggedIn ? (
             <ul>
               <li>
                 <Link to="/packs">My Packs</Link>
               </li>
               <li>My Profile</li>
               <li>Logout</li>
+            </ul>
+          ) : (
+            <ul>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
             </ul>
           )
         ) : null}
@@ -53,4 +56,13 @@ class Dropdown extends Component {
   }
 }
 
-export default Dropdown;
+const mapDispatchToProps = dispatch => {
+  return {
+    userLoggedIn: newBoolean => dispatch(userLoggedIn(newBoolean))
+  };
+};
+
+export default connect(
+  null,
+  mapDispatchToProps
+)(Dropdown);

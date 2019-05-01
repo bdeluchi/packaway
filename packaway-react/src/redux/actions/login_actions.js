@@ -1,7 +1,6 @@
-
 export const userLoggedIn = boolean => {
-    return {
+  return {
     type: 'USER_LOGIN',
     status: boolean
-    }
-}
+  };
+};

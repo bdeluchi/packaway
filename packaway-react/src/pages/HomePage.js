@@ -8,7 +8,9 @@ export default class HomePage extends Component {
         <h2>Pick a city and start packing!</h2>
         <ul>
           <li>
-            <Link to="/poisearch">Barcelona</Link>
+            <Link to={{
+              pathname: '/poisearch/barcelona'
+            }}>Barcelona</Link>
           </li>
           <li>Madrid</li>
           <li>Salamanca</li>

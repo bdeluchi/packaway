@@ -6,7 +6,7 @@ import POISearchPage from './pages/POISearchPage'
 import EditPackPage from './pages/packs/EditPackPage'
 import PackOverviewPage from './pages/packs/PackOverviewPage'
 import ViewPackPage from './pages/packs/ViewPackPage'
-import Navbar from './components/Navbar/Navbar';
+import Navbar from './components/Navbar';
 
 
 
@@ -18,7 +18,7 @@ const App = () => {
        <Switch>
          <Route exact path="/" component={HomePage} />
          <Route path="/login" component={LoginPage} />
-         <Route path="/poisearch" component={POISearchPage} />
+         <Route path="/poisearch/:cityId" component={POISearchPage} />
          <Route path="/packs/edit" component={EditPackPage} />
          <Route path="/packs/view" component={ViewPackPage} />
          <Route path="/packs" component={PackOverviewPage} />

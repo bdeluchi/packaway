@@ -26,9 +26,13 @@ class Dropdown extends Component {
     });
   };
 
+  componentDidMount() {
+    console.log(this.props)
+  }
+
+
   render() {
     const {userLoggedIn} = this.props;
-    console.log(userLoggedIn)
     return (
       <div className="dropdown">
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
@@ -56,13 +60,19 @@ class Dropdown extends Component {
   }
 }
 
+const mapStateToProps = state => {
+  return {
+    userLoggedIn: state.loginStatusReducer.status
+  }
+}
+
 const mapDispatchToProps = dispatch => {
   return {
-    userLoggedIn: newBoolean => dispatch(userLoggedIn(newBoolean))
+    setUserLoggedIn: newBoolean => dispatch(userLoggedIn(newBoolean))
   };
 };
 
 export default connect(
-  null,
+  mapStateToProps,
   mapDispatchToProps
 )(Dropdown);

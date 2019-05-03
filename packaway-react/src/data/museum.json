@@ -1,5 +1,4 @@
-{
-   "results" : [
+[
       {
          "geometry" : {
             "location" : {
@@ -901,4 +900,3 @@
          "vicinity" : "Passeig de Gràcia, 41, Barcelona"
       }
    ]
-}

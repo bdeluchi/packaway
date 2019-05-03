@@ -1,0 +1,23 @@
+nav {
+  background-color: #36C387;
+  ul {
+    list-style: none;
+    line-height: 50px;
+    text-transform: uppercase;
+    padding: 0;
+
+    li {
+      display: inline-block;
+      padding: 0 5px;
+    } 
+
+    .nav-left {
+      text-align: left;
+    }
+
+    
+    .nav-right {
+      text-align: right;
+    }
+  }
+}

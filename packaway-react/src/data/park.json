@@ -1,7 +1,4 @@
-{
-   "html_attributions" : [],
-   "next_page_token" : "CqQCGwEAABjhiMJintB-tswT4Usm-bWPOY5_qChLhcK35WuTMk0MdwwOQoQjeGMevt7ZduJ8xntER2yRUOEh-pn4voFr-Q8gvnKBYyfKO_vc-gFWY4tVULMAKnQNx5xyRbewJmEUMuhAyaxb0y9Jhm0H5NrD-jhGGi3E-uOPTGi9VK9n-mFUk8ecbjqNbmTarfgBk5lrq7akDedN-P_r8XXesOlVvRK-WT-eewtg_POQfoujaz9OaTjzLZPux8TIagVnkUGMUHJP-kmZS_8BRstO6zWiRhUcN4WHg7DlEOuTQN2wqBni1L-AivWwaa8fZ-WXzxLn1clbOMD7eOtGo2CBTGw9lXBA0_JrBSmweAW0kBA1ExVVsJiJbOw4LnlPoUA1R18awxIQT_Vmn4Qd2b2pJZV1FOmgrhoUMafwL-0DRs5eZMrgY8lhQd5bX8g",
-   "results" : [
+[
       {
          "geometry" : {
             "location" : {
@@ -882,6 +879,4 @@
          "user_ratings_total" : 296,
          "vicinity" : "Passeig de Colom, 19, Barcelona"
       }
-   ],
-   "status" : "OK"
-}
+   ]

@@ -1,5 +1,4 @@
-{
-  "results" : [
+[
       {
          "geometry" : {
             "location" : {
@@ -861,4 +860,3 @@
          "vicinity" : "Avinguda de la Mare de Déu de Montserrat, 34, Barcelona"
       }
    ]
-}

@@ -1,11 +1,25 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-const LoginPage = () => {
-  return (
-    <div>
-      login or register here
-    </div>
-  );
-};
+export default class LoginPage extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      email: '',
+      password: '',
+      errorMessage: ''
+    }
+  }
 
-export default LoginPage;
+  onChangeInput = (e) => {
+    this.setState({[e.target.name]: e.target.value})
+  }
+  
+  render() {
+    const {email, password} = this.state;
+    return (
+      <div>
+        
+      </div>
+    );
+  }
+}

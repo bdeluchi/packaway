@@ -26,10 +26,6 @@ class Dropdown extends Component {
     });
   };
 
-  componentDidMount() {
-    console.log(this.props)
-  }
-
 
   render() {
     const {userLoggedIn} = this.props;

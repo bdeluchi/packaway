@@ -15,9 +15,9 @@ export const categoryFilterReducer = (state = defaultState, action) => {
     case "REMOVE_MUSEUM_FILTER":
       return Object.assign({}, state, { churchesFilter: state.churchesFilter, museumsFilter: false, parksFilter: state.parksFilter });
     case "ADD_PARK_FILTER":
-      return Object.assign({}, state, { churchesFilter: state.parksFilter, museumsFilter: state.museumsFilter, parksFilter: true });
+      return Object.assign({}, state, { churchesFilter: state.churchesFilter, museumsFilter: state.museumsFilter, parksFilter: true });
     case "REMOVE_PARK_FILTER":
-      return Object.assign({}, state, { churchesFilter: state.parksFilter, museumsFilter: state.museumsFilter, parksFilter: false });
+      return Object.assign({}, state, { churchesFilter: state.churchesFilter, museumsFilter: state.museumsFilter, parksFilter: false });
     default:
       return state;
   }

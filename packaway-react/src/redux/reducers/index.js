@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import { loginStatusReducer } from './login_reducers';
-import { categoryFilterReducer } from './filter_reducers';
+import { categoryFilterReducer } from './filterReducers';
+import { userReducer } from './userReducers'
 
 export default combineReducers({
-  loginStatusReducer: loginStatusReducer,
-  categoryFilterReducer: categoryFilterReducer
+  categoryFilterReducer,
+  userReducer
 })

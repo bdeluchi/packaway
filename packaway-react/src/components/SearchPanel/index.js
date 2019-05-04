@@ -7,26 +7,24 @@ import parkArr from "../../data/park";
 import museumArr from "../../data/museum";
 
 export default class SearchPanel extends Component {
-
   constructor(props) {
     super(props);
-    this.state = { 
-      formInput: null 
-    }
+    this.state = {
+      formInput: null
+    };
   }
-  
-  handleChange = ({target}) => {
+
+  handleChange = ({ target }) => {
     const value = target.value;
-    this.setState({formInput: value})
-  }
+    this.setState({ formInput: value });
+  };
 
-  handleSearch = (e) => {
-    e.preventDefault()
+  handleSearch = e => {
+    e.preventDefault();
     const poiArr = [...churchArr, ...parkArr, ...museumArr];
-    const {formInput} = this.state
-    console.log(poiArr.filter(poi => poi.name.includes(formInput)))
-
-  }
+    const { formInput } = this.state;
+    console.log(poiArr.filter(poi => poi.name.includes(formInput)));
+  };
 
   render() {
     const poiArr = [...churchArr, ...parkArr, ...museumArr];

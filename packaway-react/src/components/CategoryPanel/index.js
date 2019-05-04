@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
-import { addChurchFilter, removeChurchFilter, addMuseumFilter, removeMuseumFilter, addParkFilter, removeParkFilter } from '../../redux/actions/filter_actions'
+import { addChurchFilter, removeChurchFilter, addMuseumFilter, removeMuseumFilter, addParkFilter, removeParkFilter } from '../../redux/actions/filterActions'
 
 class CategoryPanel extends Component {
 
-  handleChurchFilter(e) {
+  handleChurchFilter = (e) => {
     if (e.target.checked) {
       this.props.dispatch(addChurchFilter())
     } else {
@@ -12,7 +12,7 @@ class CategoryPanel extends Component {
     }
   }
 
-  handleMuseumFilter(e) {
+  handleMuseumFilter = (e) => {
     if (e.target.checked) {
       this.props.dispatch(addMuseumFilter())
     } else {
@@ -20,7 +20,7 @@ class CategoryPanel extends Component {
     }
   }
 
-  handleParkFilter(e) {
+  handleParkFilter = (e) => {
     if (e.target.checked) {
       this.props.dispatch(addParkFilter())
     } else {

@@ -1,24 +1,14 @@
 import React, { Component } from 'react';
+import Login from '../components/Login'
+import SignUp from '../components/SignUp'
 
 export default class LoginPage extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      email: '',
-      password: '',
-      errorMessage: ''
-    }
-  }
-
-  onChangeInput = (e) => {
-    this.setState({[e.target.name]: e.target.value})
-  }
-  
   render() {
-    const {email, password} = this.state;
+    console.log(this.props.history)
     return (
       <div>
-        
+        <SignUp history={this.props.history}/>
+        <Login history={this.props.history}/>
       </div>
     );
   }

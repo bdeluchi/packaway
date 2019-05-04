@@ -1,12 +1,14 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import { connect } from "react-redux";
-import { userLoggedIn } from "../../redux/actions/login_actions";
-//hooks
+
+import { setUserInfo } from '../../redux/actions/userActions';
+import AuthService from '../../services/auth';
+import DataService from '../../services/data';
 
 class Dropdown extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
 
     this.state = {
       displayMenu: false
@@ -26,22 +28,51 @@ class Dropdown extends Component {
     });
   };
 
+  componentDidMount() {
+    AuthService.registerAuthObserver(async (user) => {
+      if (user) {
+        console.log('User is signed in')
+        const userDetail = await DataService.getObjectDetail('users', user.uid);
+
+        if(userDetail) {
+          this.props.setUserInfo(userDetail)
+        } else {
+          console.log("ESPERAAAAAA me estoy registrando");
+        }
+        
+      } else {
+        console.log('User is signed out')
+      }
+      this.setState({loading: false})
+    })
+  }
+
+
+  logout = () => {
+    AuthService.logout();
+    this.props.setUserInfo(null);
+  }
+
 
   render() {
-    const {userLoggedIn} = this.props;
+    const { userInfo } = this.props;
+    const { loading } = this.state;
+
+    if(loading) return <div>Loading</div>;
+
     return (
       <div className="dropdown">
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
           My account
         </div>
         {this.state.displayMenu ? (
-          userLoggedIn ? (
+          userInfo ? (
             <ul>
               <li>
                 <Link to="/packs">My Packs</Link>
               </li>
               <li>My Profile</li>
-              <li>Logout</li>
+              <li onClick={this.logout}>Logout</li>
             </ul>
           ) : (
             <ul>
@@ -58,13 +89,13 @@ class Dropdown extends Component {
 
 const mapStateToProps = state => {
   return {
-    userLoggedIn: state.loginStatusReducer.status
+    userInfo: state.userReducer.user
   }
 }
 
 const mapDispatchToProps = dispatch => {
   return {
-    setUserLoggedIn: newBoolean => dispatch(userLoggedIn(newBoolean))
+    setUserInfo: (user) => dispatch(setUserInfo(user))
   };
 };
 

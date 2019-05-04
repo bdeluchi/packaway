@@ -12,7 +12,7 @@ export default class PackCart extends Component {
   render() {
     return (
       <div>
-        My Pack
+        
       </div>
     );
   }

@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import AuthService from "../../services/auth"
 import DataService from "../../services/data"
 
-export default class LoginPage extends Component {
+export default class SignUp extends Component {
   constructor(props) {
     super(props);
 
@@ -12,6 +12,7 @@ export default class LoginPage extends Component {
       email: '',
       password: '',
       errorMessage: ''
+      
     };
 
   }

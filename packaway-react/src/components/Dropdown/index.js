@@ -30,6 +30,7 @@ class Dropdown extends Component {
 
   componentDidMount() {
     AuthService.registerAuthObserver(async (user) => {
+      console.log("dropdown")
       if (user) {
         console.log('User is signed in')
         const userDetail = await DataService.getObjectDetail('users', user.uid);
@@ -71,8 +72,9 @@ class Dropdown extends Component {
               <li>
                 <Link to="/packs">My Packs</Link>
               </li>
-              <li>My Profile</li>
-              <li onClick={this.logout}>Logout</li>
+              <li><Link to="/profile">My Profile</Link></li>
+              <li onClick={this.logout}
+              >Logout</li>
             </ul>
           ) : (
             <ul>

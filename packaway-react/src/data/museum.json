@@ -1,5 +1,6 @@
 [
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3788851,
@@ -19,32 +20,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/geocode-71.png",
          "id" : "93115703c9cecc5443248f1dd7d4ce0eb6c0bbf9",
          "name" : "Güell Palace",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3456,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/113631515285323083163/photos\"\u003eBernat Molera\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAlYJjdjtPeamcAMqHmFBFBxrqVpf2j_7Evtnx10O4AvWr2LK07wja_FKpQh8QFUOd7yas8OBcTIsHHCbjoNBLRd87g2WP7Yb9VgIbuanjLGW4lyx3bZHajjuauFWXAL9hEhBDEqRk4cJu6c_82uOXE0noGhR_-8wbcrZRygd-N8_9izlsUDJ8Sg",
                "width" : 5023
             }
          ],
          "place_id" : "ChIJ3fHTIFiipBIRpKXCn_E_oJY",
-         "plus_code" : {
-            "compound_code" : "95HF+HM Barcelona, Spain",
-            "global_code" : "8FH495HF+HM"
-         },
          "rating" : 4.5,
          "reference" : "ChIJ3fHTIFiipBIRpKXCn_E_oJY",
-         "scope" : "GOOGLE",
-         "types" : [ "premise", "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 8176,
          "vicinity" : "Carrer Nou de la Rambla, 3-5, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.385216,
@@ -64,32 +55,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "533a300d37619e07f1b1c7d22d8342e53293bdc0",
          "name" : "Picasso Museum",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 675,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/104749349358481840639/photos\"\u003eMuseu Picasso de Barcelona\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAACMQTTgzVVX2Pvej9PpVRZVQ_iuCm0ic6mEgpXj6Xhogf8SG3BNCU8gad9deRyWw3IsvoJKhKcf9ZWBqrUODi3bihdxxn3KxclaE-5_xdEuSXjhH6uDEsmkBase6PXUuWEhBz_8JuLs3NPB_RaswAFRnBGhSjcWzEBWWdnJ0BqsQdy6zwXHckyQ",
                "width" : 1200
             }
          ],
          "place_id" : "ChIJa-K8mf6ipBIRY8wAB3EeASc",
-         "plus_code" : {
-            "compound_code" : "95PJ+39 Barcelona, Spain",
-            "global_code" : "8FH495PJ+39"
-         },
          "rating" : 4.3,
          "reference" : "ChIJa-K8mf6ipBIRY8wAB3EeASc",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 12895,
          "vicinity" : "Carrer Montcada, 15-23, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.41297199999999,
@@ -109,32 +90,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "d597b5fdc95b0186fea621b8ebbb84eae5a06b5f",
          "name" : "CosmoCaixa Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 2333,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/117173861791196999815/photos\"\u003eВладислав Малтызов\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAxfYTeIX2FV3N9PZHR6oV1qFGg0hnyebQyvlj96QD4s8jpB7_yFpf-I23ieHunhswrObGn6lcVOYVrqtLPLoJYTFkWViLIWAhlSIiUk3hTpDyNShfEp98WH3iy4lh90bwEhAV4xinXyoaRGwpiJ9veV-EGhRyZ_mzxzujCgJAjDj9iGW8ENlOIA",
                "width" : 3500
             }
          ],
          "place_id" : "ChIJzdmhJBqYpBIR83dP63GAFSA",
-         "plus_code" : {
-            "compound_code" : "C47J+5J Barcelona, Spain",
-            "global_code" : "8FH4C47J+5J"
-         },
          "rating" : 4.6,
          "reference" : "ChIJzdmhJBqYpBIR83dP63GAFSA",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 13955,
          "vicinity" : "Carrer d'Isaac Newton, 26, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3688085,
@@ -154,32 +125,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "19f77d727e1ce0d73d8003174675b86c1468d85a",
          "name" : "Poble Espanyol",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 768,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105194890789621533077/photos\"\u003eTommi Putkonen\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA2_eETcM5XuE8PLWkk04_wI7EB-CF26bil7UQeNMpm4jMohNTNnPozk8_nXvt4O5D_uYSKMe82eOqNNsUQBJMRF7OOv_PIZhKR0IygIAEUYR0VPxUa2TJRAmGKpf4ETfBEhC4iK3yBpzMwTjBhOyz0zhSGhS4LtlYOh5sOm0h3jhAuRdFQ_Rmgw",
                "width" : 1024
             }
          ],
          "place_id" : "ChIJJ2JbaneipBIRpVQ6RTJSwLA",
-         "plus_code" : {
-            "compound_code" : "949X+G8 Barcelona, Spain",
-            "global_code" : "8FH4949X+G8"
-         },
          "rating" : 4.1,
          "reference" : "ChIJJ2JbaneipBIRpVQ6RTJSwLA",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 12833,
          "vicinity" : "Avinguda Francesc Ferrer i Guàrdia, 13, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3854353,
@@ -199,32 +160,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
          "id" : "52ac992dc712c1b15f67c1c10097a8859638a058",
          "name" : "Born Cultural Centre",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 2976,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/115123842009107904688/photos\"\u003eDuaulina Pin\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAGP-Zsh7pQNyxdtLclUNOUJ6u9lAPoIScXW4eOfCbdTCIElFw_JBVSrwAiShTgXPVnwW-GcIWSvJAZB28227Eg1SHxLC8qDqTf3Y5bp1l7wpcwm69hTTRsBPrYXVoz9HiEhBGNM45VH6KSQaq_Lm1j6A1GhTcNHjNpnoCKkEz60-H7xSIN-4VWw",
                "width" : 3968
             }
          ],
          "place_id" : "ChIJc0WMe_GipBIR_EfbMXL48cY",
-         "plus_code" : {
-            "compound_code" : "95PM+5G Barcelona, Spain",
-            "global_code" : "8FH495PM+5G"
-         },
          "rating" : 4.4,
          "reference" : "ChIJc0WMe_GipBIR_EfbMXL48cY",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 6605,
          "vicinity" : "Plaça Comercial, 12, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.37711520000001,
@@ -244,32 +195,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "8fb363bee6dc3331ad241f4b347cfdf205a44641",
          "name" : "Wax Museum",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 2000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/117314804724499930922/photos\"\u003eFrederico do Nascimento\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAApXX2YkTOpTtzn3PZ4bM6TZOdIU2VaQeJDSTksH4Lz07E7T_WNBo_JrzbD5uIxkk3zIOkYoIrUO3Z8NIrs-ESM1W4qgEX9M-9YpchcAAZnN0_gb3jFrHXViknRilpKT6BEhDRpZXFhD5sd06_Jqjf3xOTGhSuhs0_NwzgfyrL7x5dsA0jFSUGiQ",
                "width" : 3008
             }
          ],
          "place_id" : "ChIJSXLa41aipBIR8O0eAyi4epg",
-         "plus_code" : {
-            "compound_code" : "95GG+RQ Barcelona, Spain",
-            "global_code" : "8FH495GG+RQ"
-         },
          "rating" : 3.8,
          "reference" : "ChIJSXLa41aipBIR8O0eAyi4epg",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 1711,
          "vicinity" : "Passatge de la Banca, 7, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3831913,
@@ -289,32 +230,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "524c3cda116139e8c094657b9e2f3830a30f8b65",
          "name" : "Barcelona Museum of Contemporary Art",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 2848,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101526759688491177660/photos\"\u003eGuilherme Baggio\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAeCBsJzis_j3v5GKxws418yOYHvTLin9NcaF2jAJcKps9ITzKafvk_yf7EkSEV6tpy6tOsTqPCl8cGvyODT0YrYubjoOMI0K22LJc1GiQgVZRucCaZI3ESqSOLcewZoylEhBv-X6RmO_uG_vkPBnC78v7GhTWRjpV3mFNOprH_oBc0NPa--f9hg",
                "width" : 4272
             }
          ],
          "place_id" : "ChIJ0V6MrPWipBIRKnssXv0o_Y4",
-         "plus_code" : {
-            "compound_code" : "95M8+7P Barcelona, Spain",
-            "global_code" : "8FH495M8+7P"
-         },
          "rating" : 4.3,
          "reference" : "ChIJ0V6MrPWipBIRKnssXv0o_Y4",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 6026,
          "vicinity" : "Plaça dels Àngels, 1, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.38505740000001,
@@ -334,32 +265,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "a4f9c0203ab13a23fa9586b9bb96561320138d8c",
          "name" : "European Museum of Modern Art",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3456,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/109926543411630163427/photos\"\u003eMikel Hal\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA1kMUAMMZ5ANpS9_CFiye0qbbPGHv-9zHDTt89bqW_XixDkP12ttoDfvjSAzreGnYJw7ymqiykcfRug-anr7aa85oKMQPu07rTyZkGTSTbKzSe97sTZy1ghwS_eXkV27DEhDO_WSrrAh_6y3sGHH7RzFuGhQy-SF70YteWia-Z9MvzH-NFZu3JA",
                "width" : 4608
             }
          ],
          "place_id" : "ChIJveK7vP6ipBIRiegu-jsxGX8",
-         "plus_code" : {
-            "compound_code" : "95PJ+24 Barcelona, Spain",
-            "global_code" : "8FH495PJ+24"
-         },
          "rating" : 4.4,
          "reference" : "ChIJveK7vP6ipBIRiegu-jsxGX8",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 666,
          "vicinity" : "Carrer de la Barra de Ferro, 5, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.362959,
@@ -379,32 +300,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
          "id" : "bc2167f91ac574cb4cbc8df7ba833a96667c38b0",
          "name" : "Montjuïc Castle",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3120,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/100556880230288127488/photos\"\u003eFelix Baldero\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAag1kwZXRxyensw10CxtqfxDJTHXZAYZKdTSeDdu8hFP1QQ0wpjQNWil0_2WOpo_zycBf3xD_v_ISfQMYb7R8_UrcM1_YCrl-7rlzhOXwaKEY5-z-mjdzhhv8EEgIbImVEhC_1qH0WESpU8zSQfVTGxnhGhQZQIV7hC7a5zGj_0gFWGWlReyBbA",
                "width" : 4160
             }
          ],
          "place_id" : "ChIJN7FiCkGipBIR1PJn6ohejww",
-         "plus_code" : {
-            "compound_code" : "9578+52 Barcelona, Spain",
-            "global_code" : "8FH49578+52"
-         },
          "rating" : 4.4,
          "reference" : "ChIJN7FiCkGipBIR1PJn6ohejww",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 22987,
          "vicinity" : "Carretera de Montjuïc, 66, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.36843990000001,
@@ -424,32 +335,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "de87ec1d47ae6b372996bdaa5341534f62e6c2cb",
          "name" : "Museu Nacional d'Art de Catalunya",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3264,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105555362202957185694/photos\"\u003eDmitriy Zh\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAANqZKSyquzz6OqB14n7B9zarHpXZqzDSKpUC4j_jAXefq4pBAYnKZacNJ3lq0tfgFogzExV3UGJQsg95EZc-HX4vgUnW5igo2VOLk-TcdoA99PSsUpi9zAVj8Nqs6vlXyEhChX5X78qRd0yJIZdK3ukTxGhQBjbuLeAfpX5ABxqn5hqoIpxLNZw",
                "width" : 4928
             }
          ],
          "place_id" : "ChIJMU59xHGipBIRkdwlcgUWAYY",
-         "plus_code" : {
-            "compound_code" : "9593+9C Barcelona, Spain",
-            "global_code" : "8FH49593+9C"
-         },
          "rating" : 4.6,
          "reference" : "ChIJMU59xHGipBIRkdwlcgUWAYY",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 11920,
          "vicinity" : "Palau Nacional, Parc de Montjuïc, s/n, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3686304,
@@ -469,32 +370,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "a928942e30c1979da20ff22d417be23c74c78a21",
          "name" : "Joan Miró Foundation",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3120,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/106877185707549829774/photos\"\u003eНаталья Михайлова\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAPEe_C8p68_QMny_5jo3mpQnlizqMZD-66NgmWbseltHqRA8JFdV-Keb9wC36thkbqtYSbBGUExOV8i3Gx0aaWdh1CgfzXe71Jp8lZX4aeD5fy-AK-p8xd1Nety4YWnJvEhDjTgDHtQrk1SDr8Btw-gHuGhQM_5UjGN_888nQMHM248j4Wk0ADA",
                "width" : 4160
             }
          ],
          "place_id" : "ChIJLcelLmmipBIRqmlJrcEfypY",
-         "plus_code" : {
-            "compound_code" : "9595+FW Barcelona, Spain",
-            "global_code" : "8FH49595+FW"
-         },
          "rating" : 4.4,
          "reference" : "ChIJLcelLmmipBIRqmlJrcEfypY",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 4962,
          "vicinity" : "Parc de Montjuïc, s/n, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3808059,
@@ -514,32 +405,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "1bcf8282efd28d111bc080e302fee0aeaa5b64e9",
          "name" : "Hemp Museum Gallery",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1366,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101840402074877988842/photos\"\u003eIsidre Marco\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAYBcfXtsPLV0X_YepQ0BYr1i8rWbUDkm3JdKKAcr-3Jfg30amUqlDYD85n5JPp5OZ9Sfl2hRpR-gaLIcgdHw03B2brfgE2Sp0N6f-W3qj5hPP81K1ay7QW3L-3SV1hRnEEhBCaO-5ULcBEntAdxH8zG2NGhQc9wKWOThxAZvIS5fndMhkAGFuew",
                "width" : 2048
             }
          ],
          "place_id" : "ChIJMfl8WP-ipBIRU2_wJBJJC58",
-         "plus_code" : {
-            "compound_code" : "95JJ+83 Barcelona, Spain",
-            "global_code" : "8FH495JJ+83"
-         },
          "rating" : 4.4,
          "reference" : "ChIJMfl8WP-ipBIRU2_wJBJJC58",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "art_gallery", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 410,
          "vicinity" : "Carrer Ample, 35, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3870538,
@@ -559,32 +440,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "d3ee859e13ada2af88a058b3efd97b4b6a5d41f7",
          "name" : "Museu de la Xocolata",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/116778392449176692588/photos\"\u003eEduardo Renedo\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAUkt0u5nB06bzZ7x9bVUH9GI4XSm3g1fjtf5cntFRhS5nTkYWbP9GLny5wg2RnyFk8hB90xKKv3AmdnadpTLO4YeJSZwEIQoovaEGP28WPGhvzKaSUpJMiXmuN4HlGGSCEhDulTsg-DiIGfhqvr92IiLlGhSucbPGh-lf1bgsAawDauWXiJx8gA",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJC6CEtf2ipBIRkFQaF95uL1Q",
-         "plus_code" : {
-            "compound_code" : "95PJ+RP Barcelona, Spain",
-            "global_code" : "8FH495PJ+RP"
-         },
          "rating" : 3.8,
          "reference" : "ChIJC6CEtf2ipBIRkFQaF95uL1Q",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 3191,
          "vicinity" : "Carrer del Comerç, 36, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3772402,
@@ -604,32 +475,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "31f9ce6a9cb36e8941e430532d004036aa941753",
          "name" : "Arts Santa Mònica",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 1080,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/118113977552278212053/photos\"\u003eABDERRAHIM AHRAR\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAy80IEaLkXA0f03c1bcJznUvqdUaEOkCFRCjmU36ObI1LU_iyggHEKIDrTTVi9-xCVHiltfkvTT_0TXa8uVZHM3yyWs8kA-aiWnPBPv1Iqdjdgz83uSQ1SjvZBBTeL8rUEhBShFeiGIN-sg5wW7mx1EH1GhSu-XX2WMS3rYOsGBhZiyvr8N8Y9g",
                "width" : 1920
             }
          ],
          "place_id" : "ChIJZTiFwleipBIRj8RWjPOrnLk",
-         "plus_code" : {
-            "compound_code" : "95GG+V9 Barcelona, Spain",
-            "global_code" : "8FH495GG+V9"
-         },
          "rating" : 4.3,
          "reference" : "ChIJZTiFwleipBIRj8RWjPOrnLk",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 538,
          "vicinity" : "La Rambla, 7, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3706091,
@@ -649,32 +510,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "3e6ccf56c60cff4e6a528b0440c0079f3aeb7aaf",
          "name" : "El Pabellón de Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 857,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101518064396182416591/photos\"\u003eFrank Engel\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAZxDZNQSAHMQOa_aZG5SWVDMYqn8rNmmcnPjI8rBf0z0o39YTtsmr8ZEtapcHcj9rKlaESMBAMdtWAkzVpO4ZZm1gNt3JoCHZIn5uUxpCIG2lwC4XbVWrUKal0bD_9ukXEhDj_oq7mGsZINKyksCSX5pMGhTuZouyGS6_xl27_t0FOFNTPJ5TPQ",
                "width" : 1280
             }
          ],
          "place_id" : "ChIJJ2JbaneipBIRaFPRmdUt7fA",
-         "plus_code" : {
-            "compound_code" : "95C2+63 Barcelona, Spain",
-            "global_code" : "8FH495C2+63"
-         },
          "rating" : 4.6,
          "reference" : "ChIJJ2JbaneipBIRaFPRmdUt7fA",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 1064,
          "vicinity" : "Avinguda Francesc Ferrer i Guàrdia, 7, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3936239,
@@ -694,32 +545,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "a8297ebf8b81adcb579c3285644f7cfd7bff7201",
          "name" : "Museo Egipcio de Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1080,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105069418602483937103/photos\"\u003eFederico De Ambrosi\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAbmApV46ub8u2xlufH3xaJuH9Hw6LGiGrLnKiYx7o8XG5pw5KM-rudxG9w3jjahnDPFx_2_rEIzPKx_s32cZFmmpZbGx2CJJlvEVoHi69hrE27KUKcyZIKxfyYAB8SVv3EhDdlHnKn9fFkDvrj5QBoOXmGhTrs6Gr48kvcJ29fHtJx7eTjA9i_w",
                "width" : 1616
             }
          ],
          "place_id" : "ChIJkeeo1OyipBIR---OHUceofI",
-         "plus_code" : {
-            "compound_code" : "95V7+CV Barcelona, Spain",
-            "global_code" : "8FH495V7+CV"
-         },
          "rating" : 4.1,
          "reference" : "ChIJkeeo1OyipBIR---OHUceofI",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 1547,
          "vicinity" : "Carrer de València, 284, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3839062,
@@ -739,32 +580,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "f902d76019351720bc4a496de3780310889e0fc6",
          "name" : "Museum of the History of Barcelona",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 333,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/111256557081890139592/photos\"\u003eBożena Lorenc\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA7Ues4YfqeTu1TSFQqsPkyTGwT4169FFPMFC_L4JXF5mF5HnpTsjZBby5NK2YnHmvq59cS61-41w_E0E-tpgpAwkN2sSjYpkIPgMVZoDA5UI_KuGAZcfUJFG7mij01UJfEhB7fxVewqOLaghuqX3DCwICGhQypEWgVUdYTLqLX-KxzvVO5xaDKg",
                "width" : 500
             }
          ],
          "place_id" : "ChIJc0WMe_GipBIRJiU_pUq_bRc",
-         "plus_code" : {
-            "compound_code" : "95MH+H4 Barcelona, Spain",
-            "global_code" : "8FH495MH+H4"
-         },
          "rating" : 4.5,
          "reference" : "ChIJc0WMe_GipBIRJiU_pUq_bRc",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 2022,
          "vicinity" : "Plaça del Rei, s/n, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3822323,
@@ -784,32 +615,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "3ccf091949dd8e2a44cc24a9cf735e8de5c50a91",
          "name" : "Museu Eròtic de Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1366,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/113306755734947534880/photos\"\u003eMuseu Eròtic de Barcelona\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAjzakuyJZA_-w8ouH-VfTFnPVdyr5NqtiME3kzbTDhvWW87UfHpXRGI6auFhuvbwVAXvYyFyJ4t-25gmnXWa4h6e04svJEzqCjJE9KTAUtDKIhd88Y5wNX9hA2nLQuAQ2EhAy2isMXpEpxDBS1se2xIlzGhS25xEBywc93kN0bFHw3Rbpz3mppg",
                "width" : 2048
             }
          ],
          "place_id" : "ChIJfdDpi6iCpBIR5Sd8iLJd5KE",
-         "plus_code" : {
-            "compound_code" : "95JF+V2 Barcelona, Spain",
-            "global_code" : "8FH495JF+V2"
-         },
          "rating" : 4.1,
          "reference" : "ChIJfdDpi6iCpBIR5Sd8iLJd5KE",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 1668,
          "vicinity" : "La Rambla, 96 bis, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3808622,
@@ -829,32 +650,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "3384d42ba1e48e527579248684e624e8ca9ca9c3",
          "name" : "History Museum of Catalonia",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101437678683055266818/photos\"\u003eNicolas BOUYER\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAgMdRCWEFTgc1SjqOqnd6J67SxqKal7-Y6hsq3m4DYpcCDPOQzZWJ1HBYCGz_ygJTgM2yRmULrg7cQxKN09ZXaqKKvQWeFxCZSk4gL9QCzU3XW9-P91CcXII4bD2gaf5rEhDuVnu2wFYI61HN7FhQvorXGhSWQ42eDE6lnnaSS7Y8BdoWZDgCAg",
                "width" : 5333
             }
          ],
          "place_id" : "ChIJBTfBbwCjpBIRK-jjm940utc",
-         "plus_code" : {
-            "compound_code" : "95JP+87 Barcelona, Spain",
-            "global_code" : "8FH495JP+87"
-         },
          "rating" : 4.4,
          "reference" : "ChIJBTfBbwCjpBIRK-jjm940utc",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 2262,
          "vicinity" : "Plaça de Pau Vila, 3, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3914803,
@@ -874,28 +685,17 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/museum-71.png",
          "id" : "fbd509231955e3ec66c27235fcfdc95ce1edb2c2",
          "name" : "Casa Amatller",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1366,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/106052536188570972164/photos\"\u003eshih wen Fan\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAVe03wmdlbbgzyecpIHphHV17Ctz-P7w5fXV7QtcqeDFLzOWByBNPtBac5JWgE4JEiD4ORWd7eUe9wFYUs1p-fRtDeho7Fr1Bw0S0KlaW8sdRPfwh8sAdyn-S6Ff4XMQ6EhA5Mjmi8ar547nUoqCLZZY_GhS2cNo85ckYbsXmsj3jfWF8npQzAw",
                "width" : 2048
             }
          ],
          "place_id" : "ChIJdTx2T-2ipBIRQM8Gwarzfik",
-         "plus_code" : {
-            "compound_code" : "95R7+HX Barcelona, Spain",
-            "global_code" : "8FH495R7+HX"
-         },
          "rating" : 4.5,
          "reference" : "ChIJdTx2T-2ipBIRQM8Gwarzfik",
-         "scope" : "GOOGLE",
-         "types" : [ "museum", "point_of_interest", "establishment" ],
+         "type": "museum",
          "user_ratings_total" : 770,
          "vicinity" : "Passeig de Gràcia, 41, Barcelona"
       }

@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 
 import POIItem from "../POIItem";
+// import DataService from "../../services/data"
 
 import churchArr from "../../data/church";
 import parkArr from "../../data/park";
@@ -25,6 +26,12 @@ export default class SearchPanel extends Component {
     const { formInput } = this.state;
     console.log(poiArr.filter(poi => poi.name.includes(formInput)));
   };
+
+  // handleClick = () => {
+  //   const poiArr = [...churchArr, ...parkArr, ...museumArr];
+  //   poiArr.forEach(poi => DataService.addPOI(poi))
+    
+  // }
 
   render() {
     const poiArr = [...churchArr, ...parkArr, ...museumArr];
@@ -51,6 +58,7 @@ export default class SearchPanel extends Component {
             ))}
           </div>
         </div>
+        {/* <button onClick={this.handleClick()}>add to db</button> */}
       </div>
     );
   }

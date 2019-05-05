@@ -7,8 +7,10 @@ import combinedReducers from "./redux/reducers";
 import "./index.scss";
 import App from "./App";
 
+
 const store = createStore(
-  combinedReducers
+  combinedReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
 );
 
 const firebase = require('firebase/app');

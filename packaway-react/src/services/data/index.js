@@ -34,4 +34,46 @@ export default class DataService {
     }
     return success;
   }
+
+  static async addPOI(POIData) {
+    const db = firebase.firestore();
+    let success = false;
+
+    try {
+      const docRef = await db.collection('pois').add(POIData);
+      if(docRef && docRef.id) {
+        success = true;
+      }
+    } catch (err) {
+			console.log("TCL: DataService -> addContact -> err", err)
+    }
+
+    return success;
+  }
+
+  static async getPOI() {
+    const db = firebase.firestore();
+    const firstQuery = db.collection("pois").limit(10);
+
+    // firstQuery = firstQuery.startAfter(xxxxx)
+    let results = [];
+    
+      try {
+        const snapShot = await firstQuery.get() 
+
+        snapShot.forEach(poi => {
+          const objectResult = poi.data();
+          objectResult.id = poi.id;
+          results.push(objectResult);
+        }) 
+      } catch (err) {
+        console.log("TCL: DataService -> getContacts -> err", err)
+      }
+  
+      return results;
+    }
+
+    
+    
+
 }

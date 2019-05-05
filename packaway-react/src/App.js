@@ -7,6 +7,7 @@ import EditPackPage from './pages/packs/EditPackPage'
 import PackOverviewPage from './pages/packs/PackOverviewPage'
 import ViewPackPage from './pages/packs/ViewPackPage'
 import Navbar from './components/Navbar';
+import ProfilePage from './pages/ProfilePage'
 
 
 
@@ -18,6 +19,7 @@ const App = () => {
        <Switch>
          <Route exact path="/" component={HomePage} />
          <Route path="/login" component={LoginPage} />
+         <Route path="/profile" component={ProfilePage} />
          <Route path="/poisearch/:cityId" component={POISearchPage} />
          <Route path="/packs/edit" component={EditPackPage} />
          <Route path="/packs/view" component={ViewPackPage} />

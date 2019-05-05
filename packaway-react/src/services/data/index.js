@@ -53,25 +53,23 @@ export default class DataService {
 
   static async getPOI() {
     const db = firebase.firestore();
-    const firstQuery = db.collection("pois").limit(10);
-
-    // firstQuery = firstQuery.startAfter(xxxxx)
     let results = [];
-    
-      try {
-        const snapShot = await firstQuery.get() 
 
-        snapShot.forEach(poi => {
-          const objectResult = poi.data();
-          objectResult.id = poi.id;
-          results.push(objectResult);
-        }) 
-      } catch (err) {
-        console.log("TCL: DataService -> getContacts -> err", err)
-      }
-  
-      return results;
+    try {
+      const querySnapshot = await db.collection("pois").get();
+
+      querySnapshot.forEach(doc => {
+        const objectResult = doc.data();
+        objectResult.id = doc.id;
+        results.push(objectResult);
+      }) 
+    } catch (err) {
+			console.log("TCL: DataService -> getPOIs -> err", err)
     }
+
+    return results;
+  }
+
 
     
     

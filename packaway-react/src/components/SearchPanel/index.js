@@ -1,17 +1,14 @@
 import React, { Component } from "react";
 
 import POIItem from "../POIItem";
-// import DataService from "../../services/data"
-
-import churchArr from "../../data/church";
-import parkArr from "../../data/park";
-import museumArr from "../../data/museum";
+import DataService from "../../services/data"
 
 export default class SearchPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      formInput: null
+      formInput: null,
+      loading: false
     };
   }
 
@@ -22,9 +19,8 @@ export default class SearchPanel extends Component {
 
   handleSearch = e => {
     e.preventDefault();
-    const poiArr = [...churchArr, ...parkArr, ...museumArr];
-    const { formInput } = this.state;
-    console.log(poiArr.filter(poi => poi.name.includes(formInput)));
+    const { formInput, pois } = this.state;
+    console.log(pois.filter(poi => poi.name.includes(formInput)));
   };
 
   // handleClick = () => {
@@ -33,8 +29,18 @@ export default class SearchPanel extends Component {
     
   // }
 
+  async getData() {
+    this.setState({loading: true});
+    const pois = await DataService.getPOI();
+    this.setState({pois, loading: false})
+  }
+
+  async componentDidMount() {
+    this.getData();
+  }
+
   render() {
-    const poiArr = [...churchArr, ...parkArr, ...museumArr];
+    const {pois} = this.state;
     // console.log(poiArr.filter(poi => poi.types.includes('church')))
 
     return (
@@ -52,11 +58,11 @@ export default class SearchPanel extends Component {
           </form>
         </div>
         <div className="poi-container">
-          <div>
-            {poiArr.map(poi => (
+          {pois && <div>
+            {pois.map(poi => (
               <POIItem poi={poi} key={poi.id} />
             ))}
-          </div>
+          </div>}
         </div>
         {/* <button onClick={this.handleClick()}>add to db</button> */}
       </div>

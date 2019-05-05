@@ -118,7 +118,7 @@ class UserDetails extends Component {
               <br />
               <label>Profile image:</label>
               {user.imageUrl && <img src={user.imageUrl} alt={user.name} />}
-              <div onClick={this.deleteImage}>Eliminar image</div>
+              <div onClick={this.deleteImage}>Remove image</div>
             <input type="file" name="picture" onChange={this.onFileSelected} />
               <br />
               <button>Save</button>

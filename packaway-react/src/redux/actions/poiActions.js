@@ -6,9 +6,9 @@ export const addPoi = (poi) => {
   }
 }
 
-// export const removePoi = (poi) => {
-//   return {
-//     id: poi.id,
-//     type: 'REMOVE_POI'
-//   }
-// }
+export const removePoi = (id) => {
+  return {
+    id: id,
+    type: 'REMOVE_POI'
+  }
+}

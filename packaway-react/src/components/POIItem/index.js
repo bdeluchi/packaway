@@ -1,19 +1,19 @@
-import React, { useState } from "react";
-import { connect } from "react-redux";
-import {addPoi} from '../../redux/actions/poiActions'
+import React from "react";
+// import { connect } from "react-redux";
+// import {addPoi} from '../../redux/actions/poiActions'
+import withPOI from '../../helpers/withPOI'
 
 
 function POIItem(props) {
-  const {poi} = props;
-  const [inCart, changeButton] = useState(false);
+  const {poi, pois} = props;
+  const inCart = pois ? Object.keys(pois).includes(poi.id) : false;
 
   const addToCart = () => {
     props.setPoiInfo(poi);
-    changeButton(true) //está mal porque si vuelvo a entrar no se cambia
   }
 
   const removeFromCart = () => {
-    changeButton(false)
+    props.removePoiInfo(poi.id);
   }
 
 
@@ -29,19 +29,16 @@ function POIItem(props) {
 }
 
 
-const mapStateToProps = state => {
-  return {
-    pois: state.poiReducer.pois
-  }
-}
+// const mapStateToProps = state => {
+//   return {
+//     pois: state.poiReducer.pois
+//   }
+// }
 
-const mapDispatchToProps = dispatch => {
-  return {
-    setPoiInfo: (poi) => dispatch(addPoi(poi))
-  };
-};
+// const mapDispatchToProps = dispatch => {
+//   return {
+//     setPoiInfo: (poi) => dispatch(addPoi(poi))
+//   };
+// };
 
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(POIItem);
+export default withPOI(POIItem);

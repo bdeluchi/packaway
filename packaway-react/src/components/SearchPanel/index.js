@@ -41,7 +41,6 @@ export default class SearchPanel extends Component {
 
   render() {
     const {pois} = this.state;
-    // console.log(poiArr.filter(poi => poi.types.includes('church')))
 
     return (
       <div className="search-panel">

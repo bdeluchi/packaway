@@ -1,5 +1,5 @@
 const defaultState = {
-  pois: null
+  pois: {}
 };
 
 export const poiReducer = (state = defaultState, action = {}) => {

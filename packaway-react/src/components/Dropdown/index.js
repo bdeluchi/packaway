@@ -1,8 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import { connect } from "react-redux";
-
-import { setUserInfo } from '../../redux/actions/userActions';
+import withUser from "../../helpers/withUser"
 import AuthService from '../../services/auth';
 import DataService from '../../services/data';
 
@@ -89,19 +87,4 @@ class Dropdown extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    userInfo: state.userReducer.user
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setUserInfo: (user) => dispatch(setUserInfo(user))
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Dropdown);
+export default withUser(Dropdown);

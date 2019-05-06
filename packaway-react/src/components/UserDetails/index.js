@@ -2,9 +2,7 @@ import React, { Component } from "react";
 
 import StorageService from "../../services/storage";
 import DataService from "../../services/data";
-
-import { connect } from "react-redux";
-import { setUserInfo } from '../../redux/actions/userActions';
+import withUser from "../../helpers/withUser"
 
 class UserDetails extends Component {
   constructor(props) {
@@ -130,19 +128,4 @@ class UserDetails extends Component {
   }
 }
 
-const mapStateToProps = state => {
-  return {
-    userInfo: state.userReducer.user
-  }
-}
-
-const mapDispatchToProps = dispatch => {
-  return {
-    setUserInfo: (user) => dispatch(setUserInfo(user))
-  };
-};
-
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(UserDetails);
+export default withUser(UserDetails);

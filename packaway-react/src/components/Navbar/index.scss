@@ -1,23 +1,21 @@
 nav {
-  background-color: #36C387;
-  ul {
+  background-color: #36c387;
+  .nav__menu {
     list-style: none;
     line-height: 50px;
     text-transform: uppercase;
     padding: 0;
+    position: relative;
 
-    li {
-      display: inline-block;
-      padding: 0 5px;
-    } 
-
-    .nav-left {
-      text-align: left;
+    .submenu-container {
+      position: absolute;
+      z-index: 1;
+      min-width: 160px;
     }
 
-    
-    .nav-right {
-      text-align: right;
+    .nav__menu-item {
+      display: inline-block;
+      padding: 0 5px;
     }
   }
 }

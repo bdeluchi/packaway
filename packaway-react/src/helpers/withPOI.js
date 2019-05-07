@@ -5,8 +5,8 @@ import {addPoi, removePoi} from '../redux/actions/poiActions'
 
 function withPOI(WrappedComponent){
   const NewComponent = (props) => {
-    const userInfo = props;
-    return <WrappedComponent userInfo={userInfo} {...props} />
+    const poiInfo = props;
+    return <WrappedComponent poiInfo={poiInfo} {...props} />
   }
 
   return connect(mapStateToProps, mapDispatchToProps)(NewComponent)

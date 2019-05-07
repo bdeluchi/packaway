@@ -25,13 +25,13 @@ export default class SearchPanel extends Component {
 
   // handleClick = () => {
   //   const poiArr = [...churchArr, ...parkArr, ...museumArr];
-  //   poiArr.forEach(poi => DataService.addPOI(poi))
+  //   poiArr.forEach(poi => DataService.addItem("pois", poi))
     
   // }
 
   async getData() {
     this.setState({loading: true});
-    const pois = await DataService.getPOI();
+    const pois = await DataService.getPOI("pois");
     this.setState({pois, loading: false})
   }
 

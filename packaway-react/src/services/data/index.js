@@ -27,6 +27,7 @@ export default class DataService {
     let success = true;
 
     try {
+      //arrayUnion to put pack inside array
       await db.collection(collection).doc(id).set(data, {merge: true})
     } catch (err) {
       success = true;
@@ -35,12 +36,14 @@ export default class DataService {
     return success;
   }
 
-  static async addPOI(POIData) {
+  static async addItem(collection, data) {
     const db = firebase.firestore();
     let success = false;
+ 
 
     try {
-      const docRef = await db.collection('pois').add(POIData);
+      const docRef = await db.collection(collection).add(data);
+   
       if(docRef && docRef.id) {
         success = true;
       }
@@ -64,10 +67,27 @@ export default class DataService {
         results.push(objectResult);
       }) 
     } catch (err) {
-			console.log("TCL: DataService -> getPOIs -> err", err)
+			console.log("TCL: DataService -> getPOI -> err", err)
     }
 
     return results;
+  }
+
+  
+  static async addPack(data) {
+    const db = firebase.firestore();
+    let success = false;
+    try {
+      const docRef = await db.collection("packs").add(data);
+      if (docRef && docRef.id) {
+        await DataService.updateDetail("users", data.userId, {packs: docRef.id})
+        success = true;
+      }
+    } catch (err) {
+			console.log("TCL: DataService -> addContact -> err", err)
+    }
+
+    return success;
   }
 
 

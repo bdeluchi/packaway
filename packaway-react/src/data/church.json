@@ -1,6 +1,6 @@
-{
-  "results" : [
+[
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4036299,
@@ -20,32 +20,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "34d9063d38ed27cafccd7cafe63b78073ae69364",
          "name" : "La Sagrada Familia",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/109385594093426557099/photos\"\u003eIoan Surariu\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA8Wc1_KitQCCbzOgWrV7NhfwYF8WkZv0zdq6G03GyB2kYBMLesTxB_NwpKUmW6Fl2kZ87hVB3APvQubMfZT9GVV5tQEoaa3YCwgRV0rY3pmaoD1cFnUbaklv0JjtDyrosEhApLLTdO3VDtTEXCrt0oS9dGhRZ7LEabyT4HpbyVC8BWEA3SCxeeA",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJk_s92NyipBIRUMnDG8Kq2Js",
-         "plus_code" : {
-            "compound_code" : "C53F+FP Barcelona, Spain",
-            "global_code" : "8FH4C53F+FP"
-         },
          "rating" : 4.7,
          "reference" : "ChIJk_s92NyipBIRUMnDG8Kq2Js",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 48065,
          "vicinity" : "Carrer de Mallorca, 401, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.38583269999999,
@@ -68,26 +58,19 @@
          "photos" : [
             {
                "height" : 600,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/114253901493415385965/photos\"\u003eОлег Покровский\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAbcDKwsHpD1nzS9juaIwvkQ9JC4yYAD2iNPJ4LUgx4fjnidEQ88Q3-ytNqdNtNbtuC1PJ9pjfyfosWMfCyfvI6CFdzsT25uJfY0jwkbPMHlTn0WGfa3FBxTzNIm6OyIM8EhCICEKTve2TpzNiX6s0NOeRGhQFrQZ7O1CdZQHeKk2dgPCcKCp03A",
                "width" : 800
             }
          ],
          "place_id" : "ChIJFf0mA_yipBIRmrj06fT0Zfc",
-         "plus_code" : {
-            "compound_code" : "95PH+8X Barcelona, Spain",
-            "global_code" : "8FH495PH+8X"
-         },
          "rating" : 4,
          "reference" : "ChIJFf0mA_yipBIRmrj06fT0Zfc",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 25,
          "vicinity" : "Carrer dels Carders, 2, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.41291289999999,
@@ -108,18 +91,14 @@
          "id" : "654b17b61346c23f3dcc6f36913fee988d49a111",
          "name" : "Monasterio De Sant Maties Jeronimes",
          "place_id" : "ChIJneUEyyKYpBIReMAvSOPLzbQ",
-         "plus_code" : {
-            "compound_code" : "C47F+5M Barcelona, Spain",
-            "global_code" : "8FH4C47F+5M"
-         },
          "rating" : 4,
          "reference" : "ChIJneUEyyKYpBIReMAvSOPLzbQ",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 1,
          "vicinity" : "Carrer Antic de Bellesguard, 0, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.383962,
@@ -139,32 +118,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "77f0e6176a8d8eb80a59defea3e3c3feda43625c",
          "name" : "Cathedral of Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 4032,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/108975570422467568517/photos\"\u003eLuis Guerrero Roquett\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA_UZUGeFbWdn28XFWoN763uWybWTPx_r1Gs3I5-vH1I13iugKqvc3hjtAqW0u3J7C67YAVBD6tuATasyYUmGpbZvpgqhrtk-XwvXzcBlVuBIYNKjdSx5wev7QqRNXiSxiEhBK-C04vxp5iq8M0ij1LqmZGhQN6rV2HiaSjGMVILEenoBgHQoCQw",
                "width" : 3024
             }
          ],
          "place_id" : "ChIJg2xxlvmipBIRg1jhdSQR9hY",
-         "plus_code" : {
-            "compound_code" : "95MG+HF Barcelona, Spain",
-            "global_code" : "8FH495MG+HF"
-         },
          "rating" : 4.6,
          "reference" : "ChIJg2xxlvmipBIRg1jhdSQR9hY",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 13119,
          "vicinity" : "Pla de la Seu, s/n, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3838871,
@@ -184,32 +153,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "754d964459ee4ee8bb5374102965228e06d0e403",
          "name" : "Basilica of Santa Maria del Mar",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101818661863644661433/photos\"\u003eJulián García Arias\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAb1bOle9tPKFv66cJwawbARynGIzhoikMq1p9ggtzDYPrOooPkCbvZTRuuZIIZ-lQOVbjCcJLXAY8mj0l3X3waaoJqcPpV0MLKooy2zPLTR7j6B5FceDVrAdNjR1yQjMtEhA1ebh-etTTHjZkTu_VeDMEGhStHbuNNro7JUSmY9Hza_7DMp1Ehg",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJV6QNXv6ipBIRYOHAH1yUvLQ",
-         "plus_code" : {
-            "compound_code" : "95MJ+HR Barcelona, Spain",
-            "global_code" : "8FH495MJ+HR"
-         },
          "rating" : 4.7,
          "reference" : "ChIJV6QNXv6ipBIRYOHAH1yUvLQ",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 12771,
          "vicinity" : "Plaça de Santa Maria, 1, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.38295400000001,
@@ -232,26 +191,19 @@
          "photos" : [
             {
                "height" : 4000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/116271789351633504696/photos\"\u003eEnrico\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAT6xr_MzHcYw_pqe7tGb1GCVSCqnYrnxB5hwXdsNfzJwVDTtAX0qZ_ucK7klUeeG9lKiKxLpnxkZKjU0KYBWwzPgKSHxUT2vwNW8wUBDIzU_nwFFJoYMtNmc7NUd6_8lzEhByFfh1BEH8EcskZjgXh8m9GhTsivHqdwVx1_IpR9DHkBoTP4M81A",
                "width" : 6000
             }
          ],
          "place_id" : "ChIJJy9B3PiipBIR5MDxIuw0yxA",
-         "plus_code" : {
-            "compound_code" : "95MH+58 Barcelona, Spain",
-            "global_code" : "8FH495MH+58"
-         },
          "rating" : 4.5,
          "reference" : "ChIJJy9B3PiipBIR5MDxIuw0yxA",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 245,
          "vicinity" : "Plaça de Sant Just, s/n, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3794018,
@@ -274,26 +226,19 @@
          "photos" : [
             {
                "height" : 1181,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/109029659896467782769/photos\"\u003eBasílica de la Mercè\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAhRz3jq64pzYPBJ_BApbo9clf7CceDBjWuXYvwGyZi28PEDbVmls9x9bdMSAv2Dmwmot0JcKrXkF74HHuFJuydLWXcnh2kuAzjFlEvTBzB67q5X51P8hqRkthEK4TvTCfEhAtRNTalcJoKki3QAiATbQlGhTO3_l7TdhwcVTvwPJINjG0pzEZWA",
                "width" : 1771
             }
          ],
          "place_id" : "ChIJJeErd1aipBIRbYMDeU4nJtA",
-         "plus_code" : {
-            "compound_code" : "95HH+QR Barcelona, Spain",
-            "global_code" : "8FH495HH+QR"
-         },
          "rating" : 4.5,
          "reference" : "ChIJJeErd1aipBIRbYMDeU4nJtA",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 353,
          "vicinity" : "Carrer de la Mercè, 1, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3821588,
@@ -316,26 +261,19 @@
          "photos" : [
             {
                "height" : 600,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/112067518333246008434/photos\"\u003eMarco Caballo\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA6TiNiKhlrTLgwX9-HMN0Ui37nrrjya8jIfwOjYmKWPmBv02wS5UU6-YHIw5MyOAnmygkfmoZMdBR9McqLo6_QYQ8Mr1NfyK9kw6whUiyA_yJI2qFETtKgw3QCYQaWEjbEhBnzoaEdBXumA28G_SX8Vp1GhQcpEU5j-rwG9BbqwqHrmB0Kpiosg",
                "width" : 800
             }
          ],
          "place_id" : "ChIJx5adlPeipBIRKWosvaChtG0",
-         "plus_code" : {
-            "compound_code" : "95JF+VH Barcelona, Spain",
-            "global_code" : "8FH495JF+VH"
-         },
          "rating" : 4.4,
          "reference" : "ChIJx5adlPeipBIRKWosvaChtG0",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 1282,
          "vicinity" : "Plaça del Pi, 7, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.37621,
@@ -355,32 +293,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_business-71.png",
          "id" : "37219eb988f4a080791767ad8ed9c4d88e9a8b58",
          "name" : "Sant Pau del Camp",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 4000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105816002792912887488/photos\"\u003eEDUARDO ENRIQUE CERONI\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAARkC0BkGs6F_fdsAl0aJqENJzvuptq-3rk6xlNO2Sno-YAVFJ-z6Kn7WvdhJ_hxeov0DWv96rvFxjeg47a85sq-HoXbrR4i3wiROCejTPaZRHrac29oUcZIFeZElatt6pEhCLzy-PgiGykA4ZaUHdCWhjGhTA-QzddgH8np4S9DQ6Ay_HnhPwcw",
                "width" : 6000
             }
          ],
          "place_id" : "ChIJkfKHpl6ipBIR8tKD_Gnha58",
-         "plus_code" : {
-            "compound_code" : "95G9+FQ Barcelona, Spain",
-            "global_code" : "8FH495G9+FQ"
-         },
          "rating" : 4.6,
          "reference" : "ChIJkfKHpl6ipBIR8tKD_Gnha58",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 361,
          "vicinity" : "Carrer de Sant Pau, 101, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4019799,
@@ -403,26 +331,19 @@
          "photos" : [
             {
                "height" : 4000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/111455001166313655792/photos\"\u003eMaik Blumenstein\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAOKW9bVTrq94qJb27pLFk2KfMCaW43KECkSpocNr0TKkWuxzaBugHlezk0f0EUmNqreVLIf2XB0cR4b_d5qNjOHG4xcqqrT_PSWxb4xfmu_sp_td2cpdWYBFA_JZV0fzpEhAzMW2JxrX5ap8n_NHsZXuNGhTJ0jFb9FpVCaW0HUITDIu36oBXOA",
                "width" : 6000
             }
          ],
          "place_id" : "ChIJj_JXpQqYpBIRQ92DS1ysZ8A",
-         "plus_code" : {
-            "compound_code" : "C42V+QR Barcelona, Spain",
-            "global_code" : "8FH4C42V+QR"
-         },
          "rating" : 4.3,
          "reference" : "ChIJj_JXpQqYpBIRQ92DS1ysZ8A",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 6,
          "vicinity" : "Carrer de Brusi, 94, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3996351,
@@ -445,26 +366,19 @@
          "photos" : [
             {
                "height" : 3456,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/107612813406572078188/photos\"\u003eJaume Arisa\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAi4OcJoEHH_ddSoMmit3YPQyhF4v0GXLmWAvCVrr7FrqpA7hl-O5Hc94ivamy0wbv2tOzSTi7DI1rnyVM7pIreWzUi0In1Mgg0I-FKKESEp5B1HtfYdenP-ECmOi00NqBEhB9p8d9cT1fciC6vgaakPXRGhTgmTnHOx-jlmY8Q7x9iURx0FPeWg",
                "width" : 4608
             }
          ],
          "place_id" : "ChIJ27srMkeYpBIRJ1DArQ5tfBY",
-         "plus_code" : {
-            "compound_code" : "94XC+VC Barcelona, Spain",
-            "global_code" : "8FH494XC+VC"
-         },
          "rating" : 4.6,
          "reference" : "ChIJ27srMkeYpBIRJ1DArQ5tfBY",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 76,
          "vicinity" : "Carrer del Rector Voltà, 5, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.38395199999999,
@@ -484,32 +398,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "e81342f043f31d9bd4a03f1f000fe893db5b169d",
          "name" : "Archdiocese of Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 2368,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/115837520032749160882/photos\"\u003eIgor Gubin\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAABHv5LYSKA6auR4w4Vz7o6QKgz77LYTynwp_5Dx70RllMZsggg76KnKb4FdbypwkAb-Jj8sfVSzODfmt-wB1Y9uYT0ua6K4MTuamYX3suj0jkv3Z3e8gXRnxNxN7wPo4eEhBAy-GR_3MPzsIRHljqHnEaGhTvYmOGTSCX1z24frJBHQX0o-QnUA",
                "width" : 4160
             }
          ],
          "place_id" : "ChIJt7wPyPmipBIR0CkfuljdyIw",
-         "plus_code" : {
-            "compound_code" : "95MG+HG Barcelona, Spain",
-            "global_code" : "8FH495MG+HG"
-         },
          "rating" : 4.4,
          "reference" : "ChIJt7wPyPmipBIR0CkfuljdyIw",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 91,
          "vicinity" : "Carrer del Bisbe, 5, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3859913,
@@ -532,26 +436,19 @@
          "photos" : [
             {
                "height" : 3456,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/116545570931871548040/photos\"\u003ePatrick Beattie\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAyAqbAS1YitfB5H9V50YshDbPG84mwQzUUt3hcptNM8GDLyczOaGj7lkGmNCjTt57oTOMVOifVGFdrJ4ikktfXgUG0Z6P2YNaa4IjQ7dme2Y7bZUliDqOTthgyygFTrxFEhBxySBmukXRAtvNkjeM_289GhR3Giiu_g8YCgis1ts_GkCPiOH2pQ",
                "width" : 5184
             }
          ],
          "place_id" : "ChIJvQRctfaipBIR0GYjV3a1RXU",
-         "plus_code" : {
-            "compound_code" : "95PC+9P Barcelona, Spain",
-            "global_code" : "8FH495PC+9P"
-         },
          "rating" : 4.5,
          "reference" : "ChIJvQRctfaipBIR0GYjV3a1RXU",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 250,
          "vicinity" : "Carrer de Santa Anna, 29, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.411,
@@ -571,32 +468,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "ef6e24022528b0c5a38ec5533746e8fbea7a0042",
          "name" : "Congregación de Scientology de Barcelona",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 720,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/103502484870106602372/photos\"\u003eCongregación de Scientology de Barcelona\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAArvX9oRpkO0YwcRMyO1zqV6es0WKjlBaHFxW87wVRt0nXTRzRmnNS5uQvtVgqfGBQQTia-VietFX-EYJ82XKgDCR6vIdoJ28poPzRR6BU96Onqs9f2NIzrfDtn4x5bavIEhAda6jdD7boL_xQE1FzV2cMGhSJgl_lMzfyiFmOWLYGnG88dw6a2Q",
                "width" : 960
             }
          ],
          "place_id" : "ChIJh393ftCipBIRbwTZMLgxwx8",
-         "plus_code" : {
-            "compound_code" : "C56G+CR Barcelona, Spain",
-            "global_code" : "8FH4C56G+CR"
-         },
          "rating" : 4.2,
          "reference" : "ChIJh393ftCipBIRbwTZMLgxwx8",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 5,
          "vicinity" : "Carrer del Dos de Maig, 310, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3938388,
@@ -619,26 +506,19 @@
          "photos" : [
             {
                "height" : 1945,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/100561675332400699064/photos\"\u003egiorgi GIORGIA\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAaKTsqrWzyRK9mdMwLyIAtXEptBwzjqdOF9Ny0goBV5E_BSCQK3nuNTRwm9yF_iVi180CuiWsr3SkZJYfcHVee_KGoEsL7OvvBfTLV2-HnxB5leCMpYcy9jw6OD9HrLPzEhDNaAh-H0_0Y6QsN8XXyQksGhQxznf61VreCOrKTpCfhkjuAqbNLg",
                "width" : 1080
             }
          ],
          "place_id" : "ChIJv0iyPUGYpBIRSaHE62KHP_c",
-         "plus_code" : {
-            "compound_code" : "94VC+G3 Barcelona, Spain",
-            "global_code" : "8FH494VC+G3"
-         },
          "rating" : 2.8,
          "reference" : "ChIJv0iyPUGYpBIRSaHE62KHP_c",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 8,
          "vicinity" : "Carrer del Cardenal Vives i Tutó, 2-16, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3873149,
@@ -661,26 +541,19 @@
          "photos" : [
             {
                "height" : 1817,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/110611571252433654035/photos\"\u003eIl Memnone\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAmfATPmXVR_0zOppsRht55jOSGxTlS1j3oHs2RWKln-qErorbyNER3KUPJcWrOt6MgETd_0xJ3JFrLnMFZF5IebBV6Y6h6DzrasTAB85TRVn9mqYbG3hsDOkHFeiIuLIaEhBx8zxIci_NZRVQWGQ0t6FPGhQrGkA3J5MrCmCCjHw7wvvb4EM5rg",
                "width" : 4000
             }
          ],
          "place_id" : "ChIJEwGy246ipBIRbGqhDcAMtLo",
-         "plus_code" : {
-            "compound_code" : "95P5+W7 Barcelona, Spain",
-            "global_code" : "8FH495P5+W7"
-         },
          "rating" : 4.5,
          "reference" : "ChIJEwGy246ipBIRbGqhDcAMtLo",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 11,
          "vicinity" : "Carrer d'Aragó, 181, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4007792,
@@ -703,32 +576,19 @@
          "photos" : [
             {
                "height" : 2448,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105542706953925396801/photos\"\u003eNúria Bonet\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAmEvu1cFdf96KucIkzuaTFTysUq3t_wLs6TUOzgWVSU5wv-_LHrFl31Pr3fYVjadXstL1ETEIcaQ6bmrp2oK5qgJqcAgpXxn1HyKVWaPjRWzwgWMQApsHG5XETTHFgd9uEhDryio_9PuJa2I0M-nGjqwYGhQfD0qsBFxbRTouprkGNN-h5mG1Rw",
                "width" : 3264
             }
          ],
          "place_id" : "ChIJZwDpP0eYpBIREdPz4S3OEqQ",
-         "plus_code" : {
-            "compound_code" : "C428+8R Barcelona, Spain",
-            "global_code" : "8FH4C428+8R"
-         },
          "rating" : 4.3,
          "reference" : "ChIJZwDpP0eYpBIREdPz4S3OEqQ",
-         "scope" : "GOOGLE",
-         "types" : [
-            "school",
-            "church",
-            "place_of_worship",
-            "point_of_interest",
-            "establishment"
-         ],
+         "type": "church",
          "user_ratings_total" : 82,
          "vicinity" : "Carrer del Sagrat Cor, 25, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3848849,
@@ -748,32 +608,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "9ff73adcd3f7a9bd4d787b2ff812941643f82a8f",
          "name" : "Iglesia Adventista del Séptimo Día - Tallers",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/117397059916873030936/photos\"\u003eAttique Hashmi\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAICaph9fBI3hSppmqNgfGOveZDdX8s5qGXw9aCdBxjCqTKcxHOHgEcSR-tWHm_WJRVkN4B1jscITcwnu0HR0nxxdJEIeWYYAUYAYeZP6UavchSURMbY6j-j2VyLtL_MsnEhDPFTtZ6EEV42_D9YlcsZ_QGhQ3sd-q0F7HJqmptru7XeyUSUg_4A",
                "width" : 4000
             }
          ],
          "place_id" : "ChIJqTN6FPSipBIRfYpPCKMDQ5E",
-         "plus_code" : {
-            "compound_code" : "95M9+X9 Barcelona, Spain",
-            "global_code" : "8FH495M9+X9"
-         },
          "rating" : 4.6,
          "reference" : "ChIJqTN6FPSipBIRfYpPCKMDQ5E",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 18,
          "vicinity" : "Carrer dels Tallers, 26, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.38596799999999,
@@ -793,32 +643,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/worship_general-71.png",
          "id" : "40e8eb38808c7c6e68ee459ef635c446adcdd563",
          "name" : "Església Adventista del Seté Dia - Urgell",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 3542,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/114118451392288609524/photos\"\u003ePako Valera\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAziapHTphqgIlNlP84JPUJMtcvjclgTz9OulCpNUdbrCq2ITG9TcJI21tmjYtY7iS-lLn3lwgJgr_CB9cuoELI7Dfi8iELbldB3UwzIg8NhFDdfUZIgOKa8mL4v8ERfzYEhB4A0M4DLN92sBZBHFXB1QKGhSkOf8v24r8oH5oyOVLGjsbEdZyXA",
                "width" : 4802
             }
          ],
          "place_id" : "ChIJq3VadoaipBIRCfSxS9DYDfw",
-         "plus_code" : {
-            "compound_code" : "95P3+96 Barcelona, Spain",
-            "global_code" : "8FH495P3+96"
-         },
          "rating" : 4.9,
          "reference" : "ChIJq3VadoaipBIRCfSxS9DYDfw",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 13,
          "vicinity" : "Carrer del Comte d'Urgell, 133, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.413961,
@@ -841,24 +681,15 @@
          "photos" : [
             {
                "height" : 3264,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101271985343949934642/photos\"\u003eJavier Prieto Sánchez\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA1HLBEcZmtu9RekRE5-TfCq2jaqAfBSOhtk4TUBXBU9xAEMLjb9DcB9-fCAOlH5Ut0XT2zzF7habM0iYdonQLLVmFBl-VPBZNOqX2gPgL75J4Ai9lMrElQbF0bMRitOipEhD1GXgRa3xjRy-2jqqykw6zGhTB95tW833xBKL6wMyZAvq2RWy6Dw",
                "width" : 1836
             }
          ],
          "place_id" : "ChIJh8V0V7aipBIRL_3UAeFELqw",
-         "plus_code" : {
-            "compound_code" : "C577+H2 Barcelona, Spain",
-            "global_code" : "8FH4C577+H2"
-         },
          "rating" : 4.5,
          "reference" : "ChIJh8V0V7aipBIRL_3UAeFELqw",
-         "scope" : "GOOGLE",
-         "types" : [ "church", "place_of_worship", "point_of_interest", "establishment" ],
+         "type": "church",
          "user_ratings_total" : 24,
          "vicinity" : "Avinguda de la Mare de Déu de Montserrat, 34, Barcelona"
       }
    ]
-}

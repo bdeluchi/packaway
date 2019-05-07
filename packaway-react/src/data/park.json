@@ -1,8 +1,6 @@
-{
-   "html_attributions" : [],
-   "next_page_token" : "CqQCGwEAABjhiMJintB-tswT4Usm-bWPOY5_qChLhcK35WuTMk0MdwwOQoQjeGMevt7ZduJ8xntER2yRUOEh-pn4voFr-Q8gvnKBYyfKO_vc-gFWY4tVULMAKnQNx5xyRbewJmEUMuhAyaxb0y9Jhm0H5NrD-jhGGi3E-uOPTGi9VK9n-mFUk8ecbjqNbmTarfgBk5lrq7akDedN-P_r8XXesOlVvRK-WT-eewtg_POQfoujaz9OaTjzLZPux8TIagVnkUGMUHJP-kmZS_8BRstO6zWiRhUcN4WHg7DlEOuTQN2wqBni1L-AivWwaa8fZ-WXzxLn1clbOMD7eOtGo2CBTGw9lXBA0_JrBSmweAW0kBA1ExVVsJiJbOw4LnlPoUA1R18awxIQT_Vmn4Qd2b2pJZV1FOmgrhoUMafwL-0DRs5eZMrgY8lhQd5bX8g",
-   "results" : [
+[
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.41449480000001,
@@ -22,32 +20,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "625e9a74fefad95d34db76fd97c4f256a66ac970",
          "name" : "Park Güell",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 960,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/115169323820956742012/photos\"\u003ecarmela cardillo\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAADaJiWsiUajd3DXAEnXvzz0AFKbunZSehCE7KaWcmqwqZ8Kw-t5JlNkvY198rPPqBtqcafRAEE9-yvPeZW2fGFHZEIDxgdpnnAj1_ZenUWV9hvkDRk98VcdKYWVlNBWnjEhCc6XSyIHgBTu0y3ZBzEYz7GhQpBzAH6RaIVR2u-Q4dQB7nSwd-hQ",
                "width" : 1600
             }
          ],
          "place_id" : "ChIJq0HUUq6ipBIRWM6qGqALmok",
-         "plus_code" : {
-            "compound_code" : "C573+Q3 Barcelona, Spain",
-            "global_code" : "8FH4C573+Q3"
-         },
          "rating" : 4.4,
          "reference" : "ChIJq0HUUq6ipBIRWM6qGqALmok",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 71547,
          "vicinity" : "Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3780869,
@@ -67,32 +55,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "3abd00512b36677b58d02f5ca24fc3a89934a1c0",
          "name" : "Joan Miró park",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 4032,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/103914404974796662970/photos\"\u003efedele zamboni\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA6emQhC5cQsbjB0c0Q5-aRomantalnaCQ9vem88jwAw0QpNKcRhlb2o3c78ZqWund4M7yxxDPaohjAlkp2w0AWLlXlctU_7PRw_8u9rwW0KcuTmtbBmgLtKITpFUAaUZZEhCa9Sr5u2AQlU0umyelUCJWGhTqGYRY_YK32cUfJ1bpLEQ70ql_aw",
                "width" : 3016
             }
          ],
          "place_id" : "ChIJ-0mz736ipBIR8EJRH-H6AA8",
-         "plus_code" : {
-            "compound_code" : "94HX+66 Barcelona, Spain",
-            "global_code" : "8FH494HX+66"
-         },
          "rating" : 4,
          "reference" : "ChIJ-0mz736ipBIR8EJRH-H6AA8",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 3120,
          "vicinity" : "Carrer d'Aragó, 2, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.388123,
@@ -115,26 +93,19 @@
          "photos" : [
             {
                "height" : 2268,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/114679198034228722697/photos\"\u003eStandart Kitasuki\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAto-5DlR58WPnIDPP4J8DirI2BapKr-QLj5OqGHs_724MPSe_PlC6LRqJ67HRjo0YoFF0Jj1X44zd43IxZwJczhMP7Edmo7dO8k7-ntcZ6mRqdm1stI37JPBUjpBf1R2BEhAU0yICkSUebei-9nMaW-QsGhRFEIvnwxuHK4ineH2L8HxggVCEpQ",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJ4QmWQ_2ipBIRcD1a5hhhOEI",
-         "plus_code" : {
-            "compound_code" : "95QP+6C Barcelona, Spain",
-            "global_code" : "8FH495QP+6C"
-         },
          "rating" : 4.5,
          "reference" : "ChIJ4QmWQ_2ipBIRcD1a5hhhOEI",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 27002,
          "vicinity" : "Passeig de Picasso, 21, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.38908730000001,
@@ -154,32 +125,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "e0b94acb087f25d9811534a9b95db65e5cff3c09",
          "name" : "Plaça Letamendi",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1920,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/105188972623790768677/photos\"\u003eFermin Serena Hortas\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA69ihjosLWAReeq2OvPhbQOmVy9JpQ8NsQNwNs-l8MIqL3fc_hFBtMlyZrXSpan8yr1RK_KDol8Z6KQORyFM_scCIDUwCgYe0eFlBe_mayOg4USgDvwKYxPeCRmgQCvmuEhBJs1mxtJml70ERhffLo6sKGhSY0GH5lxYPevugoQlxf1xTSLe06A",
                "width" : 1080
             }
          ],
          "place_id" : "ChIJlWYAvI2ipBIR5l56DV6tljQ",
-         "plus_code" : {
-            "compound_code" : "95Q6+J7 Barcelona, Spain",
-            "global_code" : "8FH495Q6+J7"
-         },
          "rating" : 3.7,
          "reference" : "ChIJlWYAvI2ipBIR5l56DV6tljQ",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 374,
          "vicinity" : "Plaça del Doctor Letamendi, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3933703,
@@ -199,32 +160,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "31644dc6d70fa504c565786b749c1f57057327c3",
          "name" : "Jardins de Joan Vinyoli",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/101954180153940003154/photos\"\u003eenric gari\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAkyjEPlt_CdIakahjc6rNOyBSbXBqzFo2Ik878qjbC6dQw0u42We20R-ytF0vAo7dkYlo1g0xj3_azn2Y6rufpjb44GC_VW0LwUvIIlNruXZd5-4zmb5geptuRs__xn74EhCAhGY00FH_r6zkVU7roPrCGhSY40AT0SeYhv0e9WtZysc_3xEU1A",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJXSOf7miYpBIRaeZPYx56TPU",
-         "plus_code" : {
-            "compound_code" : "94VH+89 Barcelona, Spain",
-            "global_code" : "8FH494VH+89"
-         },
          "rating" : 3.7,
          "reference" : "ChIJXSOf7miYpBIRaeZPYx56TPU",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 38,
          "vicinity" : "Pg Sant Joan Bosco, 39, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4194667,
@@ -244,32 +195,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "e8cdb402ace7be4626798c70e16d74d24408a047",
          "name" : "Parc del Guinardó",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3168,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/117713671533712547760/photos\"\u003eRobert Jacobsen\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAwSZXF5uFnRISw-uhsIQey9biqGSQ0muqnwrEPVAc0Q-Hh9uOM6aR7g9YBRKHIssGYaDxRPlNKPTNZjgiBcO4jPCjyv83o4TAg5al59_cfEwjAVt6ptkWHcmV2IPazsb4EhBTiuVH-i-OeDF4VqovQPhKGhTGcIP0si_sOcXf0qEPLcgRg8dhag",
                "width" : 4752
             }
          ],
          "place_id" : "ChIJDzyZ6MyipBIRN8o_qdw8A0g",
-         "plus_code" : {
-            "compound_code" : "C598+QW Barcelona, Spain",
-            "global_code" : "8FH4C598+QW"
-         },
          "rating" : 4.3,
          "reference" : "ChIJDzyZ6MyipBIRN8o_qdw8A0g",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 2691,
          "vicinity" : "Spain"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4025601,
@@ -290,23 +231,12 @@
          "id" : "8130dc214c0d9b9d247762bbc6f72a193eb779bf",
          "name" : "MisAutocaravanas",
          "place_id" : "ChIJHY49tD2jpBIR8nH-TOhlpLk",
-         "plus_code" : {
-            "compound_code" : "C53X+24 Barcelona, Spain",
-            "global_code" : "8FH4C53X+24"
-         },
          "reference" : "ChIJHY49tD2jpBIR8nH-TOhlpLk",
-         "scope" : "GOOGLE",
-         "types" : [
-            "car_rental",
-            "campground",
-            "park",
-            "lodging",
-            "point_of_interest",
-            "establishment"
-         ],
+         "type": "park",
          "vicinity" : "Carrer de Pere IV, 174, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4200543,
@@ -326,32 +256,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "c32385b9e7ed1cbc107789b36fcad1cc472e50fc",
          "name" : "Parc de Sant Martí",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1366,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/113534096261597973982/photos\"\u003eJesús F. Feijóo\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAesZ0e1mYQ10b_jA5rU2lebfK_wwuhgJckRXURjyuwykbvt-Z73oq0tLxFl4HwjAbuSokl910dfSTSjoJ5aOuYSa028xJueX8n0Egh5_jwKXb4ooIAHOazK9ys3xlyFDFEhCR433bLoU97hck3w7TdwDFGhR-3RjjM8AUjFTcqeucTo9guXhlxA",
                "width" : 2048
             }
          ],
          "place_id" : "ChIJXa4QtjKjpBIRM1z2Kx5MHdo",
-         "plus_code" : {
-            "compound_code" : "C5CX+22 Barcelona, Spain",
-            "global_code" : "8FH4C5CX+22"
-         },
          "rating" : 4,
          "reference" : "ChIJXa4QtjKjpBIRM1z2Kx5MHdo",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 1054,
          "vicinity" : "C/ Menorca, 64, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3945509,
@@ -371,32 +291,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "2d2e649fee31775ee5948b59a73df1a3b60d1059",
          "name" : "Turó Parc",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1365,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/116405573644619419366/photos\"\u003eliumeta ghorbel\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAi9zWxKbCc9ot_9Gx1AKDkDrAQyNshECtyuISNvMIk_AQMTJfC5OBw7BYvS0t0fQUAaoa2S-I0FzFkq-MlyNMJF1Pp77fvwyKcRQa0bN63TQ-hDdAbrk6yI3Wi956hUVPEhDc5rGy0n43j4t3sW68xtDNGhR4l0zM2Ng3gyMUMxHIRkVpXVhoLQ",
                "width" : 2048
             }
          ],
          "place_id" : "ChIJJ9lOz3aYpBIRQD1RH-H6AA8",
-         "plus_code" : {
-            "compound_code" : "94VR+R7 Barcelona, Spain",
-            "global_code" : "8FH494VR+R7"
-         },
          "rating" : 4.1,
          "reference" : "ChIJJ9lOz3aYpBIRQD1RH-H6AA8",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 1594,
          "vicinity" : "Av de Pau Casals, 19, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.39320649999999,
@@ -416,32 +326,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "0465f33549af6ea951cf381659d24be829f773ce",
          "name" : "Parc de l'Estació del Nord",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/112258645232215524070/photos\"\u003eKatarina Vukasinovic\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAnLexxb8437Ycc_CTMiAyhPPmNtgFufLdz6g97jOpjkiM7-h84qblVrW0b9j6NcWTH-Epx1Ylg3M3NJCMev__BsT5ttkc0ncJt2tDeIjJQVo9J9wEnt7MjzfKzI2xBkrDEhArHR1PU-f15bTD7v4Po1Z3GhQbel3MnzcK-wQxS_U7Y0My1f0Rvg",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJ9S-O9OKipBIRb-z20hucrYo",
-         "plus_code" : {
-            "compound_code" : "95VM+7C Barcelona, Spain",
-            "global_code" : "8FH495VM+7C"
-         },
          "rating" : 4,
          "reference" : "ChIJ9S-O9OKipBIRb-z20hucrYo",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 1501,
          "vicinity" : "Parque de la Estacion del Norte, s/n, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4182102,
@@ -461,32 +361,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "5d2dd9cd585f4cda9d1165a304ded2e439fb2f03",
          "name" : "Parc de la Creueta del Coll",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1836,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/100063612156998926407/photos\"\u003eTomas Vidal\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAuHTZuQa4BR-N6GhviGMKKjT0pKtW_j0Ja8FsMR3YoVGUVsrqqfwF1a5HgpjSpT0z3ud2ZLdeXqTRo3KEiw0Dfa06qHOEMNVZLdm9iSlSTA-NI6_ZcxVomE01LMzRRg5VEhCf6DMGWncS_obkEPrnQAmcGhQ1eolfWEWQn0TUHGdsSmy0iRM2AQ",
                "width" : 3264
             }
          ],
          "place_id" : "ChIJZYks8aqipBIR8D5RH-H6AA8",
-         "plus_code" : {
-            "compound_code" : "C49W+7C Barcelona, Spain",
-            "global_code" : "8FH4C49W+7C"
-         },
          "rating" : 4.1,
          "reference" : "ChIJZYks8aqipBIR8D5RH-H6AA8",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 1545,
          "vicinity" : "Passeig de la Mare de Déu del Coll, 77, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3950548,
@@ -509,26 +399,19 @@
          "photos" : [
             {
                "height" : 4032,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/112320158061112109153/photos\"\u003eHugo Hernandez\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAz_nzIAfJEoRVwc7hasxSC2Q4IDhEhzd_V6O1PfRx3qGRW1LbjqlBHwHzo8vHymG-in83FlYDayvIcEtwsrclD-mgJUbA15_KCZPav3QNZNi8aTGW9grwS15QvpYALu2-EhBA0bD3uXSk_wz_ymk2cGfAGhT5Eq7ngmoMzkYPWamriCrtHbK39g",
                "width" : 3024
             }
          ],
          "place_id" : "ChIJRdyqZeyipBIR3b21uhed1YA",
-         "plus_code" : {
-            "compound_code" : "95W9+22 Barcelona, Spain",
-            "global_code" : "8FH495W9+22"
-         },
          "rating" : 3.8,
          "reference" : "ChIJRdyqZeyipBIR3b21uhed1YA",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 50,
          "vicinity" : "Passatge del Rector Oliveras, 10, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3958801,
@@ -548,32 +431,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "107eb2de1f283c907c364c538aa94c392356b2b1",
          "name" : "Jardí del Palau Robert",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/117866030166636511104/photos\"\u003eJose Luis Diaz\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAgld-4bnYNBix6qBnO3jy42wlh0U8tB5u1WXCmEOy9FN2Wmk5bSTD2YMxWOirfef_Duwz1EHRLyU0ktdU4MjuXwJxdls_TObr2jL5PTAvOMqP_Id-JcJIucWEJ0zquhgLEhBWBtqahCsN54yw_i8-mV6-GhQJNAqz7tMvoPu3fN1MU6o4srrdBQ",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJMVBETJGipBIRNxcjBZt8OBQ",
-         "plus_code" : {
-            "compound_code" : "95W5+9H Barcelona, Spain",
-            "global_code" : "8FH495W5+9H"
-         },
          "rating" : 4.2,
          "reference" : "ChIJMVBETJGipBIRNxcjBZt8OBQ",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 551,
          "vicinity" : "Passeig de Gràcia, 107, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3774138,
@@ -593,32 +466,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "71e3a6b0edf28b84b98b9a3e9e2af7bf00848725",
          "name" : "Parc de l'Espanya Industrial",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 2904,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/111750878159349910352/photos\"\u003eJacques Provost\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAXX_DaaTb_TiFHJtm_ZSBwHqhVHRppmPZQWoSLUJG1-iy0DKCLkzUuYNj8-PGkKxxr-McPDii6YBjuldlrSAL4MmxPuXSIVxZm56SI1P4Y3fvYkKhg6l8SkkajHeKn2X_EhAmPSF9GDQwNrRKafFEZkk-GhQd_SR_CU2I9bKrpoWhiNMw8HNl_w",
                "width" : 4352
             }
          ],
          "place_id" : "ChIJG_VbN4GYpBIRwEJRH-H6AA8",
-         "plus_code" : {
-            "compound_code" : "94GR+X5 Barcelona, Spain",
-            "global_code" : "8FH494GR+X5"
-         },
          "rating" : 4,
          "reference" : "ChIJG_VbN4GYpBIRwEJRH-H6AA8",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 2775,
          "vicinity" : "Àvila ES, Carrer de Muntadas, 37, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4328322,
@@ -638,32 +501,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "a7799c7b9dbefd7089e0cf9e57c614ec320eeea9",
          "name" : "Parc del Turó de la Peira",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 3024,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/114399096185651689243/photos\"\u003eAndrew Xue\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAHqxH7gU350-8PG2iPsKiRC7XKSjPlqPJIC-rLCMC5L0FeLWgdSgppbs_f3JorLobeOGCxnOnAXpi2vJ66P3A5JJggTP9TBPnyZnIu9qgV0zevIbknm7pl5xVo6tepZl6EhAE7yDlSAOTHOyQzM1WYm6FGhSYZ9UDShOvFWkBruUE9cBFWBsmSQ",
                "width" : 4032
             }
          ],
          "place_id" : "ChIJWdWTo0e9pBIR3rRW96tkJsA",
-         "plus_code" : {
-            "compound_code" : "C5M8+44 Barcelona, Spain",
-            "global_code" : "8FH4C5M8+44"
-         },
          "rating" : 4.1,
          "reference" : "ChIJWdWTo0e9pBIR3rRW96tkJsA",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 714,
          "vicinity" : "Spain"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.4300143,
@@ -683,32 +536,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/bar-71.png",
          "id" : "eab8eb09304b036228db0b17850718a589b3b1a8",
          "name" : "Samba Brasil",
-         "opening_hours" : {
-            "open_now" : false
-         },
          "photos" : [
             {
                "height" : 1537,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/116957541128244874532/photos\"\u003eSamba Brasil\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAq4Gt0YHWgMGFBS1TA3HVgO9UKSqhs171yuZd6fNK5khexBOp1Ie9Dgs2a6x1HAOfr1euAJSZd6fqJQadlzdiy_eQ54ZbB5Qu72n0-vo2Vkfu0pjZIE1mOKf1PrIuABt5EhBAlQvL-ovpnXeCYBndGG6iGhSfx-LeVsvl4QSSFYE0UTT3wtazpw",
                "width" : 1538
             }
          ],
          "place_id" : "ChIJx4eNYki9pBIRhb7X0KciA9w",
-         "plus_code" : {
-            "compound_code" : "C5J6+2R Barcelona, Spain",
-            "global_code" : "8FH4C5J6+2R"
-         },
          "rating" : 4.1,
          "reference" : "ChIJx4eNYki9pBIRhb7X0KciA9w",
-         "scope" : "GOOGLE",
-         "types" : [ "bar", "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 981,
          "vicinity" : "Carrer de Santes Creus, 20, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.40803909999999,
@@ -728,32 +571,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "90a5d43feb495be4375ade4a99acb46b97a2206c",
          "name" : "Park el Clot",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 4000,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/109614638702236122066/photos\"\u003eDavid Gonzalez Shannon\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA9WZqtBVWEnR3XzI8IyS9zArmeRBdyCT6RiFFqQ74ugJvM4mRCy92wcu8E_C-nAg41d8tGN5MPkSDFEKV262vXb9ZgMJC9oDj-AUwjv2nI_nNGmhNmmkegckx8Bm11QmDEhC75MRhMq1v2hBq1A5G_FxQGhR40OwrTVBnUoy5M1O1ezeYT_4moA",
                "width" : 6000
             }
          ],
          "place_id" : "ChIJPZJ6OSSjpBIRUERRH-H6AA8",
-         "plus_code" : {
-            "compound_code" : "C55R+64 Barcelona, Spain",
-            "global_code" : "8FH4C55R+64"
-         },
          "rating" : 4.1,
          "reference" : "ChIJPZJ6OSSjpBIRUERRH-H6AA8",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 2013,
          "vicinity" : "Spain"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3825712,
@@ -773,32 +606,22 @@
          "icon" : "https://maps.gstatic.com/mapfiles/place_api/icons/generic_recreational-71.png",
          "id" : "8eb847f95b74ce7b60a982c6337d7450c4f74e2c",
          "name" : "Barceloneta Park",
-         "opening_hours" : {
-            "open_now" : true
-         },
          "photos" : [
             {
                "height" : 1978,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/114054405618234825375/photos\"\u003eThang To\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAD3ioJ1RZeDD-JNE20k_fvBmwBR2Ikf5hNkL4zzsnfJPyepbuNY7-Ed_E8wd-IH05igrAnoKqOqdvdAzJVq0ZQF-cebyGQb2X6_fyJVgPJPoaDc67QG054iNcQ4d7-BsfEhAmqeMne6JU2nh0nzrWOlSSGhTON-yGpK8QskL0lq1sHdooPyWJuA",
                "width" : 2942
             }
          ],
          "place_id" : "ChIJ12cYsQejpBIR4EFRH-H6AA8",
-         "plus_code" : {
-            "compound_code" : "95MV+22 Barcelona, Spain",
-            "global_code" : "8FH495MV+22"
-         },
          "rating" : 4.3,
          "reference" : "ChIJ12cYsQejpBIR4EFRH-H6AA8",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 1435,
          "vicinity" : "Passeig Marítim de la Barceloneta, 15, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.37043619999999,
@@ -821,26 +644,19 @@
          "photos" : [
             {
                "height" : 2240,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/106751850148084451571/photos\"\u003eERIC PERICHON\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAA1q9L2MRWVO9JPRMDILfU63XEDLfCDrk1QRggMOdI44kBQJtLo_DEMaId2on5fQAS10GRXrDtiFCJkM1vxnp92qG41364yFLVpw39fvz4TCql__14Gn5uK9YAvTDOHEScEhDpvm8DWZE_OkHu24fbiLqAGhR-ZVah7yFOJTdAO5AJpwy6-X6PIw",
                "width" : 3968
             }
          ],
          "place_id" : "ChIJF65a1kSipBIR8NF-1ukbNWo",
-         "plus_code" : {
-            "compound_code" : "95CC+5Q Barcelona, Spain",
-            "global_code" : "8FH495CC+5Q"
-         },
          "rating" : 4.4,
          "reference" : "ChIJF65a1kSipBIR8NF-1ukbNWo",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 102,
          "vicinity" : "Carretera de Miramar, 38, Barcelona"
       },
       {
+         "city": "barcelona",
          "geometry" : {
             "location" : {
                "lat" : 41.3783221,
@@ -863,25 +679,15 @@
          "photos" : [
             {
                "height" : 4032,
-               "html_attributions" : [
-                  "\u003ca href=\"https://maps.google.com/maps/contrib/111827635605162790643/photos\"\u003eEloy Guirao López\u003c/a\u003e"
-               ],
                "photo_reference" : "CmRaAAAAs1AVLJoRu9HU3-Rl-0MJ5FiYXfjxxOVK__7UkCjHgsQCO5qxzNdw_A2bMgg-Ja_EKsIEUDt-VNFCPT-DMxJeY1rTKcvmhmwiSW1w5bJrG-TYY9WTw509YSccJDbGk9E0EhARVOMribnm6xUTQEhC6xqQGhQ0nPqLiMJLbCjVB6nuxP1h4bITFg",
                "width" : 3024
             }
          ],
          "place_id" : "ChIJUWxL1VWipBIRNABXZf2sXsU",
-         "plus_code" : {
-            "compound_code" : "95HH+8H Barcelona, Spain",
-            "global_code" : "8FH495HH+8H"
-         },
          "rating" : 4,
          "reference" : "ChIJUWxL1VWipBIRNABXZf2sXsU",
-         "scope" : "GOOGLE",
-         "types" : [ "park", "point_of_interest", "establishment" ],
+         "type": "park",
          "user_ratings_total" : 296,
          "vicinity" : "Passeig de Colom, 19, Barcelona"
       }
-   ],
-   "status" : "OK"
-}
+   ]

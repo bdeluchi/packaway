@@ -14,6 +14,7 @@ function POIItem(props) {
 
   const removeFromCart = () => {
     props.removePoiInfo(poi.id);
+    console.log(poi.id)
   }
 
 

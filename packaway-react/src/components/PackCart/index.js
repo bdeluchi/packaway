@@ -19,7 +19,7 @@ function PackCart(props) {
           <button onClick={() => onCreatePack()}>New pack</button>
           <div>
             {Object.entries(pois).map(([key, value]) => (
-              <PackCartItem poiName={value.name} key={value.id} />
+              <PackCartItem poiName={value.name} key={value.id} id={value.id} />
             ))}
           </div>
         </div>

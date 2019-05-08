@@ -2,27 +2,27 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import PackCart from "../PackCart";
-
+import { withRouter } from "react-router-dom";
 import "./index.scss";
-
 
 class Navbar extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showAboutMenu: false
+      showCart: false
     };
   }
-  
+
   handleHover = () => {
-    this.setState({ showAboutMenu: true });
+    this.setState({ showCart: true });
   };
 
   handleLeave = () => {
-    this.setState({ showAboutMenu: false });
+    this.setState({ showCart: false });
   };
 
   render() {
+    const { pathname } = this.props.location;
     return (
       <nav>
         <ul className="nav__menu">
@@ -32,17 +32,25 @@ class Navbar extends Component {
           <li className="nav-myaccount nav__menu-item">
             <Dropdown />
           </li>
-          <li className="nav-mypack nav__menu-item" onMouseLeave={this.handleLeave}>
-            <div className="submenu-container" onMouseEnter={this.handleHover}>
-              My Pack
-              {this.state.showAboutMenu && <PackCart />}
-            </div>
-           
-          </li>
+
+          {pathname.includes("/poisearch") && (
+            <li
+              className="nav-mypack nav__menu-item"
+              onMouseLeave={this.handleLeave}
+            >
+              <div
+                className="submenu-container"
+                onMouseEnter={this.handleHover}
+              >
+                My Pack
+                {this.state.showCart && <PackCart />}
+              </div>
+            </li>
+          )}
         </ul>
       </nav>
     );
   }
 }
 
-export default Navbar;
+export default withRouter(Navbar);

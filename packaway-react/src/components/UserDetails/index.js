@@ -63,11 +63,9 @@ class UserDetails extends Component {
       lastname,
       imageUrl
     }
-    console.log('updateuser',updateUser)
     const id = uid;
     const success = DataService.updateDetail('users', id, updateUser);
     if(success) {
-      console.log("updated!!")
       this.props.setUserInfo(updateUser);
     }
 

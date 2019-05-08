@@ -28,7 +28,6 @@ class Dropdown extends Component {
 
   componentDidMount() {
     AuthService.registerAuthObserver(async (user) => {
-      console.log("dropdown")
       if (user) {
         console.log('User is signed in')
         const userDetail = await DataService.getObjectDetail('users', user.uid);

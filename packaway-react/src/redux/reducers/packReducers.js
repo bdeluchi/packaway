@@ -3,7 +3,6 @@ const defaultState = {
 };
 
 export const packReducer = (state = defaultState, action) => {
-
   if (action.type === "SET_PACK") {
     return {
       ...state,

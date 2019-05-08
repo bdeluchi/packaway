@@ -21,17 +21,25 @@ function PackCart(props) {
           userId: userInfo.uid,
           days: []
         });
-        props.setCurrentPack(packId);
+        if (packId) {
+          props.setCurrentPack(packId);
+        }
+        
       })();
       props.history.push("/packs/edit");
     } else {
-      // props.history.push("/login");
+      props.history.push("/login");
     }
   };
 
   const handlePackUpdate = () => {
-    console.log("updatey matey");
-    //call data > updatePack
+    DataService.updatePack(currentPack, {
+      name: "Enter pack name",
+      poiList: pois,
+      // city: pois[Object.keys[0]].city,
+      userId: userInfo.uid,
+      days: []
+    })
   };
 
   return (

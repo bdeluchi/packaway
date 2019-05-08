@@ -114,4 +114,20 @@ export default class DataService {
     }
     return pack;
   }
+
+  static async updatePack(packId, data) {
+    const db = firebase.firestore();
+    let success = true;
+
+    try {
+      await db
+        .collection("packs")
+        .doc(packId)
+        .set(data);
+    } catch (err) {
+      success = true;
+      console.log("TCL: DataService -> staticupdatedDetail -> err", err);
+    }
+    return success;
+  }
 }

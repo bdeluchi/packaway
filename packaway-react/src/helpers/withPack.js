@@ -6,7 +6,7 @@ import {setCurrentPack} from '../redux/actions/packActions'
 function withPack(WrappedComponent){
   const NewComponent = (props) => {
     const currentPack = props;
-    return <WrappedComponent poiInfo={currentPack} {...props} />
+    return <WrappedComponent packInfo={currentPack} {...props} />
   }
 
   return connect(mapStateToProps, mapDispatchToProps)(NewComponent)
@@ -14,7 +14,7 @@ function withPack(WrappedComponent){
 
 const mapStateToProps = (state) => {
   return {
-    currentPack: state.poiReducer.currentPack
+    currentPack: state.packReducer.currentPack
   }
 }
 

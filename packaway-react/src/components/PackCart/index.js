@@ -34,11 +34,11 @@ function PackCart(props) {
 
   const handlePackUpdate = () => {
     DataService.updatePack(currentPack, {
-      name: "Enter pack name",
-      poiList: pois,
+      // name: "Enter pack name",
+      poiList: pois
       // city: pois[Object.keys[0]].city,
-      userId: userInfo.uid,
-      days: []
+      // userId: userInfo.uid,
+      // days: []
     })
   };
 

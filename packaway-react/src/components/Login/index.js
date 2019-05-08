@@ -37,7 +37,7 @@ export default class Login extends Component {
 
     if (!email || !password) {
       this.setState({
-        errorMessage: "Email y password necesarios para login... no?? "
+        errorMessage: "Please enter email and password."
       });
       return;
     }

@@ -1,5 +1,6 @@
 import * as firebase from "firebase";
 
+
 export default class DataService {
   //user functions
   static async addObjectWithId(collection, objId, data) {
@@ -100,7 +101,6 @@ export default class DataService {
   static async getPack(packId) {
     const db = firebase.firestore();
     let pack = null;
-    console.log("packid in data", packId)
     try {
       const packRef = await db
         .collection("packs")
@@ -116,6 +116,7 @@ export default class DataService {
   }
 
   static async updatePack(packId, data) {
+    console.log("datafrom",data)
     const db = firebase.firestore();
     let success = true;
 
@@ -123,7 +124,7 @@ export default class DataService {
       await db
         .collection("packs")
         .doc(packId)
-        .set(data);
+        .set(data, { merge: true });
     } catch (err) {
       success = true;
       console.log("TCL: DataService -> staticupdatedDetail -> err", err);

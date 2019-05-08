@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import withUser from "../../helpers/withUser"
+import withPOI from "../../helpers/withPOI"
 import AuthService from '../../services/auth';
 import DataService from '../../services/data';
 
@@ -48,6 +49,8 @@ class Dropdown extends Component {
 
   logout = () => {
     AuthService.logout();
+    //tengo que cambiar el estado del reducer de pois aquí.
+    // this.props.setPoiInfo();
     this.props.setUserInfo(null);
   }
 
@@ -86,4 +89,4 @@ class Dropdown extends Component {
   }
 }
 
-export default withUser(Dropdown);
+export default withPOI(withUser(Dropdown));

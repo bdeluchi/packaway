@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import withPack from "../../helpers/withPack";
 import DataService from "../../services/data";
 import POIListItem from "../POIListItem";
+import InfoPanel from "../InfoPanel/InfoPanel";
 
 class MyPOIList extends Component {
   constructor(props) {
@@ -32,16 +33,23 @@ class MyPOIList extends Component {
 
   render() {
     const { pack } = this.state;
-    pack && console.log("this my pack");
     return (
       <div>
-        <h1>My list of POIs</h1>
-        <div>
-          {pack &&
-            Object.entries(pack.poiList).map(([key, value]) => (
-              <POIListItem key={value.id} poiName={value.name} poiId={value.id} />
-            ))}
-        </div>
+        {pack && (
+          <div>
+            <h1>My list of POIs</h1>
+            <InfoPanel packName={pack.name} />
+            <div>
+              {Object.entries(pack.poiList).map(([key, value]) => (
+                <POIListItem
+                  key={value.id}
+                  poiName={value.name}
+                  poiId={value.id}
+                />
+              ))}
+            </div>
+          </div>
+        )}
       </div>
     );
   }

@@ -1,5 +1,6 @@
 nav {
   background-color: #36c387;
+
   .nav__menu {
     list-style: none;
     line-height: 50px;
@@ -11,6 +12,13 @@ nav {
       position: absolute;
       z-index: 1;
       min-width: 160px;
+      background-color: #36c387;
+
+      .pack-icon {
+        width: 30px;
+        height: auto;
+        cursor: pointer;
+      }
     }
 
     .nav__menu-item {

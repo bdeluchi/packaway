@@ -42,7 +42,7 @@ class Navbar extends Component {
                 className="submenu-container"
                 onMouseEnter={this.handleHover}
               >
-                My Pack
+                <img className="pack-icon" src={process.env.PUBLIC_URL + '/assets/luggage.svg'} alt="pack cart icon" />
                 {this.state.showCart && <PackCart />}
               </div>
             </li>

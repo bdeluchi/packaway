@@ -29,7 +29,7 @@ class CategoryPanel extends Component {
   }
 
   render() {
-    console.log(this.props.poiFilters)
+    // console.log(this.props.poiFilters)
   return (
     <div className="category-panel">
       <h3>Categories</h3>

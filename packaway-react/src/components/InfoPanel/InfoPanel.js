@@ -32,6 +32,14 @@ class InfoPanel extends Component {
     DataService.updatePack(currentPack, name);
   }
 
+  createDayOptions = () => {
+    let options = [];
+    for (let i = 1; i <= 30; i++) {
+      options.push(<option value={i} key={i}>{i}</option>)
+    }
+    return options;
+  }
+
   //function to save updates de FB
 
   render() {
@@ -50,16 +58,7 @@ class InfoPanel extends Component {
             <label>
               Days: 
               <select name="day-input" onChange={this.handleDropdownChange}>
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-                <option value="7">7</option>
-                <option value="8">8</option>
-                <option value="9">9</option>
-                <option value="10">10</option>
+                {this.createDayOptions()}
               </select>
             </label>
             <button>Save</button>

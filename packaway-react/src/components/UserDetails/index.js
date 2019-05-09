@@ -56,9 +56,8 @@ class UserDetails extends Component {
 
   onSubmitForm = e => {
     e.preventDefault();
-    const { email, name, lastname, uid, imageUrl } = this.state.user;
+    const { name, lastname, uid, imageUrl } = this.state.user;
     const updateUser = {
-      email,
       name,
       lastname,
       imageUrl
@@ -88,13 +87,6 @@ class UserDetails extends Component {
         {user && (
           <div>
             <form onSubmit={this.onSubmitForm}>
-              <label>Email:</label>
-              <input
-                type="email"
-                value={user.email || ''}
-                name="email"
-                onChange={this.onChangeInput}
-              />
               <br />
               <label>Name:</label>
               <input

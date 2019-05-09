@@ -18,6 +18,8 @@ export const poiReducer = (state = defaultState, action = {}) => {
             return obj;
           }, {})
       };
+
+      //return array vacío
     }
     default: {
       return state;

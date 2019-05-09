@@ -29,10 +29,16 @@ export default class SearchPanel extends Component {
     
   // }
 
-  async getData() {
+  nextData = () => {
+    const {queryLastVisible} = this.state;
+    this.getData(queryLastVisible)
+  }
+  
+  async getData(lastVisible) {
     this.setState({loading: true});
-    const pois = await DataService.getPOI("pois");
-    this.setState({pois, loading: false})
+    const {results, queryLastVisible} = await DataService.getPOIPaginated(lastVisible);
+    console.log("grtdata",queryLastVisible)
+    this.setState({pois: results, queryLastVisible, loading: false})
   }
 
   async componentDidMount() {
@@ -62,6 +68,7 @@ export default class SearchPanel extends Component {
               <POIItem poi={poi} key={poi.id} />
             ))}
           </div>}
+          <button onClick={this.nextData}>Next</button>
         </div>
         {/* <button onClick={this.handleClick()}>add to db</button> */}
       </div>

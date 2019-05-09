@@ -79,16 +79,55 @@ export default class DataService {
 
     return results;
   }
+  
+//pagination
+static async getPOIPaginated(lastVisible) {
+  const db = firebase.firestore();
+  let results = [];
+  let queryLastVisible;
+  try {
+    let query = db.collection("pois").orderBy("name")
+    if (lastVisible) {
+      query = query.startAfter(lastVisible)
+      console.log(lastVisible)
+    }
+    query = query.limit(5)
+    const querySnapshot = await query.get()
+    console.log("size",querySnapshot.size)
+    
+    let i = 0;
+    querySnapshot.forEach((doc) => {
+      const objectResult = doc.data();
+      objectResult.id = doc.id;
+      results.push(objectResult);
+      console.log(i,"bla",querySnapshot.size)
+      if (i === querySnapshot.size-1) {
+        queryLastVisible = doc;
+      }
+      i++
+    });
+  } catch (err) {
+    console.log("TCL: DataService -> getPOI -> err", err);
+  }
+
+  return {results, queryLastVisible};
+}
 
   //pack functions
   static async addPack(data) {
     const db = firebase.firestore();
     let docRef;
     try {
+      const user = await DataService.getObjectDetail("users", data.userId);
+
       docRef = await db.collection("packs").add(data);
       if (docRef && docRef.id) {
+        if (!user.packs) {
+          user.packs = []
+        }
+        user.packs.push(docRef.id)
         await DataService.updateDetail("users", data.userId, {
-          packs: docRef.id
+          packs: user.packs
         });
       }
     } catch (err) {

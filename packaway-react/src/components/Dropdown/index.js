@@ -3,7 +3,6 @@ import { Link } from "react-router-dom";
 import withUser from "../../helpers/withUser"
 import withPOI from "../../helpers/withPOI"
 import AuthService from '../../services/auth';
-import DataService from '../../services/data';
 
 class Dropdown extends Component {
   constructor(props) {
@@ -27,24 +26,7 @@ class Dropdown extends Component {
     });
   };
 
-  componentDidMount() {
-    AuthService.registerAuthObserver(async (user) => {
-      if (user) {
-        console.log('User is signed in')
-        const userDetail = await DataService.getObjectDetail('users', user.uid);
-
-        if(userDetail) {
-          this.props.setUserInfo(userDetail)
-        } else {
-          console.log("ESPERAAAAAA me estoy registrando");
-        }
-        
-      } else {
-        console.log('User is signed out')
-      }
-      this.setState({loading: false})
-    })
-  }
+  
 
 
   logout = () => {

@@ -12,3 +12,6 @@ export const removePoi = (id) => {
     type: 'REMOVE_POI'
   }
 }
+
+// export reset blabañ
+//solo es un type

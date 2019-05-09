@@ -6,8 +6,8 @@ export default class LoginPage extends Component {
   render() {
     return (
       <div>
-        {/* <SignUp history={this.props.history}/> */}
-        <Login history={this.props.history}/>
+        <SignUp />
+        <Login />
       </div>
     );
   }

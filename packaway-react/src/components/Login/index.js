@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import AuthService from "../../services/auth";
+import { withRouter } from "react-router-dom";
 
-export default class Login extends Component {
+class Login extends Component {
   constructor(props) {
     super(props);
 
@@ -83,3 +84,5 @@ export default class Login extends Component {
     );
   }
 }
+
+export default withRouter(Login)

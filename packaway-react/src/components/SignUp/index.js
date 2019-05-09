@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import AuthService from "../../services/auth"
 import DataService from "../../services/data"
+import { withRouter } from "react-router-dom";
 
-export default class SignUp extends Component {
+class SignUp extends Component {
   constructor(props) {
     super(props);
 
@@ -23,21 +24,26 @@ export default class SignUp extends Component {
 
   componentDidMount() {
     AuthService.registerAuthObserver(user => {
+
       if (user) {
         const { name, lastname, email } = this.state;
-        const success = DataService.addObjectWithId("users", user.uid, {
-          name,
-          lastname,
-          email,
-          uid: user.uid
-        });
-
-        if(success) {
-          this.props.history.push('/')
+        if (name && lastname && email) {
+          const success = DataService.addObjectWithId("users", user.uid, {
+            name,
+            lastname,
+            email,
+            uid: user.uid
+          });
+  
+          if(success) {
+            this.props.history.push('/')
+          }
+        } else {
+          console.log("ojo, no hay usuario")
         }
-      } else {
-        console.log("ojo, no hay usuario")
-      }
+
+        }
+
     });
   }
 
@@ -101,3 +107,5 @@ export default class SignUp extends Component {
     );
   }
 }
+
+export default withRouter(SignUp)

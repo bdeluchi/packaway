@@ -37,8 +37,8 @@ class MyPOIList extends Component {
       <div>
         {pack && (
           <div>
-            <h1>My list of POIs</h1>
             <InfoPanel packName={pack.name} />
+            <h2>My list of POIs</h2>
             <div>
               {Object.entries(pack.poiList).map(([key, value]) => (
                 <POIListItem

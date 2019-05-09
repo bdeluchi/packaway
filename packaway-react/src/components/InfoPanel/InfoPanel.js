@@ -29,8 +29,6 @@ class InfoPanel extends Component {
     const {currentPack} = this.props
     const {packName} = this.state
     const name = { name: packName }
-    console.log(name)
-
     DataService.updatePack(currentPack, name);
   }
 
@@ -40,7 +38,7 @@ class InfoPanel extends Component {
     const { packName } = this.state;
     return (
       <div>
-        {packName && (
+        {packName !== null && (
           <div>
             <form onSubmit={this.onSaveChanges}>
             <input

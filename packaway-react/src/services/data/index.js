@@ -124,7 +124,7 @@ export default class DataService {
       await db
         .collection("packs")
         .doc(packId)
-        .set(data, { merge: true });
+        .update(data);
     } catch (err) {
       success = true;
       console.log("TCL: DataService -> staticupdatedDetail -> err", err);

@@ -1,7 +1,6 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import {addPoi} from '../../redux/actions/poiActions'
 import withPOI from '../../helpers/withPOI'
+
 
 
 function POIItem(props) {
@@ -14,7 +13,7 @@ function POIItem(props) {
 
   const removeFromCart = () => {
     props.removePoiInfo(poi.id);
-    console.log(poi.id)
+
   }
 
 
@@ -29,17 +28,4 @@ function POIItem(props) {
   );
 }
 
-
-// const mapStateToProps = state => {
-//   return {
-//     pois: state.poiReducer.pois
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     setPoiInfo: (poi) => dispatch(addPoi(poi))
-//   };
-// };
-
-export default withPOI(POIItem);
+export default withPOI(POIItem)

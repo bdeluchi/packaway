@@ -81,36 +81,40 @@ export default class DataService {
   }
   
 //pagination
-static async getPOIPaginated(lastVisible) {
+static async getPOIPaginated(lastVisible, order) {
   const db = firebase.firestore();
   let results = [];
   let queryLastVisible;
+  let queryFirstVisible;
   try {
-    let query = db.collection("pois").orderBy("name")
+    let query = db.collection("pois").orderBy("name", order)
     if (lastVisible) {
       query = query.startAfter(lastVisible)
-      console.log(lastVisible)
     }
-    query = query.limit(5)
+    query = query.limit(10)
     const querySnapshot = await query.get()
-    console.log("size",querySnapshot.size)
     
     let i = 0;
     querySnapshot.forEach((doc) => {
       const objectResult = doc.data();
       objectResult.id = doc.id;
       results.push(objectResult);
-      console.log(i,"bla",querySnapshot.size)
       if (i === querySnapshot.size-1) {
         queryLastVisible = doc;
+      }
+      if (i === 0) {
+        queryFirstVisible = doc;
       }
       i++
     });
   } catch (err) {
     console.log("TCL: DataService -> getPOI -> err", err);
   }
+  if (order === "desc") {
+    results = results.reverse();
+  }
 
-  return {results, queryLastVisible};
+  return {results, queryLastVisible, queryFirstVisible};
 }
 
   //pack functions

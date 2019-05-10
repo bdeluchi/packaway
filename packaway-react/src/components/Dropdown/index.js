@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import withUser from "../../helpers/withUser"
 import withPOI from "../../helpers/withPOI"
+import withPack from "../../helpers/withPack"
 import AuthService from '../../services/auth';
 
 class Dropdown extends Component {
@@ -26,17 +27,13 @@ class Dropdown extends Component {
     });
   };
 
-  
-
-
   logout = () => {
     AuthService.logout();
-    //tengo que cambiar el estado del reducer de pois aquí.
-    // this.props.setPoiInfo();
+    this.props.resetCart();
+    this.props.setCurrentPack("")
     this.props.setUserInfo(null);
   }
-
-
+  
   render() {
     const { userInfo } = this.props;
     const { loading } = this.state;
@@ -71,4 +68,4 @@ class Dropdown extends Component {
   }
 }
 
-export default withPOI(withUser(Dropdown));
+export default withPack(withPOI(withUser(Dropdown)));

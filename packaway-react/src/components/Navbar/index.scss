@@ -9,10 +9,17 @@ nav {
     position: relative;
 
     .submenu-container {
-      position: absolute;
       z-index: 1;
       min-width: 160px;
       background-color: #36c387;
+      position: relative;
+
+      .nav__submenu {
+        position: absolute;
+        background: #36c387;
+        left: 0;
+        top: 100%;
+      }
 
       .pack-icon {
         width: 30px;

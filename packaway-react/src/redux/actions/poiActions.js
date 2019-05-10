@@ -13,5 +13,8 @@ export const removePoi = (id) => {
   }
 }
 
-// export reset blabañ
-//solo es un type
+export const resetCart = () => {
+  return {
+    type: 'RESET_CART'
+  }
+}

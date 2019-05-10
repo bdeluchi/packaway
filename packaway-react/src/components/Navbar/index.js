@@ -40,9 +40,9 @@ class Navbar extends Component {
             >
               <div
                 className="submenu-container"
-                onMouseEnter={this.handleHover}
+                
               >
-                <Link to="/packs/edit"><img className="pack-icon" src={process.env.PUBLIC_URL + '/assets/luggage.svg'} alt="pack cart icon" /></Link>
+                <Link onMouseEnter={this.handleHover} to="/packs/edit"><img className="pack-icon" src={process.env.PUBLIC_URL + '/assets/luggage.svg'} alt="pack cart icon" /></Link>
                 {this.state.showCart && <PackCart />}
               </div>
             </li>

@@ -8,7 +8,8 @@ export default class SearchPanel extends Component {
     super(props);
     this.state = {
       formInput: null,
-      loading: false
+      loading: false,
+      page: 0
     };
   }
 
@@ -29,16 +30,24 @@ export default class SearchPanel extends Component {
     
   // }
 
+  prevData = () => {
+    const {queryFirstVisible} = this.state;
+    let { page } = this.state;
+    this.setState({page: --page})
+    this.getData(queryFirstVisible, "desc");
+  }
+
   nextData = () => {
     const {queryLastVisible} = this.state;
+    let { page } = this.state;
+    this.setState({page: ++page})
     this.getData(queryLastVisible)
   }
   
-  async getData(lastVisible) {
+  async getData(lastVisible, order) {
     this.setState({loading: true});
-    const {results, queryLastVisible} = await DataService.getPOIPaginated(lastVisible);
-    console.log("grtdata",queryLastVisible)
-    this.setState({pois: results, queryLastVisible, loading: false})
+    const {results, queryLastVisible, queryFirstVisible} = await DataService.getPOIPaginated(lastVisible, order);
+    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false})
   }
 
   async componentDidMount() {
@@ -46,8 +55,8 @@ export default class SearchPanel extends Component {
   }
 
   render() {
-    const {pois} = this.state;
-
+    const {pois, page} = this.state;
+    console.log(page)
     return (
       <div className="search-panel">
         <div className="search-box">
@@ -68,6 +77,7 @@ export default class SearchPanel extends Component {
               <POIItem poi={poi} key={poi.id} />
             ))}
           </div>}
+          {page !== 0 && <button onClick={this.prevData}>Previous</button>}
           <button onClick={this.nextData}>Next</button>
         </div>
         {/* <button onClick={this.handleClick()}>add to db</button> */}

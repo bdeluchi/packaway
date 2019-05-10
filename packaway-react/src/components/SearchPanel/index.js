@@ -56,7 +56,6 @@ export default class SearchPanel extends Component {
 
   render() {
     const {pois, page} = this.state;
-    console.log(page)
     return (
       <div className="search-panel">
         <div className="search-box">

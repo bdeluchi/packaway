@@ -5,6 +5,13 @@ export const setCurrentPack = (packId) => {
   }
 }
 
+export const updateNumberOfDays = (days) => {
+  return {
+    numberOfDays: days,
+    type: 'UPDATE_DAYS'
+  }
+}
+
 // export const removeCurrentPack = (packId) => {
 //   return {
 //     id: packId,

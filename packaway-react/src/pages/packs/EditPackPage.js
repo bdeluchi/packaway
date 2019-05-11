@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import MyPOIList from "../../components/MyPOIList";
+import DayPanel from "../../components/DayPanel";
 
 export default class EditPackPage extends Component {
 
@@ -8,6 +9,7 @@ export default class EditPackPage extends Component {
       <div>
         <h1>Edit Pack</h1>
         <MyPOIList />
+        <DayPanel />
       </div>
     );
   }

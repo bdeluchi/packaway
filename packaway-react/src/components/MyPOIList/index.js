@@ -3,6 +3,7 @@ import withPack from "../../helpers/withPack";
 import DataService from "../../services/data";
 import POIListItem from "../POIListItem";
 import InfoPanel from "../InfoPanel/InfoPanel";
+import { withRouter } from "react-router-dom";
 
 class MyPOIList extends Component {
   constructor(props) {
@@ -13,9 +14,9 @@ class MyPOIList extends Component {
   }
 
   async getData() {
-    const { currentPack } = this.props;
-    if (currentPack) {
-      const pack = await DataService.getPack(currentPack);
+    const { packId } = this.props.match.params
+    if (packId) {
+      const pack = await DataService.getPack(packId);
       this.setState({ pack });
     }
   }
@@ -40,7 +41,7 @@ class MyPOIList extends Component {
             <InfoPanel packName={pack.name} />
             <h2>My list of POIs</h2>
             <div>
-              {Object.entries(pack.poiList).map(([key, value]) => (
+              {Object.entries(pack.days.unassignedPois).map(([key, value]) => (
                 <POIListItem
                   key={value.id}
                   poiName={value.name}
@@ -55,4 +56,4 @@ class MyPOIList extends Component {
   }
 }
 
-export default withPack(MyPOIList);
+export default withRouter(withPack(MyPOIList));

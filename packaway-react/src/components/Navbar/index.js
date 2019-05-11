@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import PackCart from "../PackCart";
+import withPack from "../../helpers/withPack"
 import { withRouter } from "react-router-dom";
 import "./index.scss";
 
@@ -23,6 +24,7 @@ class Navbar extends Component {
 
   render() {
     const { pathname } = this.props.location;
+    const {currentPack} = this.props;
     return (
       <nav>
         <ul className="nav__menu">
@@ -42,7 +44,7 @@ class Navbar extends Component {
                 className="submenu-container"
                 
               >
-                <Link onMouseEnter={this.handleHover} to="/packs/edit"><img className="pack-icon" src={process.env.PUBLIC_URL + '/assets/luggage.svg'} alt="pack cart icon" /></Link>
+                <Link onMouseEnter={this.handleHover} to={`/packs/edit/${currentPack}`}><img className="pack-icon" src={process.env.PUBLIC_URL + '/assets/luggage.svg'} alt="pack cart icon" /></Link>
                 {this.state.showCart && <PackCart />}
               </div>
             </li>
@@ -53,4 +55,4 @@ class Navbar extends Component {
   }
 }
 
-export default withRouter(Navbar);
+export default withPack(withRouter(Navbar))

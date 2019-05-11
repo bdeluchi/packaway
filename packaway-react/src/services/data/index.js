@@ -160,8 +160,8 @@ export default class DataService {
     return pack;
   }
 
-  static async updatePack(packId, data) {
-    const db = firebase.firestore();
+  static async updatePackData(packId, data) {
+    // const db = firebase.firestore();
     let success = true;
     try {
       const pack = await DataService.getObjectDetail("packs", packId);
@@ -175,5 +175,23 @@ export default class DataService {
       console.log("TCL: DataService -> staticupdatedDetail -> err", err);
     }
     return success;
+  }
+
+  static async updatePackPois(packId, pois) {
+    const db = firebase.firestore();
+    let success = true;
+    try {
+      const pack = await DataService.getObjectDetail("packs", packId);
+      if (pack) {
+        await db
+        .collection("packs").doc(packId).update({poiList: pois});
+      }
+      
+    } catch (err) {
+      success = true;
+      console.log("TCL: DataService -> staticupdatedDetail -> err", err);
+    }
+    return success;
+    
   }
 }

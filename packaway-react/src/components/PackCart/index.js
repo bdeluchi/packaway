@@ -13,10 +13,9 @@ function PackCart(props) {
     if (userInfo) {
       const packId = await DataService.addPack({
         name: "Enter pack name",
-        poiList: pois,
         // city: pois[Object.keys[0]].city,
         userId: userInfo.uid,
-        days: []
+        days: {unassignedPois: pois, day1: {}}
       });
       if (packId) {
         props.setCurrentPack(packId);
@@ -28,9 +27,7 @@ function PackCart(props) {
   };
 
   const handlePackUpdate = () => {
-    DataService.updatePack(currentPack, {
-      poiList: pois
-    });
+    DataService.updatePackPois(currentPack, pois)
   };
 
   return (

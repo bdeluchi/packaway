@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {setCurrentPack} from '../redux/actions/packActions'
+import {setCurrentPack, updateNumberOfDays} from '../redux/actions/packActions'
 
 
 function withPack(WrappedComponent){
@@ -14,14 +14,16 @@ function withPack(WrappedComponent){
 
 const mapStateToProps = (state) => {
   return {
-    currentPack: state.packReducer.currentPack
+    currentPack: state.packReducer.currentPack,
+    numberOfDays: state.packReducer.days
   }
 }
 
 
 const mapDispatchToProps = dispatch => {
   return {
-    setCurrentPack: (pack) => dispatch(setCurrentPack(pack))
+    setCurrentPack: (pack) => dispatch(setCurrentPack(pack)),
+    updateNumberOfDays: (day) => dispatch(updateNumberOfDays(day))
 
   };
 };

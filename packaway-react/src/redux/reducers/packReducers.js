@@ -1,14 +1,26 @@
 const defaultState = {
-  currentPack: null
+  currentPack: null,
+  days: 1
 };
 
 export const packReducer = (state = defaultState, action) => {
-  if (action.type === "SET_PACK") {
-    return {
-      ...state,
-      currentPack: action.id
-    };
-  }
 
-  return state;
+  switch (action.type) {
+    case "SET_PACK": {
+      return {
+        ...state,
+        currentPack: action.id
+      };
+    }
+    
+    case "UPDATE_DAYS": {
+      return {
+        ...state,
+        days: action.numberOfDays
+      }
+    }
+    default: {
+      return state;
+    }
+  }
 };

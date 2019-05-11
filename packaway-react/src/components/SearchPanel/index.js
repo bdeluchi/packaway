@@ -59,7 +59,7 @@ export default class SearchPanel extends Component {
     return (
       <div className="search-panel">
         <div className="search-box">
-          <form onSubmit={e => this.handleSearch(e)}>
+          {/* <form onSubmit={e => this.handleSearch(e)}>
             <input
               className="search-box"
               type="text"
@@ -68,7 +68,7 @@ export default class SearchPanel extends Component {
               onChange={this.handleChange}
             />
             <button>Search</button>
-          </form>
+          </form> */}
         </div>
         <div className="poi-container">
           {pois && <div>

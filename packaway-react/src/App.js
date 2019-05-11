@@ -41,7 +41,7 @@ class App extends Component {
             <Route path="/login" component={LoginPage} />
             <Route path="/profile" component={ProfilePage} />
             <Route path="/poisearch/:cityId" component={POISearchPage} />
-            <Route path="/packs/edit" component={EditPackPage} />
+            <Route path="/packs/edit/:packId" component={EditPackPage} />
             <Route path="/packs/view" component={ViewPackPage} />
             <Route path="/packs" component={PackOverviewPage} />
           </Switch>

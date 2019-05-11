@@ -27,7 +27,7 @@ class Navbar extends Component {
       <nav>
         <ul className="nav__menu">
           <li className="nav__menu-item">
-            <Link to="/">Packaway</Link>
+            <Link to="/"><img className="logo" src={process.env.PUBLIC_URL + '/assets/packaway_logo.svg'} alt="packaway logo" /></Link>
           </li>
           <li className="nav-myaccount nav__menu-item">
             <Dropdown />

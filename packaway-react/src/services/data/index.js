@@ -119,21 +119,6 @@ export default class DataService {
     return { results, queryLastVisible, queryFirstVisible };
   }
 
-  // static async getTotalPois() {
-  //   const db = firebase.firestore();
-  //     let results = [];
-
-  //     try {
-  //       const totalPois = await db.collection("pois").get();
-
-  //     } catch (err) {
-  //       console.log("TCL: DataService -> getPOI -> err", err);
-  //     }
-
-  //     return results;
-
-  // }
-
   //pack functions
   static async addPack(data) {
     const db = firebase.firestore();
@@ -182,7 +167,6 @@ export default class DataService {
       const pack = await DataService.getObjectDetail("packs", packId);
       if (pack) {
         pack.days.push(data.numberOfDays);
-        console.log("name",data)
         await DataService.updateDetail("packs", packId, {days: pack.days, name:data.packName});
       }
       

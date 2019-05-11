@@ -177,15 +177,15 @@ export default class DataService {
   }
 
   static async updatePack(packId, data) {
-    console.log("datafrom", data);
     const db = firebase.firestore();
     let success = true;
-
     try {
-      await db
-        .collection("packs")
-        .doc(packId)
-        .update(data);
+      const pack = await DataService.getObjectDetail("packs", packId);
+      if (pack) {
+        pack.days.push(data.numberOfDays);
+        await DataService.updateDetail("packs", packId, {days: pack.days, name: data.name});
+      }
+      
     } catch (err) {
       success = true;
       console.log("TCL: DataService -> staticupdatedDetail -> err", err);

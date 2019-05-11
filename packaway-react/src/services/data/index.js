@@ -30,7 +30,6 @@ export default class DataService {
     let success = true;
 
     try {
-      //arrayUnion to put pack inside array
       await db
         .collection(collection)
         .doc(id)
@@ -183,7 +182,8 @@ export default class DataService {
       const pack = await DataService.getObjectDetail("packs", packId);
       if (pack) {
         pack.days.push(data.numberOfDays);
-        await DataService.updateDetail("packs", packId, {days: pack.days, name: data.name});
+        console.log("name",data)
+        await DataService.updateDetail("packs", packId, {days: pack.days, name:data.packName});
       }
       
     } catch (err) {

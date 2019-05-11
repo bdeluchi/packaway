@@ -28,8 +28,7 @@ class InfoPanel extends Component {
     e.preventDefault();
     const {currentPack} = this.props
     const {packName, numberOfDays} = this.state
-    const name = { name: packName }
-    DataService.updatePack(currentPack, {name, numberOfDays});
+    DataService.updatePack(currentPack, {packName, numberOfDays});
   }
 
   createDayOptions = () => {

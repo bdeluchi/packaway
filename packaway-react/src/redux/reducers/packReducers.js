@@ -1,6 +1,5 @@
 const defaultState = {
-  currentPack: null,
-  days: 1
+  currentPack: null
 };
 
 export const packReducer = (state = defaultState, action) => {
@@ -13,12 +12,6 @@ export const packReducer = (state = defaultState, action) => {
       };
     }
     
-    case "UPDATE_DAYS": {
-      return {
-        ...state,
-        days: action.numberOfDays
-      }
-    }
     default: {
       return state;
     }

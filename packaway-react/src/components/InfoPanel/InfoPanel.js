@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import DataService from "../../services/data";
 import withPack from "../../helpers/withPack";
+import withDay from "../../helpers/withDay";
 
 class InfoPanel extends Component {
   constructor(props) {
@@ -27,6 +28,11 @@ class InfoPanel extends Component {
 
   handleDropdownChange = e => {
     const value = parseInt(e.target.value);
+    const daysToRedux = []
+    for (let i = 1; i <= value; i++) {
+      daysToRedux.push({day: i})
+    }
+    this.props.addDays(daysToRedux)
     this.props.updateNumberOfDays(value)
   };
 
@@ -77,4 +83,4 @@ class InfoPanel extends Component {
   }
 }
 
-export default withPack(InfoPanel);
+export default withDay(withPack(InfoPanel));

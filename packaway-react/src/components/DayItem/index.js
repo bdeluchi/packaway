@@ -5,7 +5,6 @@ import "./index.scss"
 
 export default function DayItem(props) {
   const {day} = props
-  console.log("props",props)
 
   return (
     <div className="day-item">

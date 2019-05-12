@@ -161,13 +161,20 @@ export default class DataService {
   }
 
   static async updatePackData(packId, data) {
-    // const db = firebase.firestore();
+    const db = firebase.firestore();
+    console.log("data",data)
     let success = true;
     try {
       const pack = await DataService.getObjectDetail("packs", packId);
+      console.log("pack", pack)
       if (pack) {
-        pack.days.push(data.numberOfDays);
-        await DataService.updateDetail("packs", packId, {days: pack.days, name:data.packName});
+        console.log(pack.days)
+        console.log(data.daysObject)
+        pack.days = data.daysObject;
+        await db
+        .collection("packs")
+        .doc(packId)
+        .update({days: data.daysObject, name:data.packName});
       }
       
     } catch (err) {

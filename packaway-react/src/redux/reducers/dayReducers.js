@@ -1,5 +1,5 @@
 const defaultState = {
-  numberOfDays: 1,
+  numberOfDays: 0,
   days: []
 };
 

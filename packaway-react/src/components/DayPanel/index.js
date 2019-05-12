@@ -7,16 +7,11 @@ import "./index.scss"
 class DayPanel extends Component {
   
   createDays = () => {
-    console.log("hola")
     const { numberOfDays } = this.props;
     const dayItems = [];
-    // const daysToRedux = []
     for (let i = 1; i <= numberOfDays; i++) {
       dayItems.push(<DayItem key={`day${i}`} day={i} />);
-      // daysToRedux.push({day: i})
     }
-    // this.props.addDays(daysToRedux)
-
     return dayItems;
   };
 

@@ -2,6 +2,9 @@ import React, { Component } from "react";
 import DataService from "../../services/data";
 import withPack from "../../helpers/withPack";
 import withDay from "../../helpers/withDay";
+import withPOI from "../../helpers/withPOI";
+import { withRouter } from "react-router-dom";
+
 
 class InfoPanel extends Component {
   constructor(props) {
@@ -9,7 +12,7 @@ class InfoPanel extends Component {
 
     this.state = {
       packName: this.props.packName,
-      numberOfDays: 1
+      numberOfDays: 0
     };
   }
 
@@ -26,37 +29,40 @@ class InfoPanel extends Component {
     this.setState({ packName: value });
   };
 
-  handleDropdownChange = e => {
+  handleNumberChange = e => {
     const value = parseInt(e.target.value);
-    const daysToRedux = []
+    const daysArr = [];    
     for (let i = 1; i <= value; i++) {
-      daysToRedux.push({day: i})
+      daysArr.push({day: i, pois: {}})
     }
-    this.props.addDays(daysToRedux)
+    this.props.addDays(daysArr)
     this.props.updateNumberOfDays(value)
   };
 
   onSaveChanges = e => {
     e.preventDefault();
     const { currentPack } = this.props;
+    const {days, pois} = this.props
+    const daysObject = {...days, unassignedPois: pois}
     const { packName } = this.state;
-    DataService.updatePackData(currentPack, { packName });
+    DataService.updatePackData(currentPack, { packName, daysObject } );
   };
 
-  createDayOptions = () => {
-    let options = [];
-    for (let i = 1; i <= 30; i++) {
-      options.push(
-        <option value={i} key={i}>
-          {i}
-        </option>
-      );
-    }
-    return options;
-  };
+  // createDayOptions = () => {
+  //   let options = [];
+  //   for (let i = 1; i <= 30; i++) {
+  //     options.push(
+  //       <option value={i} key={i}>
+  //         {i}
+  //       </option>
+  //     );
+  //   }
+  //   return options;
+  // };
 
   render() {
     const { packName } = this.state;
+    const {numberOfDays} = this.props
     return (
       <div>
         {packName !== null && (
@@ -70,9 +76,10 @@ class InfoPanel extends Component {
 
               <label>
                 Days:
-                <select name="day-input" onChange={this.handleDropdownChange}>
+                <input type="number" min="0"  max="30" name="day-input" value={numberOfDays} onChange={this.handleNumberChange} />
+                {/* <select name="day-input" onChange={this.handleDropdownChange}>
                   {this.createDayOptions()}
-                </select>
+                </select> */}
               </label>
               <button>Save</button>
             </form>
@@ -83,4 +90,4 @@ class InfoPanel extends Component {
   }
 }
 
-export default withDay(withPack(InfoPanel));
+export default withPOI(withRouter(withDay(withPack(InfoPanel))))

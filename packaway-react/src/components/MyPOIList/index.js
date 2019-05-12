@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 import withPack from "../../helpers/withPack";
+import withPOI from "../../helpers/withPOI";
 import DataService from "../../services/data";
 import POIListItem from "../POIListItem";
-import InfoPanel from "../InfoPanel/InfoPanel";
+import InfoPanel from "../InfoPanel";
 import { withRouter } from "react-router-dom";
 
 class MyPOIList extends Component {
@@ -17,6 +18,10 @@ class MyPOIList extends Component {
     const { packId } = this.props.match.params
     if (packId) {
       const pack = await DataService.getPack(packId);
+      const pois = pack.days.unassignedPois
+      if (Object.keys(this.props.pois).length === 0) {
+        Object.values(pois).forEach(poi => this.props.setPoiInfo(poi))
+      }
       this.setState({ pack });
     }
   }
@@ -25,12 +30,12 @@ class MyPOIList extends Component {
     this.getData();
   }
 
-  async componentDidUpdate(prevProps) {
-    const { currentPack } = this.props;
-    if (!prevProps.currentPack && currentPack) {
-      this.getData();
-    }
-  }
+  // async componentDidUpdate(prevProps) {
+  //   const { currentPack } = this.props;
+  //   if (!prevProps.currentPack && currentPack) {
+  //     this.getData();
+  //   }
+  // }
 
   render() {
     const { pack } = this.state;
@@ -56,4 +61,4 @@ class MyPOIList extends Component {
   }
 }
 
-export default withRouter(withPack(MyPOIList));
+export default withPOI(withRouter(withPack(MyPOIList)));

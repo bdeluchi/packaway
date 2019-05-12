@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import withDay from "../../helpers/withDay";
+import { addDays } from "../../redux/actions/dayActions";
 
 class POIListItem extends Component {
   constructor(props) {
@@ -35,10 +36,13 @@ class POIListItem extends Component {
     }
   };
 
+  handleMove = (day) => {
+    console.log(day)
+  }
+
   render() {
-    const { poiName, poiId } = this.props;
+    const { poiName, poiId, days } = this.props;
     const { open } = this.state;
-    console.log(this.props)
 
     return (
       <div>
@@ -51,7 +55,7 @@ class POIListItem extends Component {
           {open && (
             <div className="dropdown">
               <ul>
-                {<li>Option1</li>}
+                {days.map(ele => <li onClick={() => this.handleMove(ele.day)} key={ele.day} >Day {ele.day}</li>)}
               </ul>
             </div>
           )}

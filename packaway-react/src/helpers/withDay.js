@@ -13,7 +13,6 @@ function withDay(WrappedComponent){
 }
 
 const mapStateToProps = (state) => {
-  console.log("state: ", state)
   return {
     numberOfDays: state.dayReducer.numberOfDays,
     days: state.dayReducer.days

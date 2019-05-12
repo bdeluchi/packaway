@@ -15,7 +15,7 @@ function PackCart(props) {
         name: "Enter pack name",
         // city: pois[Object.keys[0]].city,
         userId: userInfo.uid,
-        days: {unassignedPois: pois}
+        unassignedPois: pois,
       });
       if (packId) {
         props.setCurrentPack(packId);

@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import withDay from "../../helpers/withDay";
-import { addDays } from "../../redux/actions/dayActions";
+import withPOI from "../../helpers/withPOI";
 
 class POIListItem extends Component {
   constructor(props) {
@@ -29,21 +29,26 @@ class POIListItem extends Component {
   }
 
   handleClickOutside = event => {
-    if (this.container.current && !this.container.current.contains(event.target)) {
+    if (
+      this.container.current &&
+      !this.container.current.contains(event.target)
+    ) {
       this.setState({
-        open: false,
+        open: false
       });
     }
   };
 
-  handleMove = (day) => {
-    console.log(day)
-  }
+  handleMove = day => {
+    const { days } = this.props;
+    const { poi } = this.props;
+    const selectedDay = Object.values(days).filter(ele => ele.dayId === day)[0];
+    this.props.addPoiToDay(selectedDay.dayId, poi);
+  };
 
   render() {
-    const { poiName, poiId, days } = this.props;
+    const { poi, days } = this.props;
     const { open } = this.state;
-
     return (
       <div>
         <div
@@ -51,11 +56,18 @@ class POIListItem extends Component {
           ref={this.container}
           onClick={this.handleDropdown}
         >
-          {poiName}
+          <div className="poi-item">{poi.name}</div>
           {open && (
             <div className="dropdown">
               <ul>
-                {days.map(ele => <li onClick={() => this.handleMove(ele.day)} key={ele.day} >Day {ele.day}</li>)}
+                {days.map(ele => (
+                  <li
+                    onClick={() => this.handleMove(ele.dayId)}
+                    key={ele.dayId}
+                  >
+                    Day {ele.dayId}
+                  </li>
+                ))}
               </ul>
             </div>
           )}
@@ -65,4 +77,4 @@ class POIListItem extends Component {
   }
 }
 
-export default withDay(POIListItem)
+export default withPOI(withDay(POIListItem));

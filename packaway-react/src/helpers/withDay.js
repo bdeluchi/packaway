@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {updateNumberOfDays, addDays} from '../redux/actions/dayActions'
+import {updateNumberOfDays, addDays, addPoiToDay, addUnassignedPois} from '../redux/actions/dayActions'
 
 
 function withDay(WrappedComponent){
@@ -15,7 +15,8 @@ function withDay(WrappedComponent){
 const mapStateToProps = (state) => {
   return {
     numberOfDays: state.dayReducer.numberOfDays,
-    days: state.dayReducer.days
+    days: state.dayReducer.days,
+    unassignedPois: state.dayReducer.unassignedPois
   }
 }
 
@@ -23,7 +24,9 @@ const mapStateToProps = (state) => {
 const mapDispatchToProps = dispatch => {
   return {
     updateNumberOfDays: (day) => dispatch(updateNumberOfDays(day)),
-    addDays: (dayObj) => dispatch(addDays(dayObj))
+    addDays: (dayObj) => dispatch(addDays(dayObj)),
+    addPoiToDay: (day, poi) => dispatch(addPoiToDay(day, poi)),
+    addUnassignedPois: (pois) => dispatch(addUnassignedPois(pois))
 
   };
 };

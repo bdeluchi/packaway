@@ -166,15 +166,12 @@ export default class DataService {
     let success = true;
     try {
       const pack = await DataService.getObjectDetail("packs", packId);
-      console.log("pack", pack)
       if (pack) {
-        console.log(pack.days)
-        console.log(data.daysObject)
-        pack.days = data.daysObject;
+        pack.days = data.days;
         await db
         .collection("packs")
-        .doc(packId)
-        .update({days: data.daysObject, name:data.packName});
+        .doc(packId)  
+        .update({days: data.days, unassignedPois: data.unassignedPois, name:data.packName});
       }
       
     } catch (err) {

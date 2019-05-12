@@ -1,18 +1,18 @@
 import React from "react";
 import POIListItem from "../POIListItem";
 
-import "./index.scss"
+import "./index.scss";
 
 export default function DayItem(props) {
-  const {day} = props
-
+  const { dayId, dayData } = props;
   return (
     <div className="day-item">
-      <h3 className="day-title">Day {day}</h3>
+      <h3 className="day-title">Day {dayId}</h3>
       <div className="day-content">
-        {/* <POIListItem />  que tenga una property que le indique el día dentro del que está*/}
+        {Object.values(dayData.pois).map(poi => (
+          <POIListItem key={poi.id} poi={poi} />
+        ))}
       </div>
     </div>
   );
 }
-

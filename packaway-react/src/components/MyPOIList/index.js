@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import withPack from "../../helpers/withPack";
 import withPOI from "../../helpers/withPOI";
+import withDay from "../../helpers/withDay";
 import DataService from "../../services/data";
 import POIListItem from "../POIListItem";
 import InfoPanel from "../InfoPanel";
@@ -15,13 +16,20 @@ class MyPOIList extends Component {
   }
 
   async getData() {
-    const { packId } = this.props.match.params
+    const { packId } = this.props.match.params;
     if (packId) {
       const pack = await DataService.getPack(packId);
-      const pois = pack.days.unassignedPois
+      const { unassignedPois, days } = pack;
       if (Object.keys(this.props.pois).length === 0) {
-        Object.values(pois).forEach(poi => this.props.setPoiInfo(poi))
+        Object.values(unassignedPois).forEach(poi =>
+          this.props.setPoiInfo(poi)
+        );
       }
+      if (days) {
+        Object.values(days).map(day => this.props.addDays(day));
+        this.props.updateNumberOfDays(days.length);
+      }
+      this.props.addUnassignedPois(unassignedPois);
       this.setState({ pack });
     }
   }
@@ -31,27 +39,24 @@ class MyPOIList extends Component {
   }
 
   // async componentDidUpdate(prevProps) {
-  //   const { currentPack } = this.props;
-  //   if (!prevProps.currentPack && currentPack) {
+  //   const { pois } = this.props;
+  //   if (!prevProps.pois && pois) {
   //     this.getData();
   //   }
   // }
 
   render() {
     const { pack } = this.state;
+    const { unassignedPois } = this.props;
     return (
       <div>
-        {pack && (
+        {pack && unassignedPois && (
           <div>
             <InfoPanel packName={pack.name} />
             <h2>My list of POIs</h2>
             <div>
-              {Object.entries(pack.days.unassignedPois).map(([key, value]) => (
-                <POIListItem
-                  key={value.id}
-                  poiName={value.name}
-                  poiId={value.id}
-                />
+              {Object.entries(unassignedPois).map(([key, value]) => (
+                <POIListItem key={value.id} poi={value} />
               ))}
             </div>
           </div>
@@ -61,4 +66,4 @@ class MyPOIList extends Component {
   }
 }
 
-export default withPOI(withRouter(withPack(MyPOIList)));
+export default withDay(withPOI(withRouter(withPack(MyPOIList))));

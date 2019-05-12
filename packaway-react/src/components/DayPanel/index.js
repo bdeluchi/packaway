@@ -7,10 +7,10 @@ import "./index.scss"
 class DayPanel extends Component {
   
   createDays = () => {
-    const { numberOfDays } = this.props;
+    const { numberOfDays, days } = this.props;
     const dayItems = [];
     for (let i = 1; i <= numberOfDays; i++) {
-      dayItems.push(<DayItem key={`day${i}`} day={i} />);
+       dayItems.push(<DayItem key={`day${i}`} dayId={i} dayData={days[i-1]}/>);
     }
     return dayItems;
   };

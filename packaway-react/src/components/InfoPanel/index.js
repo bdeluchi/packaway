@@ -31,34 +31,17 @@ class InfoPanel extends Component {
 
   handleNumberChange = e => {
     const value = parseInt(e.target.value);
-    const daysArr = [];    
-    for (let i = 1; i <= value; i++) {
-      daysArr.push({day: i, pois: {}})
-    }
-    this.props.addDays(daysArr)
+    this.props.addDays({dayId: value, pois: {}})
     this.props.updateNumberOfDays(value)
   };
 
   onSaveChanges = e => {
     e.preventDefault();
     const { currentPack } = this.props;
-    const {days, pois} = this.props
-    const daysObject = {...days, unassignedPois: pois}
+    const {days, unassignedPois} = this.props
     const { packName } = this.state;
-    DataService.updatePackData(currentPack, { packName, daysObject } );
+    DataService.updatePackData(currentPack, { packName, unassignedPois, days } );
   };
-
-  // createDayOptions = () => {
-  //   let options = [];
-  //   for (let i = 1; i <= 30; i++) {
-  //     options.push(
-  //       <option value={i} key={i}>
-  //         {i}
-  //       </option>
-  //     );
-  //   }
-  //   return options;
-  // };
 
   render() {
     const { packName } = this.state;
@@ -76,10 +59,7 @@ class InfoPanel extends Component {
 
               <label>
                 Days:
-                <input type="number" min="0"  max="30" name="day-input" value={numberOfDays} onChange={this.handleNumberChange} />
-                {/* <select name="day-input" onChange={this.handleDropdownChange}>
-                  {this.createDayOptions()}
-                </select> */}
+                <input type="number" min="0"  max="30" name="day-input" value={numberOfDays || 0} onChange={this.handleNumberChange} />
               </label>
               <button>Save</button>
             </form>

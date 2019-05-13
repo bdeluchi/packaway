@@ -21,13 +21,20 @@
 
 .side-drawer ul {
   height: 100%;
-   display: flex;
-   padding: 2rem;
-   justify-content: center;
-   flex-direction: column;
+  display: flex;
+  padding: 2rem;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .side-drawer ul li {
   font-size: 2rem;
   margin: 0.5rem 0;
+}
+
+
+@media (min-width: 769px) {
+  .side-drawer {
+    display: none;
+  }
 }

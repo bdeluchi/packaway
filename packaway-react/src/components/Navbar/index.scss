@@ -14,7 +14,6 @@
 
 .nav__menu {
   line-height: 20px;
-  text-transform: uppercase;
   position: relative;
   display: flex;
   align-items: center;
@@ -32,27 +31,17 @@
     .logo {
       height: 50px;
     }
-    
-  .submenu-container {
-    z-index: 1;
-    min-width: auto;
-    background-color: $dark-green;
-    position: relative;
+
+
+@media (min-width: 769px) {
+  .burger-menu {
+    display: none;
   }
+}
 
-    .nav__submenu {
-      position: absolute;
-      background: $dark-green;
-      width: 200px;
-      left: 0;
-      top: 100%;
-    }
 
-    .pack-icon {
-      width: 25px;
-      height: auto;
-      cursor: pointer;
-      padding-right: 1rem;
-    }
-
-  
+@media (max-width: 769px) {
+  .dropdown-menu {
+    display: none;
+  }
+}

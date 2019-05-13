@@ -1,0 +1,25 @@
+@import '../../colors';
+
+
+// .submenu-container {
+//   z-index: 1;
+//   background-color: $dark-green;
+  
+// }
+
+  .nav__submenu {
+    position: absolute;
+    background: $dark-green;
+    left: -100%;
+    top: 90%;
+    border: 1px solid $dark-gray;
+    padding: 1rem;
+  }
+
+  .pack-icon {
+    width: 25px;
+    height: auto;
+    cursor: pointer;
+    padding-right: 1rem;
+  }
+

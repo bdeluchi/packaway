@@ -1,9 +1,9 @@
 import React, { Component } from "react";
 import PackCartItem from "../PackCartItem";
-import { Link } from "react-router-dom";
 import DataService from "../../services/data";
 import { withRouter } from "react-router-dom";
 import withPOI from "../../helpers/withPOI";
+import withDay from "../../helpers/withDay";
 import withPack from "../../helpers/withPack";
 import withUser from "../../helpers/withUser";
 
@@ -37,8 +37,9 @@ class PackCart extends Component {
   };
 
   handlePackUpdate = () => {
-    const { pois, currentPack } = this.props;
-    DataService.updatePackPois(currentPack, pois);
+    const { unassignedPois, currentPack } = this.props;
+    // DataService.updatePackPois(currentPack, {unassignedPois: unassignedPois});
+    this.props.history.push(`/packs/edit/${currentPack}`);
   };
 
   handleHover = () => {
@@ -54,23 +55,22 @@ class PackCart extends Component {
     return (
       <div onMouseLeave={this.handleLeave}>
         <div>
-          <Link
+          <div
             onMouseEnter={this.handleHover}
-            to={`/packs/edit/${currentPack}`}
           >
             <img
               className="pack-icon"
               src={process.env.PUBLIC_URL + "/assets/luggage.svg"}
               alt="pack cart icon"
             />
-          </Link>
+          </div>
           {/* {this.state.showCart && ( */}
             <div className="nav__submenu">
               {Object.keys(pois).length !== 0 ? (
                 <div className="nav__submenu-item">
                   {currentPack ? (
                     <button onClick={() => this.handlePackUpdate()}>
-                      Update pack
+                      Go to pack
                     </button>
                   ) : (
                     <button onClick={() => this.handlePackCreate()}>
@@ -98,4 +98,4 @@ class PackCart extends Component {
   }
 }
 
-export default withRouter(withPack(withUser(withPOI(PackCart))));
+export default withRouter(withDay(withPack(withUser(withPOI(PackCart)))));

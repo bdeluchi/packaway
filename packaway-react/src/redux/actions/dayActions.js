@@ -6,9 +6,9 @@ export const updateNumberOfDays = (days) => {
   }
 }
 
-export const addUnassignedPois = (pois) => {
+export const addUnassignedPois = (poi) => {
   return {
-    unassignedPois: pois,
+    unassignedPois: poi,
     type: 'ADD_UNASSIGNED_POIS'
   }
 }
@@ -20,10 +20,21 @@ export const addDays = (days) => {
   }
 }
 
+export const removePoi = (poiId) => {
+  return {
+    poiId: poiId,
+    type: 'REMOVE_POI'
+  }
+}
+
+
+
 export const addPoiToDay = (dayId, poi) => {
   return {
     dayId: dayId,
     poi: poi,
     type: 'ADD_POI_TO_DAY'
   }
+
+
 }

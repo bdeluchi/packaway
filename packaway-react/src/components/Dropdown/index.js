@@ -44,46 +44,51 @@ class Dropdown extends Component {
       <React.Fragment>
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
           My Account
-          {displayMenu && <div>
-            {userInfo ? (
-              <ul>
-                <li>
-                  <Link to="/packs">My Packs</Link>
-                </li>
-                <li>
-                  <Link to="/profile">My Profile</Link>
-                </li>
-                <li onClick={this.logout}>Logout</li>
-              </ul>
-            ) : (
-              <ul>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-              </ul>
-            )}
-          </div>}
+          {displayMenu && (
+            <div>
+              {userInfo ? (
+                <ul className="myaccount-menu-main">
+                  <li className="myaccount-menu-item">
+                    <Link to="/packs">My Packs</Link>
+                  </li>
+                  <li className="myaccount-menu-item">
+                    <Link to="/profile">My Profile</Link>
+                  </li>
+                  <li className="myaccount-menu-item" onClick={this.logout}>
+                    Logout
+                  </li>
+                </ul>
+              ) : (
+                <ul>
+                  <li className="myaccount-menu-item">
+                    <Link to="/login">Login</Link>
+                  </li>
+                </ul>
+              )}
+            </div>
+          )}
         </div>
-       
-        <div className="burger-menu">
-            {userInfo ? (
-              <ul>
-                <li>
-                  <Link to="/packs">My Packs</Link>
-                </li>
-                <li>
-                  <Link to="/profile">My Profile</Link>
-                </li>
-                <li onClick={this.logout}>Logout</li>
-              </ul>
-            ) : (
-              <ul>
-                <li>
-                  <Link to="/login">Login</Link>
-                </li>
-              </ul>
-            )}
-             </div>
+        <div className="sidebar-menu">
+          {userInfo ? (
+            <ul className="sidebar-main">
+              <li className="sidebar-item">
+                <Link to="/packs">My Packs</Link>
+              </li>
+              <li className="sidebar-menu-item">
+                <Link to="/profile">My Profile</Link>
+              </li>
+              <li className="sidebar-menu-item" onClick={this.logout}>
+                Logout
+              </li>
+            </ul>
+          ) : (
+            <ul>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </ul>
+          )}
+        </div>
       </React.Fragment>
     );
   }

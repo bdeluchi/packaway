@@ -1,5 +1,6 @@
 import React from "react";
 import withPOI from '../../helpers/withPOI'
+import withDay from '../../helpers/withDay'
 
 
 
@@ -9,11 +10,12 @@ function POIItem(props) {
 
   const addToCart = () => {
     props.setPoiInfo(poi);
+    props.addUnassignedPois(poi);
   }
 
   const removeFromCart = () => {
     props.removePoiInfo(poi.id);
-
+    props.removePoi(poi.id)
   }
 
 
@@ -28,4 +30,4 @@ function POIItem(props) {
   );
 }
 
-export default withPOI(POIItem)
+export default withDay(withPOI(POIItem))

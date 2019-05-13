@@ -16,7 +16,7 @@ export const dayReducer = (state = defaultState, action) => {
     case "ADD_UNASSIGNED_POIS": {
       return {
         ...state,
-        unassignedPois: action.unassignedPois
+        unassignedPois: { ...state.unassignedPois, [action.unassignedPois.id]: action.unassignedPois  }
       };
     }
 
@@ -60,6 +60,33 @@ export const dayReducer = (state = defaultState, action) => {
             : day
         )
       };
+    }
+    case "REMOVE_POI": {
+
+      const stateWithoutRemovedPoi = {
+        ...state,
+        unassignedPois: Object.keys(state.unassignedPois)
+          .filter(poiId => poiId !== action.poiId)
+          .reduce((obj, key) => {
+            obj[key] = state.unassignedPois[key];
+            return obj;
+          }, {})
+        };
+
+        const stateWithoutDayPoi = {
+          ...stateWithoutRemovedPoi,
+          days: 
+          stateWithoutRemovedPoi.days.map(function(day) {
+              return {...day, pois: Object.keys(day.pois)
+                .filter(poiId => poiId !== action.poiId)
+                .reduce((obj, key) =>{
+                  obj[key] = day.pois[key];
+                  return obj
+                }, {})}
+            })
+        }
+
+      return stateWithoutDayPoi
     }
     default: {
       return state;

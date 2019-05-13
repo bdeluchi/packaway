@@ -1,5 +1,7 @@
 import React from "react";
 import withPOI from "../../helpers/withPOI";
+import withDay from '../../helpers/withDay';
+
 
 
 function PackCartItem(props) {
@@ -7,15 +9,16 @@ function PackCartItem(props) {
 
   const removeFromCart = () => {
     props.removePoiInfo(id);
+    props.removePoi(id)
   }
 
   return (
     <div>
-      {poiName}
       <button onClick={() => removeFromCart()}>x</button>
+      {poiName}
     </div>
   );
 }
 
 
-export default withPOI(PackCartItem);
+export default withPOI(withDay(PackCartItem))

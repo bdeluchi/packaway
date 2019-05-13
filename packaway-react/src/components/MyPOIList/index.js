@@ -21,15 +21,16 @@ class MyPOIList extends Component {
       const pack = await DataService.getPack(packId);
       const { unassignedPois, days } = pack;
       if (Object.keys(this.props.pois).length === 0) {
-        Object.values(unassignedPois).forEach(poi =>
+        Object.values(unassignedPois).forEach(poi => {
+          this.props.addUnassignedPois(poi);
           this.props.setPoiInfo(poi)
+          }
         );
       }
       if (days) {
         Object.values(days).map(day => this.props.addDays(day));
         this.props.updateNumberOfDays(days.length);
       }
-      this.props.addUnassignedPois(unassignedPois);
       this.setState({ pack });
     }
   }

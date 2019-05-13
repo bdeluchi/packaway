@@ -1,40 +1,58 @@
+@import '../../colors';
+
+
+
 nav {
-  background-color: #32A685;
-
-  .nav__menu {
-    list-style: none;
-    line-height: 20px;
-    text-transform: uppercase;
-    padding: 0;
-    position: relative;
-
-    .submenu-container {
-      z-index: 1;
-      min-width: 160px;
-      background-color: #36c387;
-      position: relative;
-
-      .nav__submenu {
-        position: absolute;
-        background: #36c387;
-        left: 0;
-        top: 100%;
-      }
-
-      .pack-icon {
-        width: 30px;
-        height: auto;
-        cursor: pointer;
-      }
-    }
-
-    .nav__menu-item {
-      display: inline-block;
-      padding: 0 5px;
-
-      .logo {
-        height: 50px;
-      }
-    }
-  }
+  background-color: $dark-green;
+  color: $white;
+  font-size: 1.5rem;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
 }
+
+.nav__menu {
+  line-height: 20px;
+  text-transform: uppercase;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.logo-item {
+  display: flex;
+  align-items: center;
+}
+
+  .nav__menu-item {
+    display: inline-block;
+  }
+
+    .logo {
+      height: 50px;
+    }
+    
+  .submenu-container {
+    z-index: 1;
+    min-width: auto;
+    background-color: $dark-green;
+    position: relative;
+  }
+
+    .nav__submenu {
+      position: absolute;
+      background: $dark-green;
+      width: 200px;
+      left: 0;
+      top: 100%;
+    }
+
+    .pack-icon {
+      width: 25px;
+      height: auto;
+      cursor: pointer;
+      padding-right: 1rem;
+    }
+
+  

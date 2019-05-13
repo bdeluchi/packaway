@@ -7,12 +7,18 @@ import EditPackPage from "./pages/packs/EditPackPage";
 import PackOverviewPage from "./pages/packs/PackOverviewPage";
 import ViewPackPage from "./pages/packs/ViewPackPage";
 import Navbar from "./components/Navbar";
+import SideDrawer from "./components/SideDrawer/SideDrawer";
+import Backdrop from "./components/Backdrop/Backdrop";
 import ProfilePage from "./pages/ProfilePage";
 import DataService from "./services/data";
 import AuthService from "./services/auth";
 import withUser from "./helpers/withUser";
 
 class App extends Component {
+  state = {
+    sideDrawerOpen: false
+  };
+
   componentDidMount() {
     AuthService.registerAuthObserver(async user => {
       if (user) {
@@ -31,11 +37,28 @@ class App extends Component {
     });
   }
 
+  drawerToggleClickHandler = () => {
+    this.setState(prevState => {
+      return { sideDrawerOpen: !prevState.sideDrawerOpen };
+    });
+  };
+
+  backdropClickHandler = () => {
+    this.setState({sideDrawerOpen: false})
+  }
+
   render() {
+    let backdrop;
+
+    if (this.state.sideDrawerOpen) {
+      backdrop = <Backdrop click={this.backdropClickHandler}/>;
+    }
     return (
-      <div className="App">
+      <div className="App" style={{ height: "100%" }}>
         <Router>
-          <Navbar />
+          <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
+          <SideDrawer show={this.state.sideDrawerOpen}/>
+          {backdrop}
           <Switch>
             <Route exact path="/" component={HomePage} />
             <Route path="/login" component={LoginPage} />
@@ -51,4 +74,4 @@ class App extends Component {
   }
 }
 
-export default withUser(App)
+export default withUser(App);

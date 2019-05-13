@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { Link } from "react-router-dom";
 import Dropdown from "../Dropdown";
 import PackCart from "../PackCart";
+import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 import withPack from "../../helpers/withPack";
 import { withRouter } from "react-router-dom";
 import "./index.scss";
@@ -26,7 +27,7 @@ class Navbar extends Component {
     const { pathname } = this.props.location;
     const { currentPack } = this.props;
     return (
-      <nav>
+      <nav className="navigation-bar">
         <div className="logo-item">
             <Link to="/">
               <img
@@ -55,7 +56,7 @@ class Navbar extends Component {
             </li>
           )}
           <li className="nav-myaccount nav__menu-item">
-            <Dropdown />
+          <DrawerToggleButton click={this.props.drawerClickHandler}/>
           </li>
         </ul>
       </nav>

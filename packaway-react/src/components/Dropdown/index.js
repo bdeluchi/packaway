@@ -6,7 +6,6 @@ import withPack from "../../helpers/withPack"
 import AuthService from '../../services/auth';
 
 import './index.scss'
-import DrawerToggleButton from '../SideDrawer/DrawerToggleButton'
 
 
 class Dropdown extends Component {
@@ -46,11 +45,10 @@ class Dropdown extends Component {
 
     return (
       <div className="dropdown">
-        <div className="myaccount-menu" onClick={this.showDropdownMenu}>
-          <DrawerToggleButton />
-        </div>
-        {this.state.displayMenu ? (
-          userInfo ? (
+        {/* <div className="myaccount-menu" onClick={this.showDropdownMenu}> */}
+          {/* <DrawerToggleButton click={this.props.drawerClickHandler}/> */}
+        {/* </div> */}
+          {userInfo ? (
             <ul>
               <li><Link to="/packs">My Packs</Link></li>
               <li><Link to="/profile">My Profile</Link></li>
@@ -62,8 +60,8 @@ class Dropdown extends Component {
                 <Link to="/login">Login</Link>
               </li>
             </ul>
-          )
-        ) : null}
+          )}
+  
       </div>
     );
   }

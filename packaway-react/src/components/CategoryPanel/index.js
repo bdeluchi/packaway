@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'
+import DataService from "../../services/data";
 import { addChurchFilter, removeChurchFilter, addMuseumFilter, removeMuseumFilter, addParkFilter, removeParkFilter } from '../../redux/actions/filterActions'
 
 class CategoryPanel extends Component {
 
   handleChurchFilter = (e) => {
     if (e.target.checked) {
+      DataService.filterResults("church")
       this.props.dispatch(addChurchFilter())
     } else {
       this.props.dispatch(removeChurchFilter())
@@ -14,6 +16,7 @@ class CategoryPanel extends Component {
 
   handleMuseumFilter = (e) => {
     if (e.target.checked) {
+      DataService.filterResults("museum")
       this.props.dispatch(addMuseumFilter())
     } else {
       this.props.dispatch(removeMuseumFilter())
@@ -22,6 +25,7 @@ class CategoryPanel extends Component {
 
   handleParkFilter = (e) => {
     if (e.target.checked) {
+      DataService.filterResults("park")
       this.props.dispatch(addParkFilter())
     } else {
       this.props.dispatch(removeParkFilter())

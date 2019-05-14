@@ -5,6 +5,7 @@ import withDay from "../../helpers/withDay";
 import withPOI from "../../helpers/withPOI";
 import { withRouter } from "react-router-dom";
 
+import "./index.scss";
 
 class InfoPanel extends Component {
   constructor(props) {
@@ -12,7 +13,6 @@ class InfoPanel extends Component {
 
     this.state = {
       packName: this.props.packName,
-      numberOfDays: 0
     };
   }
 
@@ -29,22 +29,38 @@ class InfoPanel extends Component {
     this.setState({ packName: value });
   };
 
-  handleNumberChange = e => {
-    const value = parseInt(e.target.value);
-    this.props.addDays({dayId: value, pois: {}})
-    this.props.updateNumberOfDays(value)
+  // handleNumberChange = e => {
+  //   const value = parseInt(e.target.value);
+  //   console.log(value);
+  // };
+
+  handleIncreaseValue = () => {
+    let { numberOfDays } = this.props;
+    let counter = numberOfDays;
+    counter++;
+    this.props.addDays({ dayId: counter, pois: {} });
+    this.props.updateNumberOfDays(counter);
+  };
+
+  handleDecreaseValue = () => {
+    let { numberOfDays } = this.props;
+    let counter = numberOfDays;
+    if (numberOfDays !== 0) {
+      counter--;
+      this.props.updateNumberOfDays(counter);
+    }
   };
 
   onSaveChanges = e => {
     e.preventDefault();
     const { currentPack } = this.props;
-    const {days, unassignedPois} = this.props
+    const { days, unassignedPois } = this.props;
     const { packName } = this.state;
-    DataService.updatePackData(currentPack, { packName, unassignedPois, days } );
+    DataService.updatePackData(currentPack, { packName, unassignedPois, days });
   };
 
   render() {
-    const { packName } = this.state;
+    const { packName} = this.state;
     const {numberOfDays} = this.props
     return (
       <div>
@@ -56,10 +72,28 @@ class InfoPanel extends Component {
                 value={packName}
                 onChange={this.handleInputChange}
               />
-
               <label>
                 Days:
-                <input type="number" min="0"  max="30" name="day-input" value={numberOfDays || 0} onChange={this.handleNumberChange} />
+                <div
+                  className="value-button decrease-btn"
+                  onClick={this.handleDecreaseValue}
+                  value="decrease"
+                >
+                  -
+                </div>
+                <input className="number-display"
+                  type="number"
+                  name="day-input"
+                  value={numberOfDays}
+                  readOnly
+                />
+                <div
+                  className="value-button increase-btn"
+                  onClick={this.handleIncreaseValue}
+                  value="increase"
+                >
+                  +
+                </div>
               </label>
               <button>Save</button>
             </form>
@@ -70,4 +104,4 @@ class InfoPanel extends Component {
   }
 }
 
-export default withPOI(withRouter(withDay(withPack(InfoPanel))))
+export default withPOI(withRouter(withDay(withPack(InfoPanel))));

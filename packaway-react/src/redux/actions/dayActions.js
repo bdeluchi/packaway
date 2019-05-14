@@ -27,6 +27,12 @@ export const removePoi = (poiId) => {
   }
 }
 
+// export const removeDay = (day) => {
+//   return {
+
+//   }
+// }
+
 
 
 export const addPoiToDay = (dayId, poi) => {

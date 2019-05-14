@@ -181,6 +181,23 @@ export default class DataService {
     return success;
   }
 
+  //filter queries
+
+  static async filterResults(type) {
+    const db = firebase.firestore();
+    let success = true;
+    try {
+      const querySnapshot = await db.collection('pois').where('type', '==', type).get();
+      querySnapshot.forEach(function (doc) {
+        console.log(doc.id, ' => ', doc.data());
+      })
+    } catch (err) {
+      success = true;
+			console.log("TCL: staticfilterResults -> err", err)
+    }
+    return success;
+  }
+
   // static async updatePackPois(packId, pois) {
   //   const db = firebase.firestore();
   //   let success = true;

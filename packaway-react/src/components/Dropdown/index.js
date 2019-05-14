@@ -43,7 +43,7 @@ class Dropdown extends Component {
     return (
       <React.Fragment>
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
-          My Account
+          <div className="my-account-btn">My Account</div>
           {displayMenu && (
             <div>
               {userInfo ? (

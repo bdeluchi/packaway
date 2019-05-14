@@ -1,12 +1,5 @@
 @import '../../colors';
 
-
-// .submenu-container {
-//   z-index: 1;
-//   background-color: $dark-green;
-  
-// }
-
   .nav__submenu {
     position: absolute;
     background: $dark-green;
@@ -23,3 +16,16 @@
     padding-right: 1rem;
   }
 
+  @media (min-width: 769px) {
+    .mobile-cart {
+      display: none;
+    }
+  }
+  
+  
+  @media (max-width: 769px) {
+    .desktop-cart {
+      display: none;
+    }
+  }
+  

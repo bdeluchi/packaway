@@ -42,21 +42,19 @@ class PackCart extends Component {
     this.props.history.push(`/packs/edit/${currentPack}`);
   };
 
-  handleHover = () => {
-    this.setState({ showCart: true });
-  };
-
-  handleLeave = () => {
-    this.setState({ showCart: false });
-  };
+  handleCartClick = () => {
+    this.setState(prevState => {
+      return { showCart: !prevState.showCart };
+    });
+  }
   
   render() {
     const { pois, currentPack } = this.props;
     return (
-      <div onMouseLeave={this.handleLeave}>
+      <div>
         <div>
           <div
-            onMouseEnter={this.handleHover}
+            onClick={this.handleCartClick}
           >
             <img
               className="pack-icon"
@@ -64,8 +62,9 @@ class PackCart extends Component {
               alt="pack cart icon"
             />
           </div>
-          {/* {this.state.showCart && ( */}
-            <div className="nav__submenu">
+          {this.state.showCart && (
+            <React.Fragment>
+            <div className="nav__submenu desktop-cart">
               {Object.keys(pois).length !== 0 ? (
                 <div className="nav__submenu-item">
                   {currentPack ? (
@@ -91,7 +90,35 @@ class PackCart extends Component {
                 <div>Your pack is empty</div>
               )}
             </div>
-          {/* )} */}
+            <div className="nav__submenu mobile-cart">
+              {Object.keys(pois).length !== 0 ? (
+                <div className="nav__submenu-item">
+                  {currentPack ? (
+                    <button onClick={() => this.handlePackUpdate()}>
+                      Go to pack
+                    </button>
+                  ) : (
+                    <button onClick={() => this.handlePackCreate()}>
+                      New pack
+                    </button>
+                  )}
+                  <div>
+                    {Object.entries(pois).map(([key, value]) => (
+                      <PackCartItem
+                        poiName={value.name}  
+                        key={value.id}
+                        id={value.id}
+                      />
+                    ))}
+                  </div>
+                </div>
+              ) : (
+                <div>Your pack is empty</div>
+              )}
+            </div>
+            </React.Fragment>
+            
+          )} 
         </div>
       </div>
     );

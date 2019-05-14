@@ -3,6 +3,8 @@ import React, { Component } from "react";
 import POIItem from "../POIItem";
 import DataService from "../../services/data"
 
+import "./index.scss"
+
 export default class SearchPanel extends Component {
   constructor(props) {
     super(props);
@@ -70,14 +72,23 @@ export default class SearchPanel extends Component {
             <button>Search</button>
           </form> */}
         </div>
-        <div className="poi-container">
+        <div className="pois-container">
           {pois && <div>
             {pois.map(poi => (
               <POIItem poi={poi} key={poi.id} />
             ))}
           </div>}
-          {page !== 0 && <button onClick={this.prevData}>Previous</button>}
-          <button onClick={this.nextData}>Next</button>
+          <div className="pagination-container">
+          {page !== 0 && 
+          <button 
+            className="pagination-btn prev-btn" 
+            onClick={this.prevData}>Previous</button>
+          }
+          <div className="spacing"></div>
+          <button 
+            className="pagination-btn next-btn" 
+            onClick={this.nextData}>Next</button>
+          </div>
         </div>
         {/* <button onClick={this.handleClick()}>add to db</button> */}
       </div>

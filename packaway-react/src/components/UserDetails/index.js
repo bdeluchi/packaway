@@ -2,7 +2,9 @@ import React, { Component } from "react";
 
 import StorageService from "../../services/storage";
 import DataService from "../../services/data";
-import withUser from "../../helpers/withUser"
+import withUser from "../../helpers/withUser";
+
+import "./index.scss";
 
 class UserDetails extends Component {
   constructor(props) {
@@ -30,7 +32,7 @@ class UserDetails extends Component {
   }
 
   onChangeInput = e => {
-    const {user} = this.state;
+    const { user } = this.state;
     const value = e.target.value;
     const name = e.target.name;
     this.setState({
@@ -43,7 +45,7 @@ class UserDetails extends Component {
 
   onFileSelected = e => {
     const file = e.target.files[0];
-    const {user} = this.state;
+    const { user } = this.state;
     StorageService.uploadFile(file, "user-images", imageUrl => {
       this.setState({
         user: {
@@ -61,13 +63,12 @@ class UserDetails extends Component {
       name,
       lastname,
       imageUrl
-    }
+    };
     const id = uid;
-    const success = DataService.updateDetail('users', id, updateUser);
-    if(success) {
+    const success = DataService.updateDetail("users", id, updateUser);
+    if (success) {
       this.props.setUserInfo(updateUser);
     }
-
   };
 
   deleteImage = () => {
@@ -75,7 +76,7 @@ class UserDetails extends Component {
     this.setState({
       user: {
         ...user,
-        imageUrl : ''
+        imageUrl: ""
       }
     });
   };
@@ -83,33 +84,33 @@ class UserDetails extends Component {
   render() {
     const { user } = this.state;
     return (
-      <div>
+      <div className="user-main">
         {user && (
-          <div>
-            <form onSubmit={this.onSubmitForm}>
-              <br />
-              <label>Name:</label>
-              <input
+          <div className="user-container">
+            <div className="user-img-container">
+              {user.imageUrl && <img className="user-img" src={user.imageUrl} alt={user.name} />}
+            </div>
+            <input type="file" name="picture" onChange={this.onFileSelected} />
+            <div className="remove-img-btn" onClick={this.deleteImage}>Remove image</div>
+            <form className="user-form" onSubmit={this.onSubmitForm}>
+              <label className="user-input-label">Name:</label>
+              <input 
+                className="user-input-field"
                 type="name"
-                value={user.name || ''}
+                value={user.name || ""}
                 name="name"
                 onChange={this.onChangeInput}
               />
               <br />
-              <label>Last Name:</label>
-              <input
+              <label className="user-input-label">Last Name:</label>
+              <input 
+                className="user-input-field"
                 type="lastname"
-                value={user.lastname || ''}
+                value={user.lastname || ""}
                 name="lastname"
                 onChange={this.onChangeInput}
               />
-              <br />
-              <label>Profile image:</label>
-              {user.imageUrl && <img src={user.imageUrl} alt={user.name} />}
-              <div onClick={this.deleteImage}>Remove image</div>
-            <input type="file" name="picture" onChange={this.onFileSelected} />
-              <br />
-              <button>Save</button>
+              <button className="user-save-btn">Save</button>
             </form>
           </div>
         )}

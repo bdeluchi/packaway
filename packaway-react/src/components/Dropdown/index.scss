@@ -42,24 +42,29 @@
 .sidebar-menu {
   display: flex;
   height: 100%;
+  
 }
 
 .sidebar-menu ul {
   height: 100%;
-  color: $dark-gray;
   display: flex;
-  padding: 2rem;
+  width: 100%;
   justify-content: center;
   flex-direction: column;
 }
 
 .sidebar-menu ul li {
-  margin: 0.5rem 0;
+  margin: 0.2rem 0;
   font-size: 2.5rem;
+  color: $white;
+  padding: 4px 0;
+  width: 100%;
+  padding-left: 10px;
+  opacity: 0.8;
 }
 
 .sidebar-menu ul li a {
-  color: $dark-gray;
+  color: inherit;
   text-decoration: none;
 }
 

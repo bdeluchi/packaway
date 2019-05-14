@@ -2,7 +2,7 @@ import React from "react";
 import withPOI from '../../helpers/withPOI'
 import withDay from '../../helpers/withDay'
 
-
+import "./index.scss"
 
 function POIItem(props) {
   const {poi, pois} = props;
@@ -17,15 +17,17 @@ function POIItem(props) {
     props.removePoiInfo(poi.id);
     props.removePoi(poi.id)
   }
-
-
   return (
-    <div className="poi-item">
-      {poi.name}
-        {!inCart ? (<button onClick={() => addToCart()}>ADD</button>)
+    <div className="poi-card">
+      <div className="poi-card-header">
+        <div className="poi-item-name">{poi.name}</div>
+        {!inCart ? (<button className="poi-item-btn add-btn" onClick={() => addToCart()}>ADD</button>)
         :
-        (<button onClick={() => removeFromCart()}>REMOVE</button>)}
-
+        (<button className="poi-item-btn remove-btn" onClick={() => removeFromCart()}>REMOVE</button>)}
+      </div>
+      <div className="poi-card-image-container">
+          <img className="poi-item-image" src={process.env.PUBLIC_URL + "/assets/placeholder_poi.png"} alt={poi.name} />
+      </div>
     </div>
   );
 }

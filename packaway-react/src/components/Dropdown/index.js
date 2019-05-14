@@ -49,10 +49,10 @@ class Dropdown extends Component {
               {userInfo ? (
                 <ul className="myaccount-menu-main">
                   <li className="myaccount-menu-item">
-                    <Link to="/packs">My Packs</Link>
+                    <Link to="/packs">My packs</Link>
                   </li>
                   <li className="myaccount-menu-item">
-                    <Link to="/profile">My Profile</Link>
+                    <Link to="/profile">My profile</Link>
                   </li>
                   <li className="myaccount-menu-item" onClick={this.logout}>
                     Logout
@@ -72,10 +72,10 @@ class Dropdown extends Component {
           {userInfo ? (
             <ul className="sidebar-main">
               <li className="sidebar-item">
-                <Link to="/packs">My Packs</Link>
+                <Link to="/packs">My packs</Link>
               </li>
               <li className="sidebar-menu-item">
-                <Link to="/profile">My Profile</Link>
+                <Link to="/profile">My profile</Link>
               </li>
               <li className="sidebar-menu-item" onClick={this.logout}>
                 Logout

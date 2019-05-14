@@ -1,0 +1,14 @@
+@import '../../colors';
+
+.category-panel {
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+}
+
+.filter-input {
+  background-color:lightgray;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 2px;
+}

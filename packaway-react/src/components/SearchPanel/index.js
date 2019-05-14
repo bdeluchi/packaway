@@ -73,11 +73,11 @@ export default class SearchPanel extends Component {
           </form> */}
         </div>
         <div className="pois-container">
-          {pois && <div>
+          {pois && <React.Fragment>
             {pois.map(poi => (
               <POIItem poi={poi} key={poi.id} />
             ))}
-          </div>}
+          </React.Fragment>}
           <div className="pagination-container">
           {page !== 0 && 
           <button 

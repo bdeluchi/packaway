@@ -17,6 +17,11 @@
   position: relative;
   display: flex;
   align-items: center;
+
+}
+.dropdown-menu {
+  width: 150px;
+
 }
 
 .logo-item {
@@ -43,5 +48,19 @@
 @media (max-width: 769px) {
   .dropdown-menu {
     display: none;
+  }
+}
+
+
+@media (min-width: 1281px) {
+  .navigation-bar {
+    justify-content: space-around;
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .city-btn {
+    width: 50vw;
   }
 }

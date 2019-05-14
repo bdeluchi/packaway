@@ -4,6 +4,10 @@
   position: relative;
   display: block;
   width: 100px;
+  animation {
+
+  }
+
 }
 
 .my-account-btn {
@@ -15,12 +19,14 @@
 
 .myaccount-menu-main {
   position: absolute;
-  background-color: $dark-green;
+  background-color: $dark-gray;
+  opacity: 0.9;
   padding: 1rem;
   border: 1px solid $dark-gray;
   top: 40px;
   height: auto;
   box-shadow: 0 4px 16px rgba(20,23,28,.25);
+  width: 150px;
 }
 
 .myaccount-menu-item {

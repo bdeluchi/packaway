@@ -45,9 +45,9 @@ class Dropdown extends Component {
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
           <div className="my-account-btn">My Account</div>
           {displayMenu && (
-            <div>
+            <ul className="myaccount-menu-main">
               {userInfo ? (
-                <ul className="myaccount-menu-main">
+                <React.Fragment>
                   <li className="myaccount-menu-item">
                     <Link to="/packs">My packs</Link>
                   </li>
@@ -57,15 +57,15 @@ class Dropdown extends Component {
                   <li className="myaccount-menu-item" onClick={this.logout}>
                     Logout
                   </li>
-                </ul>
+                </React.Fragment>
               ) : (
-                <ul>
+                <React.Fragment>
                   <li className="myaccount-menu-item">
                     <Link to="/login">Login</Link>
                   </li>
-                </ul>
+                </React.Fragment>
               )}
-            </div>
+            </ul>
           )}
         </div>
         <div className="sidebar-menu">

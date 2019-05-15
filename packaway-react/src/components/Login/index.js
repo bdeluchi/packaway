@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import AuthService from "../../services/auth";
 import { withRouter } from "react-router-dom";
 
+import "./index.scss";
+
 class Login extends Component {
   constructor(props) {
     super(props);
@@ -26,8 +28,7 @@ class Login extends Component {
   }
 
   componentDidMount() {
-    this.authUnRegister = AuthService.registerAuthObserver((user) => {
-    })
+    this.authUnRegister = AuthService.registerAuthObserver(user => {});
   }
 
   onLogin = async e => {
@@ -48,7 +49,7 @@ class Login extends Component {
     if (error) {
       this.setState({ errorMessage: AuthService.getErrorMessage(error) });
     } else {
-      this.props.history.push('/')
+      this.props.history.push("/");
     }
   };
 
@@ -56,12 +57,13 @@ class Login extends Component {
     const { email, password, errorMessage } = this.state;
 
     return (
-      <div>
-        <h1>Login</h1>
-        <form onSubmit={this.onLogin}>
+      <div className="login-container">
+        <h1 className="login-title">Login</h1>
+        <form className="login-form" onSubmit={this.onLogin}>
           <div>
-            <label>Email</label>
+            <label className="login-input-label">Email:</label>
             <input
+              className="login-input-field"
               type="email"
               name="email"
               value={email}
@@ -69,15 +71,16 @@ class Login extends Component {
             />
           </div>
           <div>
-            <label>Contraseña</label>
+            <label className="login-input-label">Password:</label>
             <input
+              className="login-input-field"
               type="password"
               name="password"
               value={password}
               onChange={this.onChangeInput}
             />
           </div>
-          <button>Sign In</button>
+          <button className="login-btn">Log In</button>
           {errorMessage && <p>{errorMessage}</p>}
         </form>
       </div>
@@ -85,4 +88,4 @@ class Login extends Component {
   }
 }
 
-export default withRouter(Login)
+export default withRouter(Login);

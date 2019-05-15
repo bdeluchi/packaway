@@ -3,10 +3,40 @@
   .nav__submenu {
     position: absolute;
     background: $dark-green;
+    width: 208px;
     left: -100%;
     top: 90%;
     border: 1px solid $dark-gray;
     padding: 1rem;
+  }
+
+  .cart-btn {
+    background: $light-green;
+    display: block;
+    margin: 0 auto;
+    color: inherit;
+    border: none;
+    margin-top: 0.5em;
+    padding: 0;
+    font-family: inherit;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: inherit;
+    border-radius: 4px;
+    padding: 6px 2px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $white;
+  
+  
+    &:hover {
+      opacity: 0.8;
+    }
+    &:active{
+      opacity: 1;
+    }
   }
 
   .pack-icon {

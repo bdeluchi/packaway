@@ -13,10 +13,25 @@ export const addUnassignedPois = (poi) => {
   }
 }
 
+export const returnPoiToUnassigned = (poi) => {
+  return {
+    poi: poi,
+    type: 'RETURN_TO_UNASSIGNED'
+  }
+}
+
 export const addDays = (days) => {
   return {
     days: days,
     type: 'ADD_DAYS'
+  }
+}
+
+export const removePoiFromDay = (poi, dayId) => {
+  return {
+    dayId: dayId,
+    poi: poi,
+    type: 'REMOVE_POI_FROM_DAY'
   }
 }
 
@@ -27,11 +42,18 @@ export const removePoi = (poiId) => {
   }
 }
 
-// export const removeDay = (day) => {
-//   return {
+export const removeLastDay = (days) => {
+  return {
+    days: days,
+    type: 'REMOVE_DAY'
+  }
+}
 
-//   }
-// }
+export const resetDayStatus = () => {
+  return {
+    type: 'RESET_DAYS'
+  }
+}
 
 
 

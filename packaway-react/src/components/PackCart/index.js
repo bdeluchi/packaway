@@ -23,7 +23,7 @@ class PackCart extends Component {
     if (userInfo) {
       const packId = await DataService.addPack({
         name: "Enter pack name",
-        // city: pois[Object.keys[0]].city,
+        city: Object.values(pois)[0].city,
         userId: userInfo.uid,
         unassignedPois: pois
       });
@@ -68,11 +68,11 @@ class PackCart extends Component {
               {Object.keys(pois).length !== 0 ? (
                 <div className="nav__submenu-item">
                   {currentPack ? (
-                    <button onClick={() => this.handlePackUpdate()}>
+                    <button className="cart-btn" onClick={() => this.handlePackUpdate()}>
                       Go to pack
                     </button>
                   ) : (
-                    <button onClick={() => this.handlePackCreate()}>
+                    <button className="cart-btn" onClick={() => this.handlePackCreate()}>
                       New pack
                     </button>
                   )}
@@ -94,11 +94,11 @@ class PackCart extends Component {
               {Object.keys(pois).length !== 0 ? (
                 <div className="nav__submenu-item">
                   {currentPack ? (
-                    <button onClick={() => this.handlePackUpdate()}>
+                    <button className="cart-btn" onClick={() => this.handlePackUpdate()}>
                       Go to pack
                     </button>
                   ) : (
-                    <button onClick={() => this.handlePackCreate()}>
+                    <button className="cart-btn" onClick={() => this.handlePackCreate()}>
                       New pack
                     </button>
                   )}

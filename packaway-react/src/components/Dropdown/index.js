@@ -4,6 +4,7 @@ import withUser from "../../helpers/withUser";
 import withPOI from "../../helpers/withPOI";
 import withPack from "../../helpers/withPack";
 import AuthService from "../../services/auth";
+import {withRouter} from 'react-router-dom'
 
 import "./index.scss";
 
@@ -34,6 +35,7 @@ class Dropdown extends Component {
     this.props.resetCart();
     this.props.setCurrentPack("");
     this.props.setUserInfo(null);
+    this.props.history.push("/");
   };
 
   render() {
@@ -71,19 +73,19 @@ class Dropdown extends Component {
         <div className="sidebar-menu">
           {userInfo ? (
             <ul className="sidebar-main">
-              <li className="sidebar-item">
+              <li className="sidebar-menu-item">
                 <Link to="/packs">My packs</Link>
               </li>
               <li className="sidebar-menu-item">
                 <Link to="/profile">My profile</Link>
               </li>
-              <li className="sidebar-menu-item" onClick={this.logout}>
+              <li className="sidebar-menu-item last-item" onClick={this.logout}>
                 Logout
               </li>
             </ul>
           ) : (
             <ul>
-              <li>
+              <li className="sidebar-menu-item last-item">
                 <Link to="/login">Login</Link>
               </li>
             </ul>
@@ -94,4 +96,4 @@ class Dropdown extends Component {
   }
 }
 
-export default withPack(withPOI(withUser(Dropdown)));
+export default withRouter(withPack(withPOI(withUser(Dropdown))))

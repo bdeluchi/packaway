@@ -1,11 +1,11 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {updateNumberOfDays, addDays, addPoiToDay, addUnassignedPois, removePoi} from '../redux/actions/dayActions'
+import {updateNumberOfDays, addDays, addPoiToDay, addUnassignedPois, removePoi, removeLastDay, resetDayStatus, returnPoiToUnassigned, removePoiFromDay} from '../redux/actions/dayActions'
 
 
 function withDay(WrappedComponent){
   const NewComponent = (props) => {
-    const {numberOfDays} = props;
+    const {numberOfDays} = props; 
     return <WrappedComponent dayInfo={numberOfDays} {...props} />
   }
 
@@ -27,8 +27,11 @@ const mapDispatchToProps = dispatch => {
     addDays: (dayObj) => dispatch(addDays(dayObj)),
     addPoiToDay: (day, poi) => dispatch(addPoiToDay(day, poi)),
     addUnassignedPois: (pois) => dispatch(addUnassignedPois(pois)),
-    removePoi: (poiId) => dispatch(removePoi(poiId))
-
+    removePoi: (poiId) => dispatch(removePoi(poiId)),
+    removeLastDay: (days) => dispatch(removeLastDay(days)),
+    resetDayStatus: () => dispatch(resetDayStatus()),
+    returnPoiToUnassigned: (poi) => dispatch(returnPoiToUnassigned(poi)),
+    removePoiFromDay: (poi, day) => dispatch(removePoiFromDay(poi, day))
   };
 };
 

@@ -46,8 +46,14 @@ class POIListItem extends Component {
     this.props.addPoiToDay(selectedDay.dayId, poi);
   };
 
+  handleMoveToList = () => {
+    const { poi, dayId } = this.props;
+    this.props.returnPoiToUnassigned(poi);
+    this.props.removePoiFromDay(poi, dayId)
+  }
+
   render() {
-    const { poi, days } = this.props;
+    const { poi, unassignedPois, days } = this.props;
     const { open } = this.state;
     return (
       <div>
@@ -68,6 +74,8 @@ class POIListItem extends Component {
                     Day {ele.dayId}
                   </li>
                 ))}
+                  {!Object.keys(unassignedPois).includes(poi.id) && 
+                  <li onClick={() => this.handleMoveToList()}>Return to List</li>}
               </ul>
             </div>
           )}

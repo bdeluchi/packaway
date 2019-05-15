@@ -7,6 +7,8 @@ import POIListItem from "../POIListItem";
 import InfoPanel from "../InfoPanel";
 import { withRouter } from "react-router-dom";
 
+
+
 class MyPOIList extends Component {
   constructor(props) {
     super(props);
@@ -39,12 +41,9 @@ class MyPOIList extends Component {
     this.getData();
   }
 
-  // async componentDidUpdate(prevProps) {
-  //   const { pois } = this.props;
-  //   if (!prevProps.pois && pois) {
-  //     this.getData();
-  //   }
-  // }
+  componentWillUnmount() {
+    this.props.resetDayStatus();
+  }
 
   render() {
     const { pack } = this.state;
@@ -53,7 +52,7 @@ class MyPOIList extends Component {
       <div>
         {pack && unassignedPois && (
           <div>
-            <InfoPanel packName={pack.name} />
+            <InfoPanel packName={pack.name} packCity={pack.city} />
             <h2>My list of POIs</h2>
             <div>
               {Object.entries(unassignedPois).map(([key, value]) => (

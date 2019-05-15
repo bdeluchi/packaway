@@ -29,11 +29,6 @@ class InfoPanel extends Component {
     this.setState({ packName: value });
   };
 
-  // handleNumberChange = e => {
-  //   const value = parseInt(e.target.value);
-  //   console.log(value);
-  // };
-
   handleIncreaseValue = () => {
     let { numberOfDays } = this.props;
     let counter = numberOfDays;
@@ -43,11 +38,15 @@ class InfoPanel extends Component {
   };
 
   handleDecreaseValue = () => {
-    let { numberOfDays } = this.props;
+    let { numberOfDays, days } = this.props;
     let counter = numberOfDays;
     if (numberOfDays !== 0) {
       counter--;
       this.props.updateNumberOfDays(counter);
+      this.props.removeLastDay(days);
+      const day = days[days.length-1];
+      Object.values(day.pois).forEach(poi => this.props.returnPoiToUnassigned(poi))
+      
     }
   };
 
@@ -61,9 +60,10 @@ class InfoPanel extends Component {
 
   render() {
     const { packName} = this.state;
-    const {numberOfDays} = this.props
+    const {numberOfDays, packCity} = this.props
     return (
       <div>
+        <h2>{packCity}</h2>
         {packName !== null && (
           <div>
             <form onSubmit={this.onSaveChanges}>

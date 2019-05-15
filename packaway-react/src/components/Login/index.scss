@@ -1,0 +1,64 @@
+@import '../../colors';
+
+.login-title {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.login-input-field {
+  margin-left: 0.5em;
+  margin-top: 0.3em;
+  height: 20px;
+  font-family: inherit;
+  font-size: 1.5rem;
+  border: 1px solid lightgray;
+}
+
+.login-input-label {
+  display: inline-block;
+  width: 90px;
+}
+
+.login-container {
+  border-top: 2px solid rgba(128, 128, 128, 0.2);
+  width: 90vw;
+  margin: 20px auto;
+  padding-top: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.login-form {
+  margin: 10px auto;
+  display: block;
+}
+
+.login-btn {
+  display: block;
+  margin: 1rem auto;
+	color: inherit;
+  border: none;
+	padding: 0;
+	font-family: inherit;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  outline: inherit;
+  border-radius: 4px;
+  padding: 6px 2px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $white;
+  background-color: $dark-green;
+}
+
+
+@media (min-width: 1280px) {
+  .login-container {
+    border-top: none;
+    border-left: 2px solid rgba(128, 128, 128, 0.2);
+
+  }
+}

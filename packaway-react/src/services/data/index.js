@@ -84,12 +84,14 @@ export default class DataService {
     let results = [];
     let queryLastVisible;
     let queryFirstVisible;
+    let hasNextPage;
+    const totalPoisPerPage = 10;
     try {
       let query = db.collection("pois").orderBy("name", order);
       if (lastVisible) {
         query = query.startAfter(lastVisible);
       }
-      query = query.limit(10);
+      query = query.limit(totalPoisPerPage);
       const querySnapshot = await query.get();
 
       let i = 0;
@@ -97,11 +99,20 @@ export default class DataService {
         const objectResult = doc.data();
         objectResult.id = doc.id;
         results.push(objectResult);
-        if (i === querySnapshot.size - 1) {
-          queryLastVisible = doc;
-        }
-        if (i === 0) {
-          queryFirstVisible = doc;
+        if (order === "desc") {
+          if (i === querySnapshot.size - 2) {
+              queryFirstVisible = doc;
+            }
+            if (i === 0) {
+              queryLastVisible = doc;
+            }
+          } else {
+            if (i === querySnapshot.size - 2) {
+              queryLastVisible = doc;
+            }
+            if (i === 0) {
+              queryFirstVisible = doc;
+            }
         }
         i++;
       });
@@ -109,14 +120,22 @@ export default class DataService {
       console.log("TCL: DataService -> getPOI -> err", err);
     }
 
-    if (order === "desc") {
-      results = results.reverse();
-      const tempVisible = queryLastVisible;
-      queryLastVisible = queryFirstVisible;
-      queryFirstVisible = tempVisible;
+    if (results.length === totalPoisPerPage) {
+      hasNextPage = true;
+      console.log(results.forEach(res => console.log(res.name)))
+      results.pop();
+    } else {
+      hasNextPage = false;
     }
 
-    return { results, queryLastVisible, queryFirstVisible };
+    if (order === "desc") {
+      results = results.reverse();
+      // const tempVisible = queryLastVisible;
+      // queryLastVisible = queryFirstVisible;
+      // queryFirstVisible = tempVisible;
+    }
+
+    return { results, queryLastVisible, queryFirstVisible, hasNextPage};
   }
 
   //pack functions

@@ -11,7 +11,8 @@ export default class SearchPanel extends Component {
     this.state = {
       formInput: null,
       loading: false,
-      page: 0
+      page: 0,
+      hasNextPage: false
     };
   }
 
@@ -39,7 +40,7 @@ export default class SearchPanel extends Component {
     this.getData(queryFirstVisible, "desc");
   }
 
-  nextData = () => {
+  nextData = () => {  
     const {queryLastVisible} = this.state;
     let { page } = this.state;
     this.setState({page: ++page})
@@ -48,8 +49,8 @@ export default class SearchPanel extends Component {
   
   async getData(lastVisible, order) {
     this.setState({loading: true});
-    const {results, queryLastVisible, queryFirstVisible} = await DataService.getPOIPaginated(lastVisible, order);
-    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false})
+    const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order);
+    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
   }
 
   async componentDidMount() {
@@ -57,7 +58,7 @@ export default class SearchPanel extends Component {
   }
 
   render() {
-    const {pois, page} = this.state;
+    const {pois, page, hasNextPage} = this.state;
     return (
       <div className="search-panel">
         <div className="search-box">
@@ -85,9 +86,11 @@ export default class SearchPanel extends Component {
             onClick={this.prevData}>Previous</button>
           }
           <div className="spacing"></div>
+          {hasNextPage &&
           <button 
             className="pagination-btn next-btn" 
             onClick={this.nextData}>Next</button>
+            }
           </div>
         </div>
         {/* <button onClick={this.handleClick()}>add to db</button> */}

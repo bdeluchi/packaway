@@ -20,6 +20,8 @@
 
 .days-dropdown {
   position:absolute;
+  width: 100%;
+  left: -1px;
   background-color: $white;
   display: inline-block;
   z-index: 100;
@@ -27,6 +29,10 @@
   border-right: 1px solid lightgray;
   border-top: 1px solid lightgray;
   border-radius: 0 0 5px 5px;
+}
+
+.ref-dropdown {
+  padding-top:5px;
 }
 
 .days-dropdown-item {

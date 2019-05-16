@@ -64,8 +64,9 @@ class POIListItem extends Component {
           ref={this.container}
           onClick={this.handleDropdown}
         >
-          <div className="poi-item">{poi.name}</div>
+          <div className="poi-item">{poi.name}
           {open && (
+              <div className="ref-dropdown">
               <ul className="days-dropdown">
                 {days.map(ele => (
                   <li 
@@ -81,7 +82,9 @@ class POIListItem extends Component {
                     className="days-dropdown-item" 
                     onClick={() => this.handleMoveToList()}>Return to List</li>}
               </ul>
+              </div>
           )}
+          </div>
         </div>
       </div>
     );

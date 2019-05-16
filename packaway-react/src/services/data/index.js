@@ -79,7 +79,7 @@ export default class DataService {
   }
 
   //pagination
-  static async getPOIPaginated(lastVisible, order) {
+  static async getPOIPaginated(lastVisible, order, city) {
     const db = firebase.firestore();
     let results = [];
     let queryLastVisible;
@@ -87,7 +87,7 @@ export default class DataService {
     let hasNextPage;
     const totalPoisPerPage = 10;
     try {
-      let query = db.collection("pois").orderBy("name", order);
+      let query = db.collection("pois").where("city", "==", city).orderBy("name", order);
       if (lastVisible) {
         query = query.startAfter(lastVisible);
       }
@@ -122,17 +122,15 @@ export default class DataService {
 
     if (results.length === totalPoisPerPage) {
       hasNextPage = true;
-      console.log(results.forEach(res => console.log(res.name)))
       results.pop();
+    } else if (order !== "desc") {
+        hasNextPage = false;
     } else {
-      hasNextPage = false;
+      hasNextPage = true;
     }
 
     if (order === "desc") {
       results = results.reverse();
-      // const tempVisible = queryLastVisible;
-      // queryLastVisible = queryFirstVisible;
-      // queryFirstVisible = tempVisible;
     }
 
     return { results, queryLastVisible, queryFirstVisible, hasNextPage};
@@ -205,16 +203,24 @@ export default class DataService {
   static async filterResults(type) {
     const db = firebase.firestore();
     let success = true;
+    let resultsArray = []
     try {
       const querySnapshot = await db.collection('pois').where('type', '==', type).get();
       querySnapshot.forEach(function (doc) {
-        console.log(doc.id, ' => ', doc.data());
+        resultsArray.push(doc.data())
       })
     } catch (err) {
       success = true;
 			console.log("TCL: staticfilterResults -> err", err)
     }
-    return success;
+    return resultsArray;
+  }
+
+  static async getPoisByType(types) {
+    const filteredResults = await Promise.all(types.map( type => DataService.filterResults(type)))
+    // filteredResults.map(mer => console.log(mer.type))
+    console.log(filteredResults)
+
   }
 
 }

@@ -21,7 +21,6 @@
   position: absolute;
   background-color: $dark-gray;
   opacity: 0.9;
-  padding: 1rem;
   border: 1px solid $dark-gray;
   top: 40px;
   height: auto;
@@ -30,7 +29,7 @@
 }
 
 .myaccount-menu-item {
-  margin: 0.8rem 0;
+  margin: 0.8rem 1rem;
   &:hover {
     color: $light-green;
   }

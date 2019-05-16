@@ -10,7 +10,7 @@ const sideDrawer = props => {
   }
   return (
     <nav className={drawerClasses}>
-      <Dropdown />
+      <Dropdown closeMenu={props.closeMenu}  />
     </nav>
   );
 };

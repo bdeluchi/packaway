@@ -18,8 +18,12 @@ export default class HomePage extends Component {
               pathname: '/poisearch/barcelona'
             }}>Barcelona</Link>
           </li>
-          <li className="city-btn"><Link to='#'>Madrid</Link></li>
-          <li className="city-btn"><Link to='#'>Salamanca</Link></li>
+          <li className="city-btn"><Link to={{
+              pathname: '/poisearch/madrid'
+            }}>Madrid</Link></li>
+          <li className="city-btn"><Link to={{
+              pathname: '/poisearch/salamanca'
+            }}>Salamanca</Link></li>
         </ul>
       </div>
     );

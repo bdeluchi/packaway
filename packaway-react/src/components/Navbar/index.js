@@ -8,6 +8,10 @@ import { withRouter } from "react-router-dom";
 import "./index.scss";
 
 class Navbar extends Component {
+
+  closeMenu = () => {
+    this.props.closeMenu()
+  }
   render() {
     const { pathname } = this.props.location;
     return (
@@ -26,7 +30,7 @@ class Navbar extends Component {
             {pathname.includes("/poisearch") && <PackCart />}
           </li>
 
-          <li className="nav-myaccount nav__menu-item dropdown-menu"><Dropdown /></li>
+          <li className="nav-myaccount nav__menu-item dropdown-menu"><Dropdown closeMenu={this.closeMenu}/></li>
           <li className="nav-myaccount nav__menu-item burger-menu">
             <DrawerToggleButton click={this.props.drawerClickHandler} />
           </li>

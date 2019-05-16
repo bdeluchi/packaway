@@ -1,11 +1,15 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
 import POIItem from "../POIItem";
 import DataService from "../../services/data"
+import {withRouter} from 'react-router-dom'
+// import churchArr from "./church.json"
+// import parkArr from "./park.json"
+// import museumArr from "./museum.json"
 
 import "./index.scss"
 
-export default class SearchPanel extends Component {
+class SearchPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -49,8 +53,21 @@ export default class SearchPanel extends Component {
   
   async getData(lastVisible, order) {
     this.setState({loading: true});
-    const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order);
-    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
+    const {poiFilters} = this.props;
+    const filteredTypes = [];
+    Object.entries(poiFilters).forEach((key, value) => {
+      if (key[1] === true ) {
+        filteredTypes.push(key[0])
+      }
+    })
+    if (filteredTypes.length === 0) {
+      const city = this.props.match.params.cityId;
+      const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order, city);
+      this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
+    } else {
+      // const {results} = await DataService.getPoisByType(filteredTypes)
+      // this.setState({pois: results, loading: false})
+    }  
   }
 
   async componentDidMount() {
@@ -98,3 +115,12 @@ export default class SearchPanel extends Component {
     );
   }
 }
+
+
+const mapStateToProps = state => {
+  return {
+    poiFilters: state.categoryFilterReducer
+  };
+};
+
+export default withRouter(connect(mapStateToProps)(SearchPanel))

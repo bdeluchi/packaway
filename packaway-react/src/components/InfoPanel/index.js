@@ -12,8 +12,7 @@ class InfoPanel extends Component {
     super(props);
 
     this.state = {
-      packName: this.props.packName
-    };
+      packName: this.props.packName    };
   }
 
   async componentDidUpdate() {

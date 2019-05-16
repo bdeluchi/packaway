@@ -47,6 +47,10 @@ class App extends Component {
     this.setState({sideDrawerOpen: false})
   }
 
+  closeMenu = () => {
+    this.setState({sideDrawerOpen: false})
+  }
+
   render() {
     let backdrop;
 
@@ -56,8 +60,10 @@ class App extends Component {
     return (
       <div className="App" style={{ height: "100%" }}>
         <Router>
-          <Navbar drawerClickHandler={this.drawerToggleClickHandler} />
-          <SideDrawer show={this.state.sideDrawerOpen}/>
+          <Navbar drawerClickHandler={this.drawerToggleClickHandler} 
+          closeMenu={this.closeMenu}/>
+          <SideDrawer show={this.state.sideDrawerOpen}
+          closeMenu={this.closeMenu}/>
           {backdrop}
           <Switch>
             <Route exact path="/" component={HomePage} />

@@ -2,6 +2,7 @@
 
 
 .day-item {
+  //TODO: no tiene que tener un tamaño explícito y el overflow debería hacer scroll
   width: 200px;
   height: 200px;
   border: 2px solid $light-gray;

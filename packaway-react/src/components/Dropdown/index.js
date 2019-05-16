@@ -31,12 +31,17 @@ class Dropdown extends Component {
     });
   };
 
+  handleMenuClose = () => {
+    this.props.closeMenu();
+  }
+
   logout = () => {
     AuthService.logout();
     this.props.resetCart();
     this.props.resetUnassigned();
     this.props.setCurrentPack("");
     this.props.setUserInfo(null);
+    this.props.closeMenu();
     this.props.history.push("/");
   };
 
@@ -76,19 +81,19 @@ class Dropdown extends Component {
           {userInfo ? (
             <ul className="sidebar-main">
               <li className="sidebar-menu-item">
-                <Link to="/packs">My packs</Link>
+                <Link to="/packs" onClick={this.handleMenuClose}>My packs</Link>
               </li>
               <li className="sidebar-menu-item">
-                <Link to="/profile">My profile</Link>
+                <Link to="/profile" onClick={this.handleMenuClose}>My profile</Link>
               </li>
               <li className="sidebar-menu-item last-item" onClick={this.logout}>
                 Logout
               </li>
             </ul>
           ) : (
-            <ul>
+            <ul className="sidebar-main">
               <li className="sidebar-menu-item last-item">
-                <Link to="/login">Login</Link>
+                <Link to="/login" onClick={this.handleMenuClose}>Login</Link>
               </li>
             </ul>
           )}

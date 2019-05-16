@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import withDay from "../../helpers/withDay";
 import withPOI from "../../helpers/withPOI";
 
+import './index.scss'
+
 class POIListItem extends Component {
   constructor(props) {
     super(props);
@@ -64,7 +66,7 @@ class POIListItem extends Component {
         >
           <div className="poi-item">{poi.name}</div>
           {open && (
-            <div className="dropdown">
+            <div className="days-dropdown">
               <ul>
                 {days.map(ele => (
                   <li

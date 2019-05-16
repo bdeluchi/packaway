@@ -12,7 +12,7 @@ class InfoPanel extends Component {
     super(props);
 
     this.state = {
-      packName: this.props.packName,
+      packName: this.props.packName
     };
   }
 
@@ -44,9 +44,10 @@ class InfoPanel extends Component {
       counter--;
       this.props.updateNumberOfDays(counter);
       this.props.removeLastDay(days);
-      const day = days[days.length-1];
-      Object.values(day.pois).forEach(poi => this.props.returnPoiToUnassigned(poi))
-      
+      const day = days[days.length - 1];
+      Object.values(day.pois).forEach(poi =>
+        this.props.returnPoiToUnassigned(poi)
+      );
     }
   };
 
@@ -59,43 +60,48 @@ class InfoPanel extends Component {
   };
 
   render() {
-    const { packName} = this.state;
-    const {numberOfDays, packCity} = this.props
+    const { packName } = this.state;
+    const { numberOfDays, packCity } = this.props;
     return (
-      <div>
-        <h2>{packCity}</h2>
+      <div className="info-container">
+        <h2 className="pack-city-name">{packCity}</h2>
         {packName !== null && (
           <div>
             <form onSubmit={this.onSaveChanges}>
-              <input
+              <div className="edit-page-field">
+              <label className="edit-page-label">Name</label>
+              <input className="edit-name-input"
                 type="text"
                 value={packName}
                 onChange={this.handleInputChange}
               />
-              <label>
-                Days:
-                <div
-                  className="value-button decrease-btn"
-                  onClick={this.handleDecreaseValue}
-                  value="decrease"
-                >
-                  -
-                </div>
-                <input className="number-display"
-                  type="number"
-                  name="day-input"
-                  value={numberOfDays}
-                  readOnly
-                />
-                <div
-                  className="value-button increase-btn"
-                  onClick={this.handleIncreaseValue}
-                  value="increase"
-                >
-                  +
-                </div>
-              </label>
-              <button>Save</button>
+              </div>
+              <div className="edit-page-field">
+              <label className="edit-page-label">Days</label>
+              <div
+                className="value-button decrease-btn"
+                onClick={this.handleDecreaseValue}
+                value="decrease"
+              >
+                -
+              </div>
+              <input
+                className="number-display"
+                type="number"
+                name="day-input"
+                value={numberOfDays}
+                readOnly
+              />
+              <div
+                className="value-button increase-btn"
+                onClick={this.handleIncreaseValue}
+                value="increase"
+              >
+                +
+              </div>
+              </div>
+              <button className="edit-page-save-btn">Save</button>
+              <div className="saved-message">SAVED!</div>
             </form>
           </div>
         )}

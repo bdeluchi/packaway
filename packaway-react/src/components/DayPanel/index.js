@@ -16,10 +16,17 @@ class DayPanel extends Component {
   };
 
   render() {
+    const {days} = this.props;
     return (
       <div>
-        <h2>Manage your days here</h2>
-        <div className="days-container">{this.createDays()}</div>
+        <div className="days-container">
+          <h2 className="edit-page-subtitle">My Days</h2>
+          <div className="days-content">
+            {days.length === 0 && <div className="days-placeholder">Add some days!</div>}
+            {this.createDays()}
+          </div>
+        </div>
+        
       </div>
     );
   }

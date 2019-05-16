@@ -7,6 +7,7 @@ import POIListItem from "../POIListItem";
 import InfoPanel from "../InfoPanel";
 import { withRouter } from "react-router-dom";
 
+import './index.scss'
 
 
 class MyPOIList extends Component {
@@ -52,15 +53,17 @@ class MyPOIList extends Component {
     return (
       <div>
         {pack && unassignedPois && (
-          <div>
+          <React.Fragment>
             <InfoPanel packName={pack.name} packCity={pack.city} />
-            <h2>My list of POIs</h2>
+            <div className="mypois-container">
+            <h2 className="edit-page-subtitle">My list of POIs</h2>
             <div>
               {Object.entries(unassignedPois).map(([key, value]) => (
                 <POIListItem key={value.id} poi={value} />
               ))}
             </div>
-          </div>
+            </div>
+          </React.Fragment>
         )}
       </div>
     );

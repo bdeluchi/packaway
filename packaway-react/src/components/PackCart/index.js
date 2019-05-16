@@ -37,7 +37,7 @@ class PackCart extends Component {
   };
 
   handlePackUpdate = () => {
-    const { unassignedPois, currentPack } = this.props;
+    const { currentPack } = this.props;
     this.props.history.push(`/packs/edit/${currentPack}`);
   };
 

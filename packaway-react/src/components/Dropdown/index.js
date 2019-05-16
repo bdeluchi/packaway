@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import withUser from "../../helpers/withUser";
 import withPOI from "../../helpers/withPOI";
 import withPack from "../../helpers/withPack";
+import withDay from "../../helpers/withDay";
 import AuthService from "../../services/auth";
 import {withRouter} from 'react-router-dom'
 
@@ -33,6 +34,7 @@ class Dropdown extends Component {
   logout = () => {
     AuthService.logout();
     this.props.resetCart();
+    this.props.resetUnassigned();
     this.props.setCurrentPack("");
     this.props.setUserInfo(null);
     this.props.history.push("/");
@@ -96,4 +98,4 @@ class Dropdown extends Component {
   }
 }
 
-export default withRouter(withPack(withPOI(withUser(Dropdown))))
+export default withDay(withRouter(withPack(withPOI(withUser(Dropdown)))));

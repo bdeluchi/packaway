@@ -55,7 +55,11 @@ export const resetDayStatus = () => {
   }
 }
 
-
+export const resetUnassigned = () => {
+  return {
+    type: 'RESET_UNASSIGNED'
+  }
+}
 
 export const addPoiToDay = (dayId, poi) => {
   return {

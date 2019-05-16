@@ -22,7 +22,7 @@ export const poiReducer = (state = defaultState, action = {}) => {
     }
     case "RESET_CART": {
       return {
-        pois: []
+        pois: defaultState.pois
       }
     }
     default: {

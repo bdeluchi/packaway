@@ -38,7 +38,6 @@ class PackCart extends Component {
 
   handlePackUpdate = () => {
     const { unassignedPois, currentPack } = this.props;
-    // DataService.updatePackPois(currentPack, {unassignedPois: unassignedPois});
     this.props.history.push(`/packs/edit/${currentPack}`);
   };
 

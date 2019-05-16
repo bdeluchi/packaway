@@ -125,15 +125,20 @@ export const dayReducer = (state = defaultState, action) => {
 
       return stateWithoutDayPoi;
     }
-
+    case "RESET_UNASSIGNED": {
+      return {
+        ...state,
+        unassignedPois: defaultState.unassignedPois 
+      }
+    }
     case "RESET_DAYS": {
       return {
         ...state,
         days: defaultState.days,
-        numberOfDays: defaultState.numberOfDays,
-        unassignedPois: defaultState.unassignedPois
+        numberOfDays: defaultState.numberOfDays
       };
     }
+
     default: {
       return state;
     }

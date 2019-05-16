@@ -2,7 +2,6 @@
 
 
 .info-container {
-  background-color: #D9D9D9;
   padding: 5px;
   border-radius: 5px;
   margin: 10px 0; 
@@ -17,6 +16,7 @@
   padding: 3px;
   letter-spacing: 2px;
   margin: 5px 0;
+  /* text-shadow: -1px -1px 6px #485856; */
 }
 
 .edit-page-field {
@@ -90,7 +90,7 @@
   font-size: 1.3rem;
   font-weight: bold;
   color: $white;
-  background-color: $dark-green;
+  background-color: $light-gray;
 
 
   &:hover {

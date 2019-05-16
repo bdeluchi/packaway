@@ -66,10 +66,10 @@ class POIListItem extends Component {
         >
           <div className="poi-item">{poi.name}</div>
           {open && (
-            <div className="days-dropdown">
-              <ul>
+              <ul className="days-dropdown">
                 {days.map(ele => (
-                  <li
+                  <li 
+                    className="days-dropdown-item"
                     onClick={() => this.handleMove(ele.dayId)}
                     key={ele.dayId}
                   >
@@ -77,9 +77,10 @@ class POIListItem extends Component {
                   </li>
                 ))}
                   {!Object.keys(unassignedPois).includes(poi.id) && 
-                  <li onClick={() => this.handleMoveToList()}>Return to List</li>}
+                  <li 
+                    className="days-dropdown-item" 
+                    onClick={() => this.handleMoveToList()}>Return to List</li>}
               </ul>
-            </div>
           )}
         </div>
       </div>

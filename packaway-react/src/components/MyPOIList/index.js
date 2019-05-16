@@ -56,7 +56,7 @@ class MyPOIList extends Component {
           <React.Fragment>
             <InfoPanel packName={pack.name} packCity={pack.city} />
             <div className="mypois-container">
-            <h2 className="edit-page-subtitle">My list of POIs</h2>
+            <h2 className="edit-page-subtitle">My list</h2>
             <div>
               {Object.entries(unassignedPois).map(([key, value]) => (
                 <POIListItem key={value.id} poi={value} />

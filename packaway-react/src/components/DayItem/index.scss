@@ -1,9 +1,17 @@
-
+@import '../../colors';
 
 
 .day-item {
   width: 200px;
   height: 200px;
-  border: 1px solid black;
-  display: inline-block
+  border: 2px solid $light-gray;
+  padding: 1rem;
+  margin: 1rem;
+  border-radius: 20px;
+  display: block;
+}
+
+.day-title {
+  text-transform: uppercase;
+  color: $light-gray;
 }

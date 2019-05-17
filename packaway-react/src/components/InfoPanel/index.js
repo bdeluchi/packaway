@@ -66,7 +66,6 @@ class InfoPanel extends Component {
   };
 
   render() {
-    console.log("rendeeerrr")
     const { packName, savedMessage } = this.state;
     const { numberOfDays, packCity } = this.props;
     return (

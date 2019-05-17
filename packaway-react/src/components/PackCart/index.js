@@ -25,6 +25,7 @@ class PackCart extends Component {
         name: "Enter pack name",
         city: Object.values(pois)[0].city,
         userId: userInfo.uid,
+        days: [],
         unassignedPois: pois
       });
       if (packId) {
@@ -41,25 +42,25 @@ class PackCart extends Component {
     this.props.history.push(`/packs/edit/${currentPack}`);
   };
 
-  // handleCartClick = () => {
-  //   this.setState(prevState => {
-  //     return { showCart: !prevState.showCart };
+  handleCartClick = () => {
+    this.setState(prevState => {
+      return { showCart: !prevState.showCart };
+    });
+  }
+
+  // showCart = event => {
+  //   event.preventDefault();
+  //   this.setState({ showCart: true }, () => {
+  //     document.addEventListener("click", this.hideCart);
   //   });
-  // }
+  //   //TODO: memory leak when clicking on home with cart open
+  // };
 
-  showCart = event => {
-    event.preventDefault();
-    this.setState({ showCart: true }, () => {
-      document.addEventListener("click", this.hideCart);
-    });
-    //TODO: memory leak when clicking on home with cart open
-  };
-
-  hideCart = () => {
-    this.setState({ showCart: false }, () => {
-      document.removeEventListener("click", this.hideCart);
-    });
-  };
+  // hideCart = () => {
+  //   this.setState({ showCart: false }, () => {
+  //     document.removeEventListener("click", this.hideCart);
+  //   });
+  // };
   
   render() {
     const { pois, currentPack } = this.props;
@@ -67,7 +68,7 @@ class PackCart extends Component {
       <div>
         <div>
           <div
-            onClick={this.showCart}
+            onClick={this.handleCartClick}
           >
             <img
               className="pack-icon"

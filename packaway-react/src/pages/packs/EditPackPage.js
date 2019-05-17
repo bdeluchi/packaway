@@ -8,7 +8,7 @@ export default class EditPackPage extends Component {
   render() {
     return (
       <div className="edit-page-container">
-        <h1 className="edit-title">Edit Pack</h1>
+        <h1 className="page-title">Edit Pack</h1>
         <div className="edit-content">
           <MyPOIList />
           <DayPanel />

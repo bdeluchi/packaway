@@ -45,6 +45,11 @@ class MyPOIList extends Component {
     this.props.resetDayStatus();
   }
 
+  handleAddMore = () => {
+    const {city} = this.state.pack
+    this.props.history.push(`/poisearch/${city}`);
+  }
+
   render() {
     const { pack } = this.state;
     const { unassignedPois } = this.props;
@@ -63,6 +68,7 @@ class MyPOIList extends Component {
                   <div className="pois-placeholder">All assigned!</div>
                 )}
               </div>
+              <button className="add-more-btn" onClick={this.handleAddMore}>Add more!</button>
             </div>
           </React.Fragment>
         )}

@@ -16,6 +16,7 @@ class Navbar extends Component {
     const { pathname } = this.props.location;
     return (
       <nav className="navigation-bar">
+        <div className="nav-container">
         <div className="logo-item">
           <Link to="/">
             <img
@@ -35,6 +36,7 @@ class Navbar extends Component {
             <DrawerToggleButton click={this.props.drawerClickHandler} />
           </li>
         </ul>
+        </div>
       </nav>
     );
   }

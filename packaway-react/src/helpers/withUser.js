@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setUserInfo } from '../redux/actions/userActions';
+import { setUserInfo, addPackToUser } from '../redux/actions/userActions';
 
 
 function withUser(WrappedComponent){
@@ -20,7 +20,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setUserInfo: (user) => dispatch(setUserInfo(user))
+    setUserInfo: (user) => dispatch(setUserInfo(user)),
+    addPackToUser: (packId) => dispatch(addPackToUser(packId))
   };
 };
 

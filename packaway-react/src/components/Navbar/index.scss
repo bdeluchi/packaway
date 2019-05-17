@@ -7,9 +7,15 @@
   color: $white;
   font-size: 1.5rem;
   height: 60px;
+  padding: 0 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.nav-container {
   display: flex;
   justify-content: space-between;
-  padding: 0 1rem;
 }
 
 .nav__menu {
@@ -53,10 +59,10 @@
 
 
 @media (min-width: 1281px) {
-  .navigation-bar {
-    justify-content: space-around;
-
-  }
+    .nav-container {
+      width: 80vw;
+      margin: 0 auto;
+    }
 }
 
 @media (min-width: 768px) and (max-width: 1280px) {

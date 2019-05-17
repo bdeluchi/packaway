@@ -18,7 +18,6 @@ class DayPanel extends Component {
   render() {
     const {days} = this.props;
     return (
-      <div>
         <div className="days-container">
           <h2 className="edit-page-subtitle">My Days</h2>
           <div className="days-content">
@@ -26,8 +25,6 @@ class DayPanel extends Component {
             {this.createDays()}
           </div>
         </div>
-        
-      </div>
     );
   }
 }

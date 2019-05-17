@@ -2,9 +2,10 @@
 
 
 .day-item {
-  //TODO: no tiene que tener un tamaño explícito y el overflow debería hacer scroll
-  width: 200px;
-  height: 200px;
+  width: 70vw;
+  height: 70vw;
+  max-width: 250px;
+  max-height: 250px;
   border: 2px solid $light-gray;
   padding: 1rem;
   margin: 1rem;
@@ -16,3 +17,11 @@
   text-transform: uppercase;
   color: $light-gray;
 }
+
+
+// @media (min-width: 768px) and (max-width: 1280px) {
+//   .day-item {
+//     max-width: 250px;
+//     max-height: 250px;
+//   }
+// }

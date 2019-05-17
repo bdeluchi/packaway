@@ -1,8 +1,24 @@
 
 
+.edit-title {
+  margin-top: 10px;
+}
+
 .edit-page-container {
   display: flex;
   flex-direction: column;
   width: 90vw;
   margin: 0 auto;
+}
+
+
+@media (min-width: 1280px) {
+  .edit-page-container {
+    width: 80vw;
+  }
+  .edit-content {
+    display: flex;
+    justify-content: space-between;
+  }
+
 }

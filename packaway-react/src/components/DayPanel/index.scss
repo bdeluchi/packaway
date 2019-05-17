@@ -11,16 +11,24 @@
 
 .days-content {
   display: flex;
-  flex-direction: column;
   align-items: center;
   margin: 1rem;
   min-height: 20vh;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .days-placeholder {
   color: #BFBFBF;
   text-transform: uppercase;
   font-weight: bold;
-  font-size: 1.7rem;
+  font-size: 2rem;
+}
+
+
+@media (min-width: 1280px) {
+  .days-container {
+    width: 50vw;
+  }
 }

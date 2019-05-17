@@ -12,7 +12,9 @@ class InfoPanel extends Component {
     super(props);
 
     this.state = {
-      packName: this.props.packName    };
+      packName: this.props.packName,
+      savedMessage: false    
+    };
   }
 
   async componentDidUpdate() {
@@ -22,6 +24,7 @@ class InfoPanel extends Component {
       this.props.setCurrentPack(packId);
     }
   }
+
 
   handleInputChange = e => {
     const value = e.target.value;
@@ -56,10 +59,15 @@ class InfoPanel extends Component {
     const { days, unassignedPois } = this.props;
     const { packName } = this.state;
     DataService.updatePackData(currentPack, { packName, unassignedPois, days });
+    this.setState({savedMessage: true})
+    setTimeout(() => {
+      this.setState({savedMessage: false})
+    }, 1000);
   };
 
   render() {
-    const { packName } = this.state;
+    console.log("rendeeerrr")
+    const { packName, savedMessage } = this.state;
     const { numberOfDays, packCity } = this.props;
     return (
       <div className="info-container">
@@ -100,7 +108,7 @@ class InfoPanel extends Component {
               </div>
               </div>
               <button className="edit-page-save-btn">Save</button>
-              <div className="saved-message">SAVED!</div>
+              {savedMessage && <div className="saved-message">SAVED!</div>}
             </form>
           </div>
         )}

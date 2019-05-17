@@ -41,11 +41,25 @@ class PackCart extends Component {
     this.props.history.push(`/packs/edit/${currentPack}`);
   };
 
-  handleCartClick = () => {
-    this.setState(prevState => {
-      return { showCart: !prevState.showCart };
+  // handleCartClick = () => {
+  //   this.setState(prevState => {
+  //     return { showCart: !prevState.showCart };
+  //   });
+  // }
+
+  showCart = event => {
+    event.preventDefault();
+    this.setState({ showCart: true }, () => {
+      document.addEventListener("click", this.hideCart);
     });
-  }
+    //TODO: memory leak when clicking on home with cart open
+  };
+
+  hideCart = () => {
+    this.setState({ showCart: false }, () => {
+      document.removeEventListener("click", this.hideCart);
+    });
+  };
   
   render() {
     const { pois, currentPack } = this.props;
@@ -53,7 +67,7 @@ class PackCart extends Component {
       <div>
         <div>
           <div
-            onClick={this.handleCartClick}
+            onClick={this.showCart}
           >
             <img
               className="pack-icon"

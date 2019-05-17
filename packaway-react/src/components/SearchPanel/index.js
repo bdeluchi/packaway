@@ -40,6 +40,7 @@ class SearchPanel extends Component {
   prevData = () => {
     const {queryFirstVisible} = this.state;
     let { page } = this.state;
+    window.scrollTo(0, 0)
     this.setState({page: --page})
     this.getData(queryFirstVisible, "desc");
   }
@@ -47,6 +48,7 @@ class SearchPanel extends Component {
   nextData = () => {  
     const {queryLastVisible} = this.state;
     let { page } = this.state;
+    window.scrollTo(0, 0)
     this.setState({page: ++page})
     this.getData(queryLastVisible)
   }

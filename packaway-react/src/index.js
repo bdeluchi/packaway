@@ -3,7 +3,6 @@ import ReactDOM from "react-dom";
 import { createStore } from "redux";
 import { Provider } from 'react-redux';
 import firebaseConfig from './services/config'
-
 import combinedReducers from "./redux/reducers";
 import "./index.scss";
 import App from "./App";

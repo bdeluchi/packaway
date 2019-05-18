@@ -1,5 +1,8 @@
 import React, { Component } from "react";
 import DataService from "../../services/data";
+import {withRouter} from 'react-router-dom'
+import withPOI from '../../helpers/withPOI'
+import withPack from '../../helpers/withPack'
 
 import "./index.scss";
 
@@ -20,10 +23,28 @@ class PackItem extends Component {
     }
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.getPackData();
   }
 
+  goToEditPage = () => {
+    const { packId } = this.props;
+    this.props.resetCart()
+    this.props.history.push(`/packs/edit/${packId}`)
+  }
+
+  goToViewPage = () => {
+    this.props.history.push("/packs/view")
+
+  }
+
+  deletePack = () => {
+    const { packId} = this.props;
+    const {userId} = this.state.pack
+    DataService.deletePack(packId, userId);
+    //TODO: setstate para hacer un render y se recargue la página
+  }
+ 
   getTotalDays() {
     const { pack } = this.state;
     if (!pack.days) {
@@ -56,9 +77,9 @@ class PackItem extends Component {
           <a className="more-options-menu" onClick={this.handleDropdown}>
           {open && <div className="more-options-dropdown">
             <ul>
-              <li className="menu-option-item">Edit pack</li>
-              <li className="menu-option-item">View pack</li>
-              <li className="menu-option-item">Delete pack</li>
+              <li className="menu-option-item" onClick={this.goToEditPage}>Edit pack</li>
+              <li className="menu-option-item" onClick={this.goToViewPage}>View pack</li>
+              <li className="menu-option-item" onClick={this.deletePack}>Delete pack</li>
             </ul>
           </div>}
         </a>
@@ -68,4 +89,4 @@ class PackItem extends Component {
   }
 }
 
-export default PackItem;
+export default withPack(withPOI(withRouter(PackItem)));

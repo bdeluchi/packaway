@@ -1,5 +1,4 @@
 import * as firebase from "firebase";
-import { fips } from "crypto";
 
 export default class DataService {
   //user functions
@@ -88,7 +87,10 @@ export default class DataService {
     let hasNextPage;
     const totalPoisPerPage = 10;
     try {
-      let query = db.collection("pois").where("city", "==", city).orderBy("name", order);
+      let query = db
+        .collection("pois")
+        .where("city", "==", city)
+        .orderBy("name", order);
       if (lastVisible) {
         query = query.startAfter(lastVisible);
       }
@@ -102,18 +104,18 @@ export default class DataService {
         results.push(objectResult);
         if (order === "desc") {
           if (i === querySnapshot.size - 2) {
-              queryFirstVisible = doc;
-            }
-            if (i === 0) {
-              queryLastVisible = doc;
-            }
-          } else {
-            if (i === querySnapshot.size - 2) {
-              queryLastVisible = doc;
-            }
-            if (i === 0) {
-              queryFirstVisible = doc;
-            }
+            queryFirstVisible = doc;
+          }
+          if (i === 0) {
+            queryLastVisible = doc;
+          }
+        } else {
+          if (i === querySnapshot.size - 2) {
+            queryLastVisible = doc;
+          }
+          if (i === 0) {
+            queryFirstVisible = doc;
+          }
         }
         i++;
       });
@@ -125,7 +127,7 @@ export default class DataService {
       hasNextPage = true;
       results.pop();
     } else if (order !== "desc") {
-        hasNextPage = false;
+      hasNextPage = false;
     } else {
       hasNextPage = true;
     }
@@ -134,7 +136,7 @@ export default class DataService {
       results = results.reverse();
     }
 
-    return { results, queryLastVisible, queryFirstVisible, hasNextPage};
+    return { results, queryLastVisible, queryFirstVisible, hasNextPage };
   }
 
   //pack functions
@@ -178,20 +180,37 @@ export default class DataService {
     return pack;
   }
 
+  static async deletePack(packId, userId) {
+    const db = firebase.firestore();
+    let success = true;
+    try {
+      const user = await DataService.getObjectDetail("users", userId);
+      await db.collection("users").doc(userId).update({packs: user.packs.filter(pack => pack !== packId)})
+      await db.collection("packs").doc(packId).delete();
+
+    } catch (err) {
+      success = true;
+      console.log("TCL: DataService -> deletePack -> err", err);
+    }
+    return success;
+  }
+
   static async updatePackData(packId, data) {
     const db = firebase.firestore();
-    console.log("data",data)
     let success = true;
     try {
       const pack = await DataService.getObjectDetail("packs", packId);
       if (pack) {
         pack.days = data.days;
         await db
-        .collection("packs")
-        .doc(packId)  
-        .update({days: data.days, unassignedPois: data.unassignedPois, name:data.packName});
+          .collection("packs")
+          .doc(packId)
+          .update({
+            days: data.days,
+            unassignedPois: data.unassignedPois,
+            name: data.packName
+          });
       }
-      
     } catch (err) {
       success = true;
       console.log("TCL: DataService -> staticupdatedDetail -> err", err);
@@ -205,27 +224,30 @@ export default class DataService {
     //llamar a poipaginated
     const db = firebase.firestore();
     let success = true;
-    let resultsArray = []
+    let resultsArray = [];
     try {
-      const querySnapshot = await db.collection('pois').where('type', '==', type).get();
-      querySnapshot.forEach(function (doc) {
-        resultsArray.push(doc.data())
-      })
+      const querySnapshot = await db
+        .collection("pois")
+        .where("type", "==", type)
+        .get();
+      querySnapshot.forEach(function(doc) {
+        resultsArray.push(doc.data());
+      });
     } catch (err) {
       success = true;
-			console.log("TCL: staticfilterResults -> err", err)
+      console.log("TCL: staticfilterResults -> err", err);
     }
     return resultsArray;
   }
 
   static async getPoisByType(types) {
-    const filteredResults = await Promise.all(types.map( type => DataService.filterResults(type)))
-    let filteredArr = []
+    const filteredResults = await Promise.all(
+      types.map(type => DataService.filterResults(type))
+    );
+    let filteredArr = [];
     filteredResults.forEach(poiArr => {
-      filteredArr = [...poiArr, ...filteredArr]
-    })
+      filteredArr = [...poiArr, ...filteredArr];
+    });
     return filteredArr;
-
   }
-
 }

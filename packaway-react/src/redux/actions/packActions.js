@@ -6,9 +6,9 @@ export const setCurrentPack = (packId) => {
 }
 
 
-// export const removeCurrentPack = (packId) => {
+// export const removePack = (packId) => {
 //   return {
 //     id: packId,
-//     type: 'REMOVE_PACK'
+//     type: 'DELETE_PACK'
 //   }
 // }

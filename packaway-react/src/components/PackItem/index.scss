@@ -3,6 +3,7 @@
 .pack-item-container {
   width: 70vw;
   height: 70vw;
+  position: relative;
   max-width: 250px;
   max-height: 250px;
   padding: 1rem;
@@ -42,28 +43,39 @@
   width: 100px;
   text-align: right;
   border-radius: 5px;
-  padding: 5px;
-  z-index: 100;
+  position: absolute;
+  padding: 10px;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
-
+  top: 25px;
+  background-color: $white;
+  right: 0;
 }
 .more-options-menu {
   text-decoration:none;
-  position: relative;
-  background: #3F3C53;
+  position: absolute;
   border-radius: 50%;
-  top: -60px;
-  right: -130px;
-  margin: 50px;
+  top: 10px;
+  right: 10px;
+  width: 33px;
+  z-index: 100;
+  cursor: pointer;
 }
 .more-options-menu:before {
   content: '•••';
   position: absolute;
   color: $dark-gray;
   border-radius: 50%;
+  
+  .more-options-menu:before:active {
+    opacity: 0.8;
+  }
 }
 
 .menu-option-item {
  color: $dark-gray;
+ cursor: pointer;
+ &:hover {
+   color: $light-green;
+ }
  
 }

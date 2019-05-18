@@ -1,4 +1,5 @@
 import * as firebase from "firebase";
+import { fips } from "crypto";
 
 export default class DataService {
   //user functions
@@ -201,6 +202,7 @@ export default class DataService {
   //filter queries
 
   static async filterResults(type) {
+    //llamar a poipaginated
     const db = firebase.firestore();
     let success = true;
     let resultsArray = []
@@ -218,8 +220,11 @@ export default class DataService {
 
   static async getPoisByType(types) {
     const filteredResults = await Promise.all(types.map( type => DataService.filterResults(type)))
-    // filteredResults.map(mer => console.log(mer.type))
-    console.log(filteredResults)
+    let filteredArr = []
+    filteredResults.forEach(poiArr => {
+      filteredArr = [...poiArr, ...filteredArr]
+    })
+    return filteredArr;
 
   }
 

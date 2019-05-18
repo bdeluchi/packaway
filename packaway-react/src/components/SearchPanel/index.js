@@ -50,6 +50,7 @@ class SearchPanel extends Component {
     let { page } = this.state;
     window.scrollTo(0, 0)
     this.setState({page: ++page})
+    //loading para no poder hacer click
     this.getData(queryLastVisible)
   }
   
@@ -67,13 +68,22 @@ class SearchPanel extends Component {
       const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order, city);
       this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
     } else {
-      // const {results} = await DataService.getPoisByType(filteredTypes)
-      // this.setState({pois: results, loading: false})
+      const results = await DataService.getPoisByType(filteredTypes)
+      this.setState({pois: results, loading: false})
     }  
   }
 
-  async componentDidMount() {
+  componentDidMount() {
     this.getData();
+  }
+
+  componentDidUpdate(prevProps) {
+    if (prevProps.poiFilters.church !== this.props.poiFilters.church || 
+      prevProps.poiFilters.museum !== this.props.poiFilters.museum ||
+      prevProps.poiFilters.park !== this.props.poiFilters.park ) {
+
+        this.getData();
+      }
   }
 
   render() {

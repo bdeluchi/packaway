@@ -5,14 +5,12 @@ import {
   DirectionsRenderer
 } from '@react-google-maps/api'
 
-
 class DirectionsItem extends Component {
   state = {
     response: null,
     travelMode: 'WALKING',
     origin: '',
-    destination: '',
-    waypoints: []
+    destination: ''
   }
 
   directionsCallback = response => {
@@ -31,17 +29,17 @@ class DirectionsItem extends Component {
     }
   }
 
-  // handleCalculateRoute = () => {
-  //     this.setState(
-  //       () => ({
-  //         origin: point1,
-  //         destination: point2
-  //       })
-  //     )
-  // }
+  handleCalculateRoute = () => {
+      this.setState(
+        () => ({
+          origin: {lat: 40.4209517, lng: -3.7080847},
+          destination: {lat: 40.4209517, lng: -3.7080847}
+        })
+      )
+  }
 
-  render() {
-    console.log(this.props.waypoints)
+  render() {    
+    const {waypoints} = this.props
     return (
     <div className='map'>
       <div className='map-settings'>
@@ -57,10 +55,10 @@ class DirectionsItem extends Component {
             height: "500px",
             width: "500px"
           }}
-          zoom={13}
+          zoom={5}
           center={{
-            lat: 41.4024661,
-            lng: 2.1481763
+            lat: 40.404622,
+            lng: -3.732098
           }}
         >
           {
@@ -72,7 +70,13 @@ class DirectionsItem extends Component {
                 options={{ // eslint-disable-line react-perf/jsx-no-new-object-as-prop
                   destination: this.state.destination,
                   origin: this.state.origin,
-                  travelMode: this.state.travelMode
+                  travelMode: this.state.travelMode,
+                  waypoints: 
+                   waypoints.map(function (location) {
+                    return {location: location, stopover: false}
+                  })
+                  
+               
                 }}
                 callback={this.directionsCallback}
               />

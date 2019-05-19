@@ -44,7 +44,6 @@ class SearchPanel extends Component {
     let { page } = this.state;
     window.scrollTo(0, 0)
     this.setState({page: ++page})
-    //loading para no poder hacer click
     this.getData(queryLastVisible)
   }
   

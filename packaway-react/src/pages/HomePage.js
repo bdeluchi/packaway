@@ -1,9 +1,22 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
 
+import withPack from '../helpers/withPack'
+import withDay from '../helpers/withDay'
+import withPOI from '../helpers/withPOI'
+
 import "./HomePage.scss"
 
-export default class HomePage extends Component {
+class HomePage extends Component {
+
+  
+  resetCity = () => {
+    this.props.resetDayStatus();
+    this.props.resetUnassigned();
+    this.props.resetCurrentPack();
+    this.props.resetCart()
+  }
+
   render() {
     return (
       <div>
@@ -16,16 +29,25 @@ export default class HomePage extends Component {
           <li className="city-btn">
             <Link to={{
               pathname: '/poisearch/barcelona'
-            }}>Barcelona</Link>
+            }} onClick={this.resetCity}>Barcelona</Link>
           </li>
           <li className="city-btn"><Link to={{
               pathname: '/poisearch/madrid'
-            }}>Madrid</Link></li>
+            }} onClick={this.resetCity}>Madrid</Link></li>
           <li className="city-btn"><Link to={{
               pathname: '/poisearch/salamanca'
-            }}>Salamanca</Link></li>
+            }} onClick={this.resetCity}>Salamanca</Link></li>
+           <li className="city-btn"><Link to={{
+              pathname: '/poisearch/amsterdam'
+            }} onClick={this.resetCity}>Amsterdam</Link></li>
+           <li className="city-btn"><Link to={{
+              pathname: '/poisearch/tokyo'
+            }} onClick={this.resetCity}>Tokyo</Link></li>
         </ul>
       </div>
     );
   }
 }
+
+
+export default withPOI(withPack(withDay(HomePage)));

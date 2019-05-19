@@ -22,14 +22,14 @@ class MyPOIList extends Component {
     if (packId) {
       const pack = await DataService.getPack(packId);
       const { unassignedPois, days } = pack;
-      // if (Object.keys(this.props.pois).length === 0) {
-      //   console.log("my pois", unassignedPois)
       Object.values(unassignedPois).forEach(poi => {
         this.props.addUnassignedPois(poi);
         this.props.setPoiInfo(poi);
       });
-      // }
       if (days) {
+        days.forEach(day =>
+          Object.values(day.pois).forEach(poi => this.props.setPoiInfo(poi))
+        );
         Object.values(days).map(day => this.props.addDays(day));
         this.props.updateNumberOfDays(days.length);
       }
@@ -46,9 +46,9 @@ class MyPOIList extends Component {
   }
 
   handleAddMore = () => {
-    const {city} = this.state.pack
+    const { city } = this.state.pack;
     this.props.history.push(`/poisearch/${city}`);
-  }
+  };
 
   render() {
     const { pack } = this.state;
@@ -68,7 +68,9 @@ class MyPOIList extends Component {
                   <div className="pois-placeholder">All assigned!</div>
                 )}
               </div>
-              <button className="add-more-btn" onClick={this.handleAddMore}>Add more!</button>
+              <button className="add-more-btn" onClick={this.handleAddMore}>
+                Add more!
+              </button>
             </div>
           </React.Fragment>
         )}

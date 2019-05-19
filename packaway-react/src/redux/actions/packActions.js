@@ -5,6 +5,12 @@ export const setCurrentPack = (packId) => {
   }
 }
 
+export const resetCurrentPack = () => {
+  return {
+    type: 'RESET_PACK'
+  }
+}
+
 
 // export const removePack = (packId) => {
 //   return {

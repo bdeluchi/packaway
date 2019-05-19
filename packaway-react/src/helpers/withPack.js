@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import {setCurrentPack} from '../redux/actions/packActions'
+import {setCurrentPack, resetCurrentPack} from '../redux/actions/packActions'
 
 
 function withPack(WrappedComponent){
@@ -20,7 +20,8 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = dispatch => {
   return {
-    setCurrentPack: (pack) => dispatch(setCurrentPack(pack))
+    setCurrentPack: (pack) => dispatch(setCurrentPack(pack)),
+    resetCurrentPack: () => dispatch(resetCurrentPack())
   };
 };
 

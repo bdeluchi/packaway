@@ -79,7 +79,7 @@ class PackItem extends Component {
           {open && <div className="more-options-dropdown">
             <ul>
               <li className="menu-option-item" onClick={this.goToEditPage}>Edit pack</li>
-              <li className="menu-option-item" onClick={this.goToViewPage}>View pack</li>
+              {pack.days.length !== 0 && <li className="menu-option-item" onClick={this.goToViewPage}>View pack</li>}
               <li className="menu-option-item" onClick={this.deletePack}>Delete pack</li>
             </ul>
           </div>}

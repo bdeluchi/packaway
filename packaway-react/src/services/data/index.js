@@ -3,10 +3,13 @@ import * as firebase from "firebase";
 export default class DataService {
   //user functions
   static async addObjectWithId(collection, objId, data) {
+		console.log("TCL: DataService -> staticaddObjectWithId -> collection", collection)
     return await DataService.updateDetail(collection, objId, data);
   }
 
   static async getObjectDetail(collection, objId) {
+	console.log("TCL: DataService -> staticgetObjectDetail -> collection", collection)
+  
     const db = firebase.firestore();
     let contact = null;
 
@@ -26,6 +29,7 @@ export default class DataService {
   }
 
   static async updateDetail(collection, id, data) {
+		console.log("TCL: DataService -> staticupdateDetail -> collection", collection)
     const db = firebase.firestore();
     let success = true;
 
@@ -42,6 +46,7 @@ export default class DataService {
   }
   //generic item functions
   static async addItem(collection, data) {
+		console.log("TCL: DataService -> staticaddItem -> collection", collection)
     const db = firebase.firestore();
     let success = false;
 
@@ -59,27 +64,28 @@ export default class DataService {
   }
 
   //poi functions
-  static async getPOI() {
-    const db = firebase.firestore();
-    let results = [];
+  // static async getPOI() {
+  //   const db = firebase.firestore();
+  //   let results = [];
 
-    try {
-      const querySnapshot = await db.collection("pois").get();
+  //   try {
+  //     const querySnapshot = await db.collection("pois").get();
 
-      querySnapshot.forEach(doc => {
-        const objectResult = doc.data();
-        objectResult.id = doc.id;
-        results.push(objectResult);
-      });
-    } catch (err) {
-      console.log("TCL: DataService -> getPOI -> err", err);
-    }
+  //     querySnapshot.forEach(doc => {
+  //       const objectResult = doc.data();
+  //       objectResult.id = doc.id;
+  //       results.push(objectResult);
+  //     });
+  //   } catch (err) {
+  //     console.log("TCL: DataService -> getPOI -> err", err);
+  //   }
 
-    return results;
-  }
+  //   return results;
+  // }
 
   //pagination
   static async getPOIPaginated(lastVisible, order, city) {
+		console.log("TCL: DataService -> staticgetPOIPaginated -> lastVisible", lastVisible)
     const db = firebase.firestore();
     let results = [];
     let queryLastVisible;
@@ -141,6 +147,8 @@ export default class DataService {
 
   //pack functions
   static async addPack(data) {
+		console.log("TCL: DataService -> staticaddPack -> data", data)
+    
     const db = firebase.firestore();
     let docRef;
     try {
@@ -164,6 +172,7 @@ export default class DataService {
   }
 
   static async getPack(packId) {
+		console.log("TCL: DataService -> staticgetPack -> packId", packId)
     const db = firebase.firestore();
     let pack = null;
     try {
@@ -181,6 +190,7 @@ export default class DataService {
   }
 
   static async deletePack(packId, userId) {
+		console.log("TCL: DataService -> staticdeletePack -> packId", packId)
     const db = firebase.firestore();
     let success = true;
     try {
@@ -196,6 +206,7 @@ export default class DataService {
   }
 
   static async updatePackData(packId, data) {
+		console.log("TCL: DataService -> staticupdatePackData -> packId", packId)
     const db = firebase.firestore();
     let success = true;
     try {
@@ -221,6 +232,7 @@ export default class DataService {
   //filter queries
 
   static async filterResults(type) {
+		console.log("TCL: DataService -> staticfilterResults -> type", type)
     //llamar a poipaginated
     const db = firebase.firestore();
     let success = true;
@@ -241,6 +253,7 @@ export default class DataService {
   }
 
   static async getPoisByType(types) {
+		console.log("TCL: DataService -> staticgetPoisByType -> types", types)
     const filteredResults = await Promise.all(
       types.map(type => DataService.filterResults(type))
     );

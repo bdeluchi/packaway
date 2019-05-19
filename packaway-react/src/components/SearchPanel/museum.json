@@ -1,0 +1,330 @@
+[
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.696238,
+            "lng": 139.5704317
+        },
+        "id": "71a98f655f215a848982d8202491d9a25b9e3f2e",
+        "name": "Ghibli Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAA7aBxR-RlLHVopyKtEgxYVqIkxNVodBq2lGm1rIWPsMpCM1nrgGTKfwqjsxlBFHBM7aFVL19Jzb-QNSwqoy_bUQjhxVCHU8A0T8EV5-EJH2AVXKgqpxvlpLIi3qOqNfzYEhBDNrl38e6VvbBdgxhVKcQuGhQ-wQsYmAzcffF9rBbGfPwO7Edh2Q",
+            "width": 640,
+            "height": 428
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipO_xpaLS1q7PEVmHwJklu2wJO9q1VXS8Gs4-2wx=s1600-w640",
+        "rating": 4.5,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.710427,
+            "lng": 139.6078791
+        },
+        "id": "31da3ca1077cfb38b8b1a6127c5e58d9d92184b7",
+        "name": "Suginami Animation Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAApVcPNTTPPI-YNhemjA-RIpMckUDUN57_xkmAlACAqR1IwDdf6N6TqiwzmP96bj306QFcqw9a3srcPMggIdT4hhD7Q5Ujkq601XhKyLMC0ikjtkpzhqaa2qG0PqQN2fEVEhCamOrLX7C6p5no8v-YSTRVGhRUDxANdo5UF2FmqPr5shEMWY3kLA",
+            "width": 4160,
+            "height": 3120
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipMMC6rfsfgjXE_x57a6ROuRykCepfYXnDOkgKQD=s1600-w4160",
+        "rating": 4.2,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6314798,
+            "lng": 139.6219884
+        },
+        "id": "3185385079f74e931e08a899d261cada602e9fee",
+        "name": "Setagaya Art Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAA1rVhssgWDA5uuTl6TB8w5XNG5OgwiGyfu8UJh59Sd9zcFYQ-ZYnb4_I6kgaZ3NKfYNekVpZvYBGXKCngypehe-cEDufctz_aTr1pgptm64RKJ8swvdas30gJlNR-DSLlEhB8fnVz13Jr6m4jAcYXsBQ-GhTomGwlsxPeP3TIbk2Y5nK6kCJ_Jg",
+            "width": 5520,
+            "height": 3104
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipMMIZLsUdIpv2SDhv9FciTWbg_7Bo-d_2ncw6f_=s1600-w5520",
+        "rating": 4,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6607815,
+            "lng": 139.5872228
+        },
+        "id": "a04200ad95ed03d04ed740557f2f5f3f97c88b38",
+        "name": "Tokyo Art Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAqAMA8mQQapSB0T_uMNmR5Ui9ZZCo1T_JQoD64ihp0Vim08fgmri0YHYzdT6QY-4fedgiWFwgkdjSPZY19vBLxaVm2E0lxRazJJIcdYhk0ep7WMYi54LesZIPjRymeJLNEhBTbedW2V_gsASBDauwbTTBGhRikrGqBto-3MCKs2omQPDi-2dDLQ",
+            "width": 3024,
+            "height": 4032
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipMKlyknW99SCMZn53AXuptRBeNBblqGb1eynMfa=s1600-w3024",
+        "rating": 3.8,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.7014081,
+            "lng": 139.5587226
+        },
+        "id": "1ca1f4c9c372de88d8cae33a5e7f0868d893cfba",
+        "name": "Mitaka - Music Box Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAALxL36QSAbP0t1F_bkV4DjaumKM73A853LtyHYvgZkY6eCTgZIhsumN2FSR1WJ3lOROItlWacodswcS0qfO9Gg6Q6cUbAWQYi4_TZo4BefR3XGWJewI-boCrvpRjuySg9EhB2dd61Sq1XrNgcRSuyLEyTGhRjNOjBRs6ofO0OKy7DpNYUd35yPQ",
+            "width": 1536,
+            "height": 2048
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipPYkiJ_DlaWm7EHu-VD5rV25pruDvLgBuCXVRS0=s1600-w1536",
+        "rating": 4.1,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.7051818,
+            "lng": 139.6343546
+        },
+        "id": "9e7bf6ca69d71f9585e3ec09f744e494978df69f",
+        "name": "Asagayaonshitsu Museum",
+        "photo_reference": {},
+        "photo_url": "",
+        "rating": 0,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6440137,
+            "lng": 139.590241
+        },
+        "id": "3cbf780b81de16923fadca77c0d3eef250ae78d5",
+        "name": "Toshio Kashio Memorial Museum of Invention",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAALlSAq6cXRyP67sRG4EfLp6oJUCH6lbHARj9g7zum0m29XEmefAGU-esWT6uA1Eg5UwEXVd2Xy8PZAvl17PeBwKdzWX80NJ2On7l9qqOiiVlK0HKtc75gTPlTK0NqJ6u7EhCTEUO29s2dgeJa_rPjT6jYGhTmtTvmjbMGHBJoFP6of4_0iU9OvA",
+            "width": 5472,
+            "height": 3648
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipPLdTcC-AthlskEVF3pxk_nw1saB8PozfhwB-mN=s1600-w5472",
+        "rating": 4.3,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6997735,
+            "lng": 139.5696887
+        },
+        "id": "21e08f0c22f4e47eda1a5e90a9229a08b038d0c9",
+        "name": "Sculpture Atelier",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAHK5i4_wRIbTIjFD1yCqLTCQiaaDkB5vYC47pNBAkm4FiKnpxQxyF-1mwf1pb1jXm_xFuvpFIEpSnpe5NWGqJkuvYXkg_l1zmxbBMTHeDFlPu9IYZPieIHUI3xcPdjsdGEhAT0YaJDxrMQC8QTDZiavKwGhQ8A2KpxBSpCCr8qJRGu0tnTEVMPw",
+            "width": 4898,
+            "height": 3265
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipOeuR5dOMHahiTqHJWFlPn0ASbu4qCuUF6P6Ja5=s1600-w4898",
+        "rating": 5,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.701643,
+            "lng": 139.5607422
+        },
+        "id": "d2a2d66c73530bf96ad28f235416375b1e36d73e",
+        "name": "Mitaka City Gallery of Art",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAN9CLnNv_8R_JEzY40rK9c5h2LIWwl8OyQeE7b0rg_y1MecNWsa4W7KhXf_cx29TSAEpB-YdgpWWOw2KJ2qD6NftKHW_mmB1S6BktA6hNrMjjOh3GRwsGgZDiaAZhEX9cEhAY46aMNqMoc-S6ux20cVOmGhQoSAxdgcj5U-5t1KxasNw_l98xEg",
+            "width": 640,
+            "height": 480
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipMfDXtK2kmYAqztfbgpJg7g7Cb91zNJtDrQnSLC=s1600-w640",
+        "rating": 3.9,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.686006,
+            "lng": 139.64546
+        },
+        "id": "810455cc85df9ff73acdd6c883b19baf0aa90600",
+        "name": "Suginami City Local History Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAzNGFPaDdBZWNPuHN75HhecYhYjM4kZAplQi0dla5C4SNGp7ONNBAPOGonI8zVEugdulBqaDrWcjp1qCqS5CKl3eu-Z3ifj5aH4tpv37fbr6EVCkoJ0Dw1SLE0pPx5KLXEhBylxa3panqU34fSa0beDOcGhRM87V-CRBtta8hlbe2ZR8D6L3xmQ",
+            "width": 3648,
+            "height": 2056
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipMPPN_lGvM6Yo-wsUB4FSiJbjIQYF-Ld7xIUDdM=s1600-w3648",
+        "rating": 4,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6412716,
+            "lng": 139.647245
+        },
+        "id": "6bd8907a0c2632c06b1e9ccc463286de65b5b843",
+        "name": "Setagaya Local History Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAHEpnAwGyDF9GF0Q05Lz9vhQ-MzOSsQVA6J3IMa_weIionuN8vShUnp68FO9RHBwSyqMO-paJD_87C7VnsIS0XJyBencPaWdOYeSq3AiyhCAQN1x9FHGfFa9KauwwSMo3EhBXjdMiV6IKkwM_0jmRDuG-GhQlNsYByycvi35ypoTmro5FTUMgAw",
+            "width": 1161,
+            "height": 771
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipNn2pslokg1lF60vLKlkzDg4XvKqF4VndJQ6N8l=s1600-w1161",
+        "rating": 3.8,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6224807,
+            "lng": 139.6192963
+        },
+        "id": "f5d9d079e4ad8c9a0cb11121ee1b272f43bb5d4e",
+        "name": "Seikadō Bunko Art Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAA4fitQD04_C1t9ZWiZEmyY6c6w1l-wXm4cKI1gHOmFWfGi5o10auJp97wZWucGa_erJ6cMf9PAN0RPL8Ast9WEENLR-D_9fOKdYc4Y8dqiDvVcfuBEEm0Iu4-zs3YHl22EhBrnyRZBb3OmGRWGj-mlpLqGhQgBilZp4RJhGSmzpAHuQTvxRabzw",
+            "width": 2048,
+            "height": 1536
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipPHLbCAh5qPKlWpl1Xm0X6fq9W_Riw9GRpjOsVu=s1600-w2048",
+        "rating": 4.1,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.7088347,
+            "lng": 139.6211667
+        },
+        "id": "2b2d01dfc729c148bfac79c9e0325636a70e7e93",
+        "name": "Provincial Museum annex",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAARL2d83bZVKi_we_Jii_Bfz-H-dQLKvqnKhIIi5HBgVHnO03exkRcvRAjbmbJScZ87EXDlbuDH-UM0fUJVP-KpCR9enOU16YmbbNbtND7ldAjvGvWMtUZ8nubR9TbfA1aEhD2U6VWyJ33Gx-2sWCR9vW8GhQz8kPjKC0bTZeOX9k7d7wupwO1Ig",
+            "width": 4000,
+            "height": 3000
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipOz313HRJXJGV8f2NQ831YN1Gx_A4Ab9j9MMOed=s1600-w4000",
+        "rating": 3.7,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.70857700000001,
+            "lng": 139.582751
+        },
+        "id": "ca761924b80068c3b79ff5b1ba0acc4d59a0af1a",
+        "name": "Sadatsumamiga Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAA1wGObH_EVjst_AArfSOg-SE2XiyT6f3HyDH15pTWVGH3JyMmq3qFibar69ZCokQILh82CRSL5CBpaCq8vHq_nggEb3XAXyoD5fvJ7mTRvz6DKObJi032PCXM7UiAD74OEhDuLJkGD7d-QnnNA_AxESL8GhRJoHb4gtQ7R5PyWavfOrNIfM1GeQ",
+            "width": 640,
+            "height": 480
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipNiOBMTBNOZBdoqp8HQOsr4ib3i5tPWjUIRXL9N=s1600-w640",
+        "rating": 4,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6356261,
+            "lng": 139.6557066
+        },
+        "id": "20ea914a2c74c03d4db401888cb6580d66c9bb75",
+        "name": "Setagaya Art Museum Mukai Junkichi Annex",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAqLiKUM1zOEST-sTly4T3IYwkIvxJ8ZU-fmBzthFMWo2YmEMMp8zHQlyXHA3_vCIGZvUurRymz4-NDkcHVsWP7x5gT2QpLQii56rCIfysvNwzQePfvFHVdKajZe9Q-G1_EhD3lOrx8qPpFLZ4EEVAZRUCGhQiFntWWrJ6NYEgeX9Kt3kbK4tLaw",
+            "width": 2048,
+            "height": 1536
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipOAnHwJF2F25rh5XGk3lN7Tzr4SsWzwKqhW0qHf=s1600-w2048",
+        "rating": 4.1,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.7050207,
+            "lng": 139.5789794
+        },
+        "id": "00db25becd58eb815225c392b1dfa907175b3795",
+        "name": "Kichijōji Art Museum",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAgWIuC68QSFxKu3M6sntWGG0J2dKyusrAIdd5guZIGO_8182SBgR7DH9ijQfPo4BCUyPS6YI3uXcmqvcedtd_EfIwCx2sIg_Xws84HWqu52UJgtqac8MUTfUYxvuP3SZqEhBQPft08j3dH5334B5EDnOpGhTJZtNuS_25zTtd98ct7XF_tNV3uQ",
+            "width": 1126,
+            "height": 752
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipOAuo3sriDwDGiTYxaVuqY3KqD7RUB5QmsUwp_H=s1600-w1126",
+        "rating": 4,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.7004285,
+            "lng": 139.5692772
+        },
+        "id": "2008b843a37e285cb4a88808354d3889e2fe2bc3",
+        "name": "Sculpture Museum House B",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAA-MwZk-9L5L44C-um-2DQ73bhXIl3LLwZtBbsqtw0lzlq6IKQKcs8txpByO7secmHDqHiAaO6bYGoGf7cdRiKm_oL1x8qZUZj_4C47bXrkpPTphWNGPGtPXkFCPNRxC20EhDFt5A5fRpO88rJID9t1_K1GhSEQknk-2qCNYdHB9PczZkhEr3gZA",
+            "width": 6000,
+            "height": 4000
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipP5R3-TM3saQRJACyf9Us8WttGHZPZVqiuMJtY3=s1600-w6000",
+        "rating": 4.4,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6808435,
+            "lng": 139.6433959
+        },
+        "id": "96f8636398b532cdd98e4cae586cc4bec5845df5",
+        "name": "Muraikaruta Museum",
+        "photo_reference": {},
+        "photo_url": "",
+        "rating": 0,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.6513001,
+            "lng": 139.6408509
+        },
+        "id": "3ea0baef1e25d126b2f4063afbb90019f7d67fde",
+        "name": "ハセガワ剥製",
+        "photo_reference": {},
+        "photo_url": "",
+        "rating": 0,
+        "type": "museum"
+    },
+    {
+        "city": "tokyo",
+        "location": {
+            "lat": 35.667802,
+            "lng": 139.625854
+        },
+        "id": "a6ab34e446f2210a99abff48fd9e766963be6ebd",
+        "name": "Kagawa Archives & Resource Center",
+        "photo_reference": {
+            "photo_reference": "CmRaAAAAcAp6WCiC3WaUILMcAx1ZsiPsNz0kU0wyUW03TwJyPLpBN2HrQI-oAOd3mI2IUoAtoyfcfmLMVyNkzbkq0WgAZBWW-gEm7cNTbHsEqfFopH2ybHYjOa3y0NH4JRUc9LvHEhD7eXYslAb6zweIE_xb5eo4GhQJckJNcZBg0bUrp946bdMMWGlP9g",
+            "width": 3840,
+            "height": 2160
+        },
+        "photo_url": "https://lh3.googleusercontent.com/p/AF1QipMFeSLGUsG82f4183MNL1EhtPodK8xY-Im8oyvb=s1600-w3840",
+        "rating": 3.8,
+        "type": "museum"
+    }
+]

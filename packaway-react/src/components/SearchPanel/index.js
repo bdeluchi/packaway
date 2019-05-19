@@ -25,12 +25,6 @@ class SearchPanel extends Component {
     this.setState({ formInput: value });
   };
 
-  handleSearch = e => {
-    e.preventDefault();
-    const { formInput, pois } = this.state;
-    console.log(pois.filter(poi => poi.name.includes(formInput)));
-  };
-
   // handleClick = () => {
   //   const poiArr = [...churchArr, ...parkArr, ...museumArr];
   //   poiArr.forEach(poi => DataService.addItem("pois", poi))
@@ -90,18 +84,6 @@ class SearchPanel extends Component {
     const {pois, page, hasNextPage} = this.state;
     return (
       <div className="search-panel">
-        <div className="search-box">
-          {/* <form onSubmit={e => this.handleSearch(e)}>
-            <input
-              className="search-box"
-              type="text"
-              name="poi"
-              placeholder="Search for POIs..."
-              onChange={this.handleChange}
-            />
-            <button>Search</button>
-          </form> */}
-        </div>
         <div className="pois-container">
           {pois && <React.Fragment>
             {pois.map(poi => (
@@ -122,7 +104,7 @@ class SearchPanel extends Component {
             }
           </div>
         </div>
-        {/* <button onClick={this.handleClick()}>add to db</button> */}
+        {/* <button onClick={this.handleClick}>add to db</button> */}
       </div>
     );
   }

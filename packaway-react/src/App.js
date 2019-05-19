@@ -71,7 +71,7 @@ class App extends Component {
             <Route path="/profile" component={ProfilePage} />
             <Route path="/poisearch/:cityId" component={POISearchPage} />
             <Route path="/packs/edit/:packId" component={EditPackPage} />
-            <Route path="/packs/view" component={ViewPackPage} />
+            <Route path="/packs/view/:packId" component={ViewPackPage} />
             <Route path="/packs" component={PackOverviewPage} />
           </Switch>
         </Router>

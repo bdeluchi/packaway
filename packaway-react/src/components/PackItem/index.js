@@ -34,7 +34,8 @@ class PackItem extends Component {
   }
 
   goToViewPage = () => {
-    this.props.history.push("/packs/view")
+    const { packId } = this.props;
+    this.props.history.push(`/packs/view/${packId}`)
 
   }
 

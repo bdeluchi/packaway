@@ -49,21 +49,15 @@ class SearchPanel extends Component {
   
   async getData(lastVisible, order) {
     this.setState({loading: true});
-    const {poiFilters} = this.props;
-    const filteredTypes = [];
-    Object.entries(poiFilters).forEach((key, value) => {
-      if (key[1] === true ) {
-        filteredTypes.push(key[0])
-      }
-    })
-    if (filteredTypes.length === 0) {
-      const city = this.props.match.params.cityId;
-      const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order, city);
-      this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
-    } else {
-      const results = await DataService.getPoisByType(filteredTypes)
-      this.setState({pois: results, loading: false})
-    }  
+    const selectedOption = this.props.selectedOption;
+    const city = this.props.match.params.cityId;
+    const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order, city, selectedOption.selectedOption);
+    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
+    
+    //  else {
+    //   const results = await DataService.getPoisByType(selectedOption)
+    //   this.setState({pois: results, loading: false})
+    // }  
   }
 
   componentDidMount() {
@@ -71,10 +65,7 @@ class SearchPanel extends Component {
   }
 
   componentDidUpdate(prevProps) {
-    if (prevProps.poiFilters.church !== this.props.poiFilters.church || 
-      prevProps.poiFilters.museum !== this.props.poiFilters.museum ||
-      prevProps.poiFilters.park !== this.props.poiFilters.park ) {
-
+    if (prevProps.selectedOption !== this.props.selectedOption) {
         this.getData();
       }
   }
@@ -112,7 +103,7 @@ class SearchPanel extends Component {
 
 const mapStateToProps = state => {
   return {
-    poiFilters: state.categoryFilterReducer
+    selectedOption: state.categoryFilterReducer
   };
 };
 

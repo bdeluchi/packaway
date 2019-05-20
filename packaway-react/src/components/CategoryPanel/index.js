@@ -1,78 +1,76 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import DataService from "../../services/data";
-import {
-  addChurchFilter,
-  removeChurchFilter,
-  addMuseumFilter,
-  removeMuseumFilter,
-  addParkFilter,
-  removeParkFilter
-} from "../../redux/actions/filterActions";
+import {addFilter} from "../../redux/actions/filterActions";
 
 import "./index.scss";
 
 class CategoryPanel extends Component {
-  handleChurchFilter = e => {
-    if (e.target.checked) {
-      DataService.filterResults("church");
-      this.props.dispatch(addChurchFilter());
-    } else {
-      this.props.dispatch(removeChurchFilter());
+  constructor(props) {
+    super(props);
+    this.state = {
+      selectedOption: null
     }
-  };
+  }
+  
 
-  handleMuseumFilter = e => {
-    if (e.target.checked) {
-      DataService.filterResults("museum");
-      this.props.dispatch(addMuseumFilter());
-    } else {
-      this.props.dispatch(removeMuseumFilter());
-    }
-  };
+  handleOptionChange = (changeEvent) => {
+    const selectedOption = changeEvent.target.value
+    this.props.dispatch(addFilter(selectedOption));
+    this.setState({ selectedOption });
+  }
 
-  handleParkFilter = e => {
-    if (e.target.checked) {
-      DataService.filterResults("park");
-      this.props.dispatch(addParkFilter());
-    } else {
-      this.props.dispatch(removeParkFilter());
-    }
-  };
+  handleClearFilter = () => {
+    const selectedOption = null
+    this.props.dispatch(addFilter(selectedOption));
+    this.setState({ selectedOption });
+  }
 
+  // componentDidMount = () => {
+  //   //TODO: me está paginando dos veces, esto lo tengo para que se recargue al volver de otra página
+  //   this.handleClearFilter()
+  // }
+  
   render() {
     return (
       <div className="category-panel">
         <label className="filter-input">
           <input
-            type="checkbox"
-            name="churches"
-            value="churches"
-            onClick={e => this.handleChurchFilter(e)}
+            type="radio"
+            name="church"
+            value="church"
+            checked={this.state.selectedOption === 'church'}
+            onChange={this.handleOptionChange}
           />
           churches
         </label>
         <br />
         <label className="filter-input">
           <input
-            type="checkbox"
-            name="museums"
-            value="museums"
-            onClick={e => this.handleMuseumFilter(e)}
+            type="radio"
+            name="museum"
+            value="museum"
+            checked={this.state.selectedOption === 'museum'}
+            onChange={this.handleOptionChange}
           />
           museums
         </label>
         <br />
         <label className="filter-input">
           <input
-            type="checkbox"
-            name="parks"
-            value="parks"
-            onClick={e => this.handleParkFilter(e)}
+            type="radio"
+            name="park"
+            value="park"
+            checked={this.state.selectedOption === 'park'}
+            onChange={this.handleOptionChange}
           />
           parks
         </label>
         <br />
+        <div className="clear-container">
+        <button className="clear-btn" onClick={this.handleClearFilter}>Clear</button>
+        </div>
+        
       </div>
     );
   }
@@ -80,7 +78,7 @@ class CategoryPanel extends Component {
 
 const mapStateToProps = state => {
   return {
-    poiFilters: state.categoryFilterReducer
+    selectedOption: state.categoryFilterReducer
   };
 };
 

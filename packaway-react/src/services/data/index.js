@@ -1,5 +1,6 @@
 import * as firebase from "firebase";
 
+
 export default class DataService {
   //user functions
   static async addObjectWithId(collection, objId, data) {
@@ -44,6 +45,7 @@ export default class DataService {
     }
     return success;
   }
+
   //generic item functions
   static async addItem(collection, data) {
 		console.log("TCL: DataService -> staticaddItem -> collection", collection)
@@ -61,88 +63,6 @@ export default class DataService {
     }
 
     return success;
-  }
-
-  //poi functions
-  // static async getPOI() {
-  //   const db = firebase.firestore();
-  //   let results = [];
-
-  //   try {
-  //     const querySnapshot = await db.collection("pois").get();
-
-  //     querySnapshot.forEach(doc => {
-  //       const objectResult = doc.data();
-  //       objectResult.id = doc.id;
-  //       results.push(objectResult);
-  //     });
-  //   } catch (err) {
-  //     console.log("TCL: DataService -> getPOI -> err", err);
-  //   }
-
-  //   return results;
-  // }
-
-  //pagination
-  static async getPOIPaginated(lastVisible, order, city) {
-		console.log("TCL: DataService -> staticgetPOIPaginated -> lastVisible", lastVisible)
-    const db = firebase.firestore();
-    let results = [];
-    let queryLastVisible;
-    let queryFirstVisible;
-    let hasNextPage;
-    const totalPoisPerPage = 10;
-    try {
-      let query = db
-        .collection("pois")
-        .where("city", "==", city)
-        .orderBy("name", order);
-      if (lastVisible) {
-        query = query.startAfter(lastVisible);
-      }
-      query = query.limit(totalPoisPerPage);
-      const querySnapshot = await query.get();
-
-      let i = 0;
-      querySnapshot.forEach(doc => {
-        const objectResult = doc.data();
-        objectResult.id = doc.id;
-        results.push(objectResult);
-        if (order === "desc") {
-          if (i === querySnapshot.size - 2) {
-            queryFirstVisible = doc;
-          }
-          if (i === 0) {
-            queryLastVisible = doc;
-          }
-        } else {
-          if (i === querySnapshot.size - 2) {
-            queryLastVisible = doc;
-          }
-          if (i === 0) {
-            queryFirstVisible = doc;
-          }
-        }
-        i++;
-      });
-    } catch (err) {
-      console.log("TCL: DataService -> getPOI -> err", err);
-    }
-
-    if (results.length === totalPoisPerPage) {
-      hasNextPage = true;
-      results.pop();
-    } else if (order !== "desc") {
-      hasNextPage = false;
-    } else {
-      hasNextPage = true;
-    }
-
-    if (order === "desc") {
-      results = results.reverse();
-    }
-
-    return { results, queryLastVisible, queryFirstVisible, hasNextPage };
   }
 
   //pack functions
@@ -229,38 +149,111 @@ export default class DataService {
     return success;
   }
 
-  //filter queries
 
-  static async filterResults(type) {
-		console.log("TCL: DataService -> staticfilterResults -> type", type)
-    //llamar a poipaginated
+  //pagination
+  static async getPOIPaginated(lastVisible, order, city, type) {
+		console.log("TCL: DataService -> staticgetPOIPaginated -> type", type)
+    
     const db = firebase.firestore();
-    let success = true;
-    let resultsArray = [];
+    let results = [];
+    let queryLastVisible;
+    let queryFirstVisible;
+    let hasNextPage;
+    const totalPoisPerPage = 10;
     try {
-      const querySnapshot = await db
+      let query = db
         .collection("pois")
-        .where("type", "==", type)
-        .get();
-      querySnapshot.forEach(function(doc) {
-        resultsArray.push(doc.data());
+        .where("city", "==", city)
+
+      if (type) {
+        query = query.where("type", "==", type)  
+      }
+        query = query.orderBy("name", order);
+
+      if (lastVisible) {
+        query = query.startAfter(lastVisible);
+      }
+      query = query.limit(totalPoisPerPage);
+      const querySnapshot = await query.get();
+
+      let i = 0;
+      querySnapshot.forEach(doc => {
+        const objectResult = doc.data();
+        objectResult.id = doc.id;
+        results.push(objectResult);
+        if (order === "desc") {
+          if (i === querySnapshot.size - 2) {
+            queryFirstVisible = doc;
+          }
+          if (i === 0) {
+            queryLastVisible = doc;
+          }
+        } else {
+          if (i === querySnapshot.size - 2) {
+            queryLastVisible = doc;
+          }
+          if (i === 0) {
+            queryFirstVisible = doc;
+          }
+        }
+        i++;
       });
     } catch (err) {
-      success = true;
-      console.log("TCL: staticfilterResults -> err", err);
+      console.log("TCL: DataService -> getPOIPaginated -> err", err);
     }
-    return resultsArray;
+
+    if (results.length === totalPoisPerPage) {
+      hasNextPage = true;
+      results.pop();
+    } else if (order !== "desc") {
+      hasNextPage = false;
+    } else {
+      hasNextPage = true;
+    }
+
+    if (order === "desc") {
+      results = results.reverse();
+    }
+
+    return { results, queryLastVisible, queryFirstVisible, hasNextPage };
   }
 
-  static async getPoisByType(types) {
-		console.log("TCL: DataService -> staticgetPoisByType -> types", types)
-    const filteredResults = await Promise.all(
-      types.map(type => DataService.filterResults(type))
-    );
-    let filteredArr = [];
-    filteredResults.forEach(poiArr => {
-      filteredArr = [...poiArr, ...filteredArr];
-    });
-    return filteredArr;
-  }
 }
+
+
+
+//   static async getPoisByType(types) {
+// 		console.log("TCL: DataService -> staticgetPoisByType -> types", types)
+//     const filteredResults = await Promise.all(
+//       types.map(type => DataService.filterResults(type))
+//     );
+//     let filteredArr = [];
+//     filteredResults.forEach(poiArr => {
+//       filteredArr = [...poiArr, ...filteredArr];
+//     });
+//     return filteredArr;
+//   }
+
+
+//   //filter queries
+
+//   static async filterResults(type) {
+// 		console.log("TCL: DataService -> staticfilterResults -> type", type)
+//     //llamar a poipaginated
+//     const db = firebase.firestore();
+//     let success = true;
+//     let resultsArray = [];
+//     try {
+//       const querySnapshot = await db
+//         .collection("pois")
+//         .where("type", "==", type)
+//         .get();
+//       querySnapshot.forEach(function(doc) {
+//         resultsArray.push(doc.data());
+//       });
+//     } catch (err) {
+//       success = true;
+//       console.log("TCL: staticfilterResults -> err", err);
+//     }
+//     return resultsArray;
+//   }

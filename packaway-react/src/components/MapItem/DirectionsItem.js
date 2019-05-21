@@ -35,8 +35,8 @@ class DirectionsItem extends Component {
   handleCalculateRoute = () => {
       this.setState(
         () => ({
-          origin: {lat: 40.4209517, lng: -3.7080847},
-          destination: {lat: 40.4209517, lng: -3.7080847}
+          origin: this.props.location,
+          destination: this.props.location
         })
       )
   }

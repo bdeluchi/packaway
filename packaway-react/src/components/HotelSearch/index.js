@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import withPack from '../../helpers/withPack'
 
 import {
     Autocomplete
@@ -22,9 +23,10 @@ class HotelSearch extends Component {
     }
 
     onPlaceChanged() {
-        console.log("holi!")
         if (this.autocomplete !== null) {
-            console.log(this.autocomplete.getPlace())
+            const autoResults = this.autocomplete.getPlace();
+            const originLocation = autoResults.geometry.location
+            this.props.setCurrentPackOrigin(originLocation)
         } else {
             console.log('Autocomplete is not loaded yet!')
         }
@@ -61,4 +63,4 @@ class HotelSearch extends Component {
     }
 
 }
-export default HotelSearch
+export default withPack(HotelSearch)

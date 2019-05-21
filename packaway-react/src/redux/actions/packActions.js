@@ -11,6 +11,13 @@ export const resetCurrentPack = () => {
   }
 }
 
+export const setCurrentPackOrigin = (location) => {
+  return {
+    location: location,
+    type: 'SET_LOCATION'
+  }
+}
+
 
 // export const removePack = (packId) => {
 //   return {

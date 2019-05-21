@@ -58,7 +58,7 @@ class App extends Component {
       backdrop = <Backdrop click={this.backdropClickHandler}/>;
     }
     return (
-      <div className="App" style={{ height: "100%" }}>
+      <div className="App">
         <Router>
           <Navbar drawerClickHandler={this.drawerToggleClickHandler} 
           closeMenu={this.closeMenu}/>

@@ -1,5 +1,6 @@
 const defaultState = {
-  currentPack: null
+  currentPack: null,
+  location: null
 };
 
 export const packReducer = (state = defaultState, action) => {
@@ -16,6 +17,13 @@ export const packReducer = (state = defaultState, action) => {
       return {
         ...state,
         currentPack: defaultState.currentPack
+      }
+    }
+
+    case "SET_LOCATION": {
+      return {
+        ...state,
+        location: action.location
       }
     }
     

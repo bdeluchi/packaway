@@ -59,7 +59,7 @@ class UserDetails extends Component {
   onSubmitForm = e => {
     e.preventDefault();
     const { name, lastname, uid, imageUrl } = this.state.user;
-    const updateUser = {
+    const updateUser = {...this.state.user,
       name,
       lastname,
       imageUrl

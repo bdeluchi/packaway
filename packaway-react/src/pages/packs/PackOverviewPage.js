@@ -22,8 +22,6 @@ class PackOverviewPage extends Component {
       const packIds = user.packs
       this.setState({packIds})
     }
-    // (le paso el pack completo así si se hace clic esté disponible en state y pueda enviarlo a redux para actualizar)
-    //cuadno se hace click, el clickado es el nuevo currentPack en redux por lo que tendré que actualizar todo redux
   }
   
   

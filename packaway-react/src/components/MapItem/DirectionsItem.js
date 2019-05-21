@@ -5,6 +5,9 @@ import {
   DirectionsRenderer
 } from '@react-google-maps/api'
 
+import './DirectionsItem.scss'
+
+
 class DirectionsItem extends Component {
   state = {
     response: null,
@@ -47,13 +50,12 @@ class DirectionsItem extends Component {
           Build Route
         </button>
       </div>
-
       <div className='map-container'>
-        <GoogleMap
+        <GoogleMap className="direction-container"
           id='direction-example'
           mapContainerStyle={{
-            height: "500px",
-            width: "500px"
+            height: "90vw",
+            width: "90vw"
           }}
           zoom={5}
           center={{

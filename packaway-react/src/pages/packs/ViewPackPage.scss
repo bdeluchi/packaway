@@ -1,6 +1,9 @@
-.map-container {
-  width: 90vw;
-}
+@import '../../colors';
+
+// .map-container {
+//   width: 90vw;
+// }
+
 .view-page-container {
   width: 90vw;
   margin: 5px auto;
@@ -8,6 +11,15 @@
 
 .input-container {
   margin: 10px 0;
+}
+
+.view-pack-city {
+  text-transform: uppercase;
+  margin: 10px 0;
+}
+
+.view-pack-name {
+  font-weight: lighter;
 }
 
 .select-days {
@@ -59,12 +71,13 @@
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 769px) {
-  .poi-list-container {
-    width: 40vw;
+@media (min-width: 1280px) {
+  .poi-list-container, .input-container, .pack-info {
+    width: 20vw;
+  }
+  .view-page-container {
+    width: 80vw;
   }
 
-  .view-page-container {
-    width: 70vw;
-  }
+
 }

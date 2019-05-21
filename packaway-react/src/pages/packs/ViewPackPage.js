@@ -64,11 +64,10 @@ class ViewPackPage extends Component {
         {pack && (
           <React.Fragment>
             <div className="pack-info">
-              <h1>{pack.city}</h1>
-              <h4>Pack Name: {pack.name}</h4>
+              <h1 className="view-pack-city">{pack.city}</h1>
+              <h4 className="view-pack-name">Pack: {pack.name}</h4>
             </div>
             <div className="input-container">
-              <label>Pick a day to view the map: </label>
               <select className="select-days" name="days" onChange={this.onDropdownSelected}>
                 {this.getDays()}
               </select>
@@ -77,7 +76,7 @@ class ViewPackPage extends Component {
             <h2 className="edit-page-subtitle">Day {selectedDay.dayId}</h2>
             {Object.values(selectedDay.pois).map(poi => <FinalPOI key={poi.id} poiName={poi.name}/>)}
             </div>}
-            {selectedDay && <div className="map-container">
+            {selectedDay && <div className="map-component">
               <MapContainer waypoints={this.getWaypoints(selectedDay)} />
             </div>
             }

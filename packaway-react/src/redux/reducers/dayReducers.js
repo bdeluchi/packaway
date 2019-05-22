@@ -29,8 +29,6 @@ export const dayReducer = (state = defaultState, action) => {
         unassignedPois: { ...state.unassignedPois, [action.poi.id]: action.poi }
       };
     }
-
-    //todo: debería ser day
     case "ADD_DAYS": {
       return {
         ...state,

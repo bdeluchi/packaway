@@ -49,7 +49,7 @@ class DirectionsItem extends Component {
     return (
     <div className='map'>
       <div className='map-settings'>
-        <button className='btn btn-primary' type='button' onClick={this.handleCalculateRoute}>
+        <button className='btn build-route-btn' type='button' onClick={this.handleCalculateRoute}>
           Build Route
         </button>
       </div>

@@ -70,6 +70,8 @@ class SearchPanel extends Component {
       }
   }
 
+
+
   render() {
     const {pois, page, hasNextPage} = this.state;
     return (

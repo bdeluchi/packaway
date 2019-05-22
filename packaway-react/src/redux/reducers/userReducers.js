@@ -11,14 +11,6 @@ export const userReducer = (state = defaultState, action) => {
       };
     }
 
-    case "ADD_PACK_TO_USER": {
-
-      return {
-        ...state.user,
-        packs: [...state.user.packs, action.packId]
-      };
-    }
-
     default: {
       return state;
     }

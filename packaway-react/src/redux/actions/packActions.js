@@ -17,11 +17,3 @@ export const setCurrentPackOrigin = (location) => {
     type: 'SET_LOCATION'
   }
 }
-
-
-// export const removePack = (packId) => {
-//   return {
-//     id: packId,
-//     type: 'DELETE_PACK'
-//   }
-// }

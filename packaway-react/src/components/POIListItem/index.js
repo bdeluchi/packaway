@@ -65,7 +65,6 @@ class POIListItem extends Component {
           onClick={this.handleDropdown}
         >
           <div className="poi-item">{poi.name}
-          {/* TODO: should fix days issue in css due to padding */}
           {days.length !== 0 && open && (
               <div className="ref-dropdown">
               <ul className="days-dropdown">

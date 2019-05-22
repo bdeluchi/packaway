@@ -37,13 +37,15 @@ class PackOverviewPage extends Component {
     }
   }
 
+
+
   render() {
     const {packIds} = this.state;
     return (
       <div className="my-packs-container">
         <h1 className="page-title">My Packs</h1>
         {packIds && <div className="my-packs-content">
-          {packIds.map(packId => <PackItem key={packId} packId={packId}/>)}
+          {packIds.map(packId => <PackItem key={packId} packId={packId} getPacks={() => this.getPacks()}/>)}
         </div>}
       </div>
     )

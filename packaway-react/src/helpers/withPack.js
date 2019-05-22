@@ -24,7 +24,7 @@ const mapDispatchToProps = dispatch => {
     setCurrentPack: (pack) => dispatch(setCurrentPack(pack)),
     resetCurrentPack: () => dispatch(resetCurrentPack()),
     setCurrentPackOrigin: (location) => dispatch(setCurrentPackOrigin(location))
-  };
+    };
 };
 
 export default withPack;

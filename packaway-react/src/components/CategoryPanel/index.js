@@ -26,10 +26,11 @@ class CategoryPanel extends Component {
     this.setState({ selectedOption });
   }
 
-  // componentDidMount = () => {
-  //   //TODO: me está paginando dos veces, esto lo tengo para que se recargue al volver de otra página
-  //   this.handleClearFilter()
-  // }
+  componentWillUnmount() {
+    const selectedOption = null;
+    this.props.dispatch(addFilter(selectedOption));
+    this.setState({ selectedOption });
+  }
   
   render() {
     return (

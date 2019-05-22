@@ -3,6 +3,7 @@ import DataService from "../../services/data";
 import {withRouter} from 'react-router-dom'
 import withPOI from '../../helpers/withPOI'
 import withPack from '../../helpers/withPack'
+import withDay from '../../helpers/withDay'
 
 import "./index.scss";
 
@@ -27,6 +28,10 @@ class PackItem extends Component {
     this.getPackData();
   }
 
+  componentWillUnmount() {
+    this.props.resetDayStatus();
+  }
+
   goToEditPage = () => {
     const { packId } = this.props;
     this.props.resetCart()
@@ -43,7 +48,7 @@ class PackItem extends Component {
     const { packId} = this.props;
     const {userId} = this.state.pack
     DataService.deletePack(packId, userId);
-    //TODO: setstate para hacer un render y se recargue la página
+    this.props.getPacks()
   }
  
   getTotalDays() {
@@ -90,4 +95,4 @@ class PackItem extends Component {
   }
 }
 
-export default withPack(withPOI(withRouter(PackItem)));
+export default withDay(withPack(withPOI(withRouter(PackItem))))

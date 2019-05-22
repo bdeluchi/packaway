@@ -79,6 +79,14 @@
 
 @media (min-width: 768px) {
   .poi-card {
+    width: 30vw;
+    height: 30vw;
+  }
+}
+
+
+@media (min-width: 1280px) {
+  .poi-card {
     width: 20vw;
     height: 20vw;
   }

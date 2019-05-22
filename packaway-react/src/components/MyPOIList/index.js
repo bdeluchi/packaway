@@ -48,6 +48,7 @@ class MyPOIList extends Component {
   handleAddMore = () => {
     const { city } = this.state.pack;
     this.props.history.push(`/poisearch/${city}`);
+    this.props.resetUnassigned();
   };
 
   render() {

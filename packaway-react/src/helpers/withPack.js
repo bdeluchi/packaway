@@ -14,7 +14,8 @@ function withPack(WrappedComponent){
 
 const mapStateToProps = (state) => {
   return {
-    currentPack: state.packReducer.currentPack  }
+    currentPack: state.packReducer.currentPack,
+    location: state.packReducer.location  }
 }
 
 

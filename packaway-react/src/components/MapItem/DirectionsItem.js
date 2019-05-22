@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+import withPack from '../../helpers/withPack'
+
 import {
   GoogleMap,
   DirectionsService,
@@ -33,6 +35,7 @@ class DirectionsItem extends Component {
   }
 
   handleCalculateRoute = () => {
+    console.log(this.props)
       this.setState(
         () => ({
           origin: this.props.location,
@@ -101,4 +104,4 @@ class DirectionsItem extends Component {
 }
 }
 
-export default DirectionsItem
+export default withPack(DirectionsItem);

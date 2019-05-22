@@ -1,68 +1,62 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+#Packaway - Final project for Skylab Coders Academy
 
-## Available Scripts
 
-In the project directory, you can run:
+##The idea behind the app
 
-### `npm start`
+Travelling has always been one of my passions. Perhaps that’s what has driven me to study languages and other cultures since I was a kid, and why I keep at it nowadays. 
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+In order to make the most out of each journey, I tend to take my time carefully planning each new trip by checking out what to see and do in my destination city, while also taking into account distances and average time to get there. It’s not easy to choose and plan, and the research behind it all can be quite time-consuming. 
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Which is why I thought that it would be a good idea to work on a project that would simplify the whole process. With packaway we can check out the most relevant points of interest in the city and choose the ones we are interested in visiting. It also helps us organize our holiday depending on how many days we have and arrange our selected sights among them. 
 
-### `npm test`
+I hope that this way we can focus on actually enjoying the trip by easing a bit the pain of planning it. 
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Live demo: https://packaway-72184.firebaseapp.com/
 
-### `npm run build`
+![alt text](./public/homepage_screenshot.png "Packaway homepage")
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##Data and API integration
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+Data for points of interest are taken from Google's **Places API** and images from **Place Photos**.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+I used **react-google-maps-api** for map integration, which in turn uses **Google Maps Javascript API** to embed the map in the website and **Directions API** to generate the route between the selected points of interest. I'm also using AutoComplete from the **Places API** in order to set the origin and destination of the routes.
 
-### `npm run eject`
+##Functional Description
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+###Diagram
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+##Technical Description
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+-React JS
+-React Router
+-Redux
+-SASS + React Transition Group
+-Firebase
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+##Pages and components
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+-Home Page
+  -Nav Bar
+  -Dropdown
+-Login Page
+  -Sign Up
+  -Login
+-POI Search Page
+  -Category Panel
+  -Search Panel
+  -POI Item
+  -Pack Cart
+  -Pack Cart Item
+-Profile Page
+  -User Details
+-Edit Pack Page
+  -Info Panel
+  -My POI List
+  -Day Panel
+  -Day Item
+-Pack Overview Page
+  -Pack Item
+-View Pack Page
+  -Map Container
+  -Directions Item
+  -Hotel Search Box

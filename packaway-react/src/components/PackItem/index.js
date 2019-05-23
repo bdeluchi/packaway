@@ -12,7 +12,7 @@ class PackItem extends Component {
     super(props);
     this.state = {
       pack: null,
-      open: false
+      displayMenu: false
     };
   }
 
@@ -34,14 +34,15 @@ class PackItem extends Component {
 
   goToEditPage = () => {
     const { packId } = this.props;
-    this.props.resetCart()
+    this.props.resetCart();
+    document.removeEventListener("click", this.hideDropdownMenu)
     this.props.history.push(`/packs/edit/${packId}`)
   }
 
   goToViewPage = () => {
     const { packId } = this.props;
     this.props.history.push(`/packs/view/${packId}`)
-
+    document.removeEventListener("click", this.hideDropdownMenu)
   }
 
   deletePack = () => {
@@ -60,17 +61,37 @@ class PackItem extends Component {
       return `${pack.days.length} days`;
     }
   }
-
-  handleDropdown = () => {
-    this.setState(state => {
-      return {
-        open: !state.open
-      };
+  showDropdownMenu = event => {
+    event.preventDefault();
+    this.setState({ displayMenu: true }, () => {
+      document.addEventListener("click", this.hideDropdownMenu);
     });
+  };
+
+  hideDropdownMenu = () => {
+    this.setState({ displayMenu: false }, () => {
+      document.removeEventListener("click", this.hideDropdownMenu);
+    });
+  };
+
+  componentWillUnmount = () => {
+    const {displayMenu} = this.state
+    if (displayMenu) {
+
+      this.hideDropdownMenu()
+    }
   }
 
+  // handleDropdown = () => {
+  //   this.setState(state => {
+  //     return {
+  //       open: !state.open
+  //     };
+  //   });
+  // }
+
   render() {
-    const { pack, open } = this.state;
+    const { pack, displayMenu } = this.state;
     return (
       <div className="pack-item-container">
         {pack && <React.Fragment>
@@ -79,8 +100,8 @@ class PackItem extends Component {
             <div className="pack-city">{pack.city}</div>
             <div className="pack-days">{this.getTotalDays()}</div>
           </div>
-          <a className="more-options-menu" onClick={this.handleDropdown}>
-          {open && <div className="more-options-dropdown">
+          <a className="more-options-menu" onClick={this.showDropdownMenu}>
+          {displayMenu && <div className="more-options-dropdown">
             <ul>
               <li className="menu-option-item" onClick={this.goToEditPage}>Edit pack</li>
               {pack.days.length !== 0 && <li className="menu-option-item" onClick={this.goToViewPage}>View pack</li>}

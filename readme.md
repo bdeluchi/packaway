@@ -1,4 +1,5 @@
-# Packaway
+# PACKAWAY
+
 ### Final project for Skylab Coders Academy
 
 
@@ -24,7 +25,15 @@ I used **react-google-maps-api** for map integration, which in turn uses **Googl
 
 ## Functional Description
 
-### Diagram
+Users will arrive to the home page, where they can select a city among the different options. They are then taken to the **POI Search page** where they can pick out what sights they'd like to visit and add them to a shopping cart of sorts. 
+
+When they are satisfied, they can create a new pack. If the user is logged in, they will be automatically taken to the **Edit Pack page**. If they're not logged in, they will be asked to do so and then redirected to the POI Search page where they can carry on creating a new pack. 
+
+In the Edit Pack page they can give their pack a name and select the number of days of their trip. Once done, they will be able to arrange their points of interest among the total days and save their pack whenever they're ready.
+
+They can now go to the **My Packs page**, where they will have all of their created packs and can delete packs, edit them and, finally, go to the **View Pack page**. In here, they will need to select their point of origin and click on the build route button in order to see the generated route for each day.
+
+![alt text](packaway-react/public/assets/func_diagram.PNG "functional diagram")
 
 ## Technical Description
 

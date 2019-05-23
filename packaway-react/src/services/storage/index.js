@@ -14,7 +14,7 @@ export default class StorageService {
 				console.log("TCL: StorageService -> uploadFile -> error", error)
       },
       async () => {
-        console.log("File uploaded! YEEEII");
+        console.log("File uploaded!");
         const downloadURL = await uploadTask.snapshot.ref.getDownloadURL();
         callback(downloadURL);
       }

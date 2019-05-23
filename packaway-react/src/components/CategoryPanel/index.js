@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
-import DataService from "../../services/data";
 import {addFilter} from "../../redux/actions/filterActions";
 
 import "./index.scss";

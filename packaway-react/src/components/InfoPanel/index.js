@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import DataService from "../../services/data";
-import HotelSearch from "../HotelSearch"
 import withPack from "../../helpers/withPack";
 import withDay from "../../helpers/withDay";
 import withPOI from "../../helpers/withPOI";

@@ -1,9 +1,5 @@
 @import '../../colors';
 
-// .map-container {
-//   width: 90vw;
-// }
-
 .view-page-container {
   width: 90vw;
   margin: 5px auto;
@@ -77,6 +73,16 @@
   }
   .view-page-container {
     width: 80vw;
+  }
+
+  .view-left-panel {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 10px;
+  }
+  .map-component {
+    display: inline-block;  
+    width: 50vw;
   }
 
 

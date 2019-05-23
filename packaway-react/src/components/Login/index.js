@@ -49,7 +49,8 @@ class Login extends Component {
     if (error) {
       this.setState({ errorMessage: AuthService.getErrorMessage(error) });
     } else {
-      this.props.history.push("/");
+      const {from} = this.props.location.state || {from: {pathname: '/'}}
+      this.props.history.push(from) 
     }
   };
 

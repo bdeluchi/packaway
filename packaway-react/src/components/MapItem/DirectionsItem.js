@@ -35,7 +35,6 @@ class DirectionsItem extends Component {
   }
 
   handleCalculateRoute = () => {
-    console.log(this.props)
       this.setState(
         () => ({
           origin: this.props.location,

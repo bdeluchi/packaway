@@ -1,0 +1,39 @@
+@import '../../colors';
+
+.category-panel {
+  display: flex;
+  margin: 10px auto;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.filter-input {
+  background-color:lightgray;
+  border-radius: 5px;
+  padding: 7px;
+  margin: 2px;
+  cursor: pointer;
+}
+
+.filter-input input {
+  margin-right: 2px;
+}
+
+.clear-container {
+  display: block;
+}
+
+.clear-btn {
+  background: $dark-green;
+  color: $white;
+  text-transform: uppercase;
+  border: none;
+	font-family: inherit;
+	cursor: pointer;
+  outline: inherit;
+  border-radius: 4px;
+  margin: 2px;
+  font-size: 1.3rem;
+  padding: 7px;
+
+}

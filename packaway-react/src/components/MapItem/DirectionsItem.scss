@@ -1,0 +1,35 @@
+@import '../../colors';
+
+.build-route-btn {
+    background: $dark-gray;
+    color: inherit;
+    border: none;
+    margin: 0.5em auto;
+    padding: 0;
+    font-family: inherit;
+    cursor: pointer;
+    width: 120px;
+    text-align: center;
+    text-transform: uppercase;
+    outline: inherit;
+    border-radius: 4px;
+    padding: 6px 2px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: $white;
+    display: block;
+  
+}
+
+@media (min-width: 1280px) {
+  #direction-example {
+    width: 60vw !important;
+    height: 60vh !important;
+    
+  }
+
+  .build-route-btn {
+    display: inline-block;
+  }
+
+}

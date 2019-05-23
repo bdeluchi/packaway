@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import withUser from "../../helpers/withUser"
-import AuthService from '../../services/auth';
-import DataService from '../../services/data';
+import withUser from "../../helpers/withUser";
+import withPOI from "../../helpers/withPOI";
+import withPack from "../../helpers/withPack";
+import withDay from "../../helpers/withDay";
+import AuthService from "../../services/auth";
+import {withRouter} from 'react-router-dom'
+
+import "./index.scss";
 
 class Dropdown extends Component {
   constructor(props) {
@@ -26,65 +31,76 @@ class Dropdown extends Component {
     });
   };
 
-  componentDidMount() {
-    AuthService.registerAuthObserver(async (user) => {
-      console.log("dropdown")
-      if (user) {
-        console.log('User is signed in')
-        const userDetail = await DataService.getObjectDetail('users', user.uid);
-
-        if(userDetail) {
-          this.props.setUserInfo(userDetail)
-        } else {
-          console.log("ESPERAAAAAA me estoy registrando");
-        }
-        
-      } else {
-        console.log('User is signed out')
-      }
-      this.setState({loading: false})
-    })
+  handleMenuClose = () => {
+    this.props.closeMenu();
   }
-
 
   logout = () => {
     AuthService.logout();
+    this.props.resetCart();
+    this.props.resetUnassigned();
+    this.props.setCurrentPack("");
     this.props.setUserInfo(null);
-  }
-
+    this.props.closeMenu();
+    this.props.history.push("/");
+  };
 
   render() {
     const { userInfo } = this.props;
-    const { loading } = this.state;
-
-    if(loading) return <div>Loading</div>;
+    const { displayMenu } = this.state;
 
     return (
-      <div className="dropdown">
+      <React.Fragment>
         <div className="myaccount-menu" onClick={this.showDropdownMenu}>
-          My account
+          <div className="my-account-btn">My Account</div>
+          {displayMenu && (
+            <ul className="myaccount-menu-main">
+              {userInfo ? (
+                <React.Fragment>
+                  <li className="myaccount-menu-item">
+                    <Link to="/packs">My packs</Link>
+                  </li>
+                  <li className="myaccount-menu-item">
+                    <Link to="/profile">My profile</Link>
+                  </li>
+                  <li className="myaccount-menu-item" onClick={this.logout}>
+                    Logout
+                  </li>
+                </React.Fragment>
+              ) : (
+                <React.Fragment>
+                  <li className="myaccount-menu-item">
+                    <Link to="/login">Login</Link>
+                  </li>
+                </React.Fragment>
+              )}
+            </ul>
+          )}
         </div>
-        {this.state.displayMenu ? (
-          userInfo ? (
-            <ul>
-              <li>
-                <Link to="/packs">My Packs</Link>
+        <div className="sidebar-menu">
+          {userInfo ? (
+            <ul className="sidebar-main">
+              <li className="sidebar-menu-item">
+                <Link to="/packs" onClick={this.handleMenuClose}>My packs</Link>
               </li>
-              <li><Link to="/profile">My Profile</Link></li>
-              <li onClick={this.logout}
-              >Logout</li>
+              <li className="sidebar-menu-item">
+                <Link to="/profile" onClick={this.handleMenuClose}>My profile</Link>
+              </li>
+              <li className="sidebar-menu-item last-item" onClick={this.logout}>
+                Logout
+              </li>
             </ul>
           ) : (
-            <ul>
-              <li>
-                <Link to="/login">Login</Link>
+            <ul className="sidebar-main">
+              <li className="sidebar-menu-item last-item">
+                <Link to="/login" onClick={this.handleMenuClose}>Login</Link>
               </li>
             </ul>
-          )
-        ) : null}
-      </div>
+          )}
+        </div>
+      </React.Fragment>
     );
   }
 }
 
-export default withUser(Dropdown);
+export default withDay(withRouter(withPack(withPOI(withUser(Dropdown)))));

@@ -1,14 +1,22 @@
 import React, { Component } from "react";
-
+import { connect } from "react-redux";
 import POIItem from "../POIItem";
 import DataService from "../../services/data"
+import {withRouter} from 'react-router-dom'
+// import churchArr from "./church.json"
+// import parkArr from "./park.json"
+// import museumArr from "./museum.json"
 
-export default class SearchPanel extends Component {
+import "./index.scss"
+
+class SearchPanel extends Component {
   constructor(props) {
     super(props);
     this.state = {
       formInput: null,
-      loading: false
+      loading: false,
+      page: 0,
+      hasNextPage: false
     };
   }
 
@@ -17,54 +25,88 @@ export default class SearchPanel extends Component {
     this.setState({ formInput: value });
   };
 
-  handleSearch = e => {
-    e.preventDefault();
-    const { formInput, pois } = this.state;
-    console.log(pois.filter(poi => poi.name.includes(formInput)));
-  };
-
   // handleClick = () => {
   //   const poiArr = [...churchArr, ...parkArr, ...museumArr];
-  //   poiArr.forEach(poi => DataService.addPOI(poi))
+  //   poiArr.forEach(poi => DataService.addItem("pois", poi))
     
   // }
 
-  async getData() {
-    this.setState({loading: true});
-    const pois = await DataService.getPOI();
-    this.setState({pois, loading: false})
+  prevData = () => {
+    const {queryFirstVisible} = this.state;
+    let { page } = this.state;
+    window.scrollTo(0, 0)
+    this.setState({page: --page})
+    this.getData(queryFirstVisible, "desc");
   }
 
-  async componentDidMount() {
+  nextData = () => {  
+    const {queryLastVisible} = this.state;
+    let { page } = this.state;
+    window.scrollTo(0, 0)
+    this.setState({page: ++page})
+    this.getData(queryLastVisible)
+  }
+  
+  async getData(lastVisible, order) {
+    this.setState({loading: true});
+    const selectedOption = this.props.selectedOption;
+    const city = this.props.match.params.cityId;
+    const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order, city, selectedOption.selectedOption);
+    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
+    
+    //  else {
+    //   const results = await DataService.getPoisByType(selectedOption)
+    //   this.setState({pois: results, loading: false})
+    // }  
+  }
+
+  componentDidMount() {
     this.getData();
   }
 
-  render() {
-    const {pois} = this.state;
+  componentDidUpdate(prevProps) {
+    if (prevProps.selectedOption !== this.props.selectedOption) {
+        this.getData();
+      }
+  }
 
+
+
+  render() {
+    const {pois, page, hasNextPage} = this.state;
     return (
       <div className="search-panel">
-        <div className="search-box">
-          <form onSubmit={e => this.handleSearch(e)}>
-            <input
-              className="search-box"
-              type="text"
-              name="poi"
-              placeholder="Search for POIs..."
-              onChange={this.handleChange}
-            />
-            <button>Search</button>
-          </form>
-        </div>
-        <div className="poi-container">
-          {pois && <div>
+        <div className="pois-container">
+          {pois && <React.Fragment>
             {pois.map(poi => (
               <POIItem poi={poi} key={poi.id} />
             ))}
-          </div>}
+          </React.Fragment>}
+          <div className="pagination-container">
+          {page !== 0 && 
+          <button 
+            className="pagination-btn prev-btn" 
+            onClick={this.prevData}>Previous</button>
+          }
+          <div className="spacing"></div>
+          {hasNextPage &&
+          <button 
+            className="pagination-btn next-btn" 
+            onClick={this.nextData}>Next</button>
+            }
+          </div>
         </div>
-        {/* <button onClick={this.handleClick()}>add to db</button> */}
+        {/* <button onClick={this.handleClick}>add to db</button> */}
       </div>
     );
   }
 }
+
+
+const mapStateToProps = state => {
+  return {
+    selectedOption: state.categoryFilterReducer
+  };
+};
+
+export default withRouter(connect(mapStateToProps)(SearchPanel))

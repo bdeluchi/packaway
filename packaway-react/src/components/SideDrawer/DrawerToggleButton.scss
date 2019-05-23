@@ -1,0 +1,24 @@
+@import '../../colors';
+
+.toggle-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 25px;
+  width: 36px;
+  background: transparent;
+  border: none;
+  padding: 0;
+  margin-left: 30px;
+  box-sizing: border-box;
+}
+
+.toggle-button:focus {
+  outline: none;
+}
+
+.toggle-button__line {
+  width: 30px;
+  height: 2px;
+  background-color: $white;
+}

@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import Login from '../components/Login'
 import SignUp from '../components/SignUp'
 
+import './LoginPage.scss'
+
 export default class LoginPage extends Component {
   render() {
     return (
-      <div>
-        {/* <SignUp history={this.props.history}/> */}
-        <Login history={this.props.history}/>
+      <div className="login-page-main">
+        <SignUp />
+        <Login />
       </div>
     );
   }

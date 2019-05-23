@@ -1,0 +1,22 @@
+.my-packs-container {
+  display: flex;
+  flex-direction: column;
+  width: 90vw;
+  margin: 0 auto;
+}
+
+.my-packs-content {
+  display: flex;
+  align-items: center;
+  margin: 1rem;
+  min-height: 20vh;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+@media (min-width: 1280px) {
+  .my-packs-container {
+    width: 80vw;
+  }
+
+}

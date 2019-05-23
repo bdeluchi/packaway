@@ -1,0 +1,41 @@
+@import '../../colors';
+
+
+.poi-incart {
+  
+}
+.cart-close-btn {
+	height: 30px;
+  width: 30px;
+  position: relative;
+	box-sizing: border-box;
+	// line-height: 50px;
+  display: inline-block;
+  cursor: pointer;
+
+	&:before, &:after {
+		transform: rotate(-45deg);
+		content: '';
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		// margin-top: -50/2;
+		// margin-left: -10/2;
+		display: block;
+		height: 20px;
+    width: 5px;
+    background-color: $light-green;
+    transition: all 0.2s ease-out;
+    
+	}
+
+	&:after {
+		transform: rotate(45deg);
+	}
+
+	&:hover {
+		&:before, &:after {
+			transform: rotate(0deg);
+		}
+	}
+}

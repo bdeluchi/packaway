@@ -1,0 +1,16 @@
+@import '../colors';
+
+.search-city-name {
+  width: 90vw;
+  margin: 10px auto;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+
+@media (min-width: 1280px) {
+  .search-city-name {
+    width: 80vw;
+    font-size: 4rem;
+  }
+}

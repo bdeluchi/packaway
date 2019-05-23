@@ -1,8 +1,8 @@
 import React from "react";
-// import { connect } from "react-redux";
-// import {addPoi} from '../../redux/actions/poiActions'
 import withPOI from '../../helpers/withPOI'
+import withDay from '../../helpers/withDay'
 
+import "./index.scss"
 
 function POIItem(props) {
   const {poi, pois} = props;
@@ -10,36 +10,26 @@ function POIItem(props) {
 
   const addToCart = () => {
     props.setPoiInfo(poi);
+    props.addUnassignedPois(poi);
   }
 
   const removeFromCart = () => {
     props.removePoiInfo(poi.id);
-    console.log(poi.id)
+    props.removePoi(poi.id);
   }
-
-
   return (
-    <div className="poi-item">
-      {poi.name}
-        {!inCart ? (<button onClick={() => addToCart()}>ADD</button>)
+    <div className="poi-card">
+      <div className="poi-card-header">
+        <div className="poi-item-name">{poi.name}</div>
+        {!inCart ? (<button className="poi-item-btn add-btn" onClick={() => addToCart()}>ADD</button>)
         :
-        (<button onClick={() => removeFromCart()}>REMOVE</button>)}
-
+        (<button className="poi-item-btn remove-btn" onClick={() => removeFromCart()}>REMOVE</button>)}
+      </div>
+      <div className="poi-card-image-container">
+          <img className="poi-item-image"src={poi.photo_url ? poi.photo_url : process.env.PUBLIC_URL + "/assets/placeholder_poi.png"} alt={poi.name} />
+      </div>
     </div>
   );
 }
 
-
-// const mapStateToProps = state => {
-//   return {
-//     pois: state.poiReducer.pois
-//   }
-// }
-
-// const mapDispatchToProps = dispatch => {
-//   return {
-//     setPoiInfo: (poi) => dispatch(addPoi(poi))
-//   };
-// };
-
-export default withPOI(POIItem);
+export default withDay(withPOI(POIItem))

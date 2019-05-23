@@ -1,0 +1,142 @@
+@import '../../colors';
+
+
+.info-container {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 10px 0; 
+}
+
+.pack-city-name {
+  //TODO: if name too long it overflows
+  text-transform: uppercase;
+  color: $white;
+  background-color: $light-gray;
+  border-radius: 5px;
+  padding: 3px;
+  letter-spacing: 2px;
+  margin: 5px 0;
+}
+
+.edit-page-field {
+  display: block;
+  margin: 10px 0;
+  display: flex;
+  align-items: center;
+}
+
+.edit-name-input {
+  width: 180px;
+  height: 20px;
+  font-family: inherit;
+  font-size: 1.3rem;
+  border: 1px solid lightgray;
+  padding: 2px;
+}
+
+.number-display, .value-button {
+  font-size: 20px;
+}
+
+.edit-page-label {
+  text-transform: uppercase;
+  margin-right: 5px;
+}
+
+
+
+//input and input buttons
+.value-button {
+  display: inline-block;
+  border: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;
+  height: 20px;
+  text-align: center;
+  vertical-align: middle;
+  padding: 11px 0;
+  background: #eee;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.value-button:hover {
+  cursor: pointer;
+}
+
+.increase-btn {
+  margin-right: 0px;
+  border-radius: 0 8px 8px 0;
+}
+
+.edit-page-save-btn {
+  display: inline-block;
+	color: inherit;
+  border: none;
+	padding: 0; 
+	font-family: inherit;
+  cursor: pointer;
+  width: 80px;
+  text-align: center;
+  text-transform: uppercase;
+  outline: inherit;
+  border-radius: 4px;
+  padding: 6px 2px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: $white;
+  background-color: $light-gray;
+
+
+  &:hover {
+    opacity: 0.8;
+  }
+  &:active{
+    opacity: 1;
+  }
+}
+
+.saved-message {
+  color: $light-green;
+  margin-left: 10px;
+  font-weight: bold;
+  display: inline-block;
+  animation: FadeAnimation 1s ease-in .2s forwards;
+  @keyframes FadeAnimation {
+    0% {
+      opacity: 1;
+      visibility: visible;
+    }
+  
+    100% {
+      opacity: 0;
+      visibility: hidden;
+    }
+  }
+}
+
+.decrease-btn {
+  border-radius: 8px 0 0 8px;
+}
+
+.number-display {
+  text-align: center;
+  border: none;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
+  margin: 0px;
+  width: 40px;  
+  height: 40px;
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    margin: 0; 
+}

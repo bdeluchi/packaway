@@ -1,0 +1,49 @@
+@import '../../colors';
+
+.pois-container {
+  display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  justify-content: center;
+}
+
+.pagination-container {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin: 20px 0;
+}
+
+.pagination-btn {
+  background: $dark-green;
+	color: $white;
+  border: none;
+  min-width: 100px;
+	padding: 0;
+	font-family: inherit;
+	cursor: pointer;
+  outline: inherit;
+  border-radius: 4px;
+  padding: 6px 2px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
+
+
+@media (min-width: 1281px) {
+  .pois-container {
+    width: 90vw;
+  }
+  .pagination-container {
+    justify-content: space-around;
+
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1280px) {
+  .pois-container {
+    width: 90vw;
+  }
+}
+

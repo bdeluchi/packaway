@@ -12,3 +12,9 @@ export const removePoi = (id) => {
     type: 'REMOVE_POI'
   }
 }
+
+export const resetCart = () => {
+  return {
+    type: 'RESET_CART'
+  }
+}

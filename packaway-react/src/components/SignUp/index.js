@@ -1,8 +1,11 @@
 import React, { Component } from "react";
 import AuthService from "../../services/auth"
 import DataService from "../../services/data"
+import { withRouter } from "react-router-dom";
 
-export default class SignUp extends Component {
+import './index.scss'
+
+class SignUp extends Component {
   constructor(props) {
     super(props);
 
@@ -23,21 +26,26 @@ export default class SignUp extends Component {
 
   componentDidMount() {
     AuthService.registerAuthObserver(user => {
+
       if (user) {
         const { name, lastname, email } = this.state;
-        const success = DataService.addObjectWithId("users", user.uid, {
-          name,
-          lastname,
-          email,
-          uid: user.uid
-        });
-
-        if(success) {
-          this.props.history.push('/')
+        if (name && lastname && email) {
+          const success = DataService.addObjectWithId("users", user.uid, {
+            name,
+            lastname,
+            email,
+            uid: user.uid
+          });
+  
+          if(success) {
+            this.props.history.push('/')
+          }
+        } else {
+          console.log("ojo, no hay usuario")
         }
-      } else {
-        console.log("ojo, no hay usuario")
-      }
+
+        }
+
     });
   }
 
@@ -55,49 +63,55 @@ export default class SignUp extends Component {
   render() {
     const { email, name, lastname, password, errorMessage } = this.state;
     return (
-      <div>
-        <h1>Sign Up</h1>
-        <form onSubmit={this.onSignUp}>
+      <div className="signup-container">
+        <h1 className="signup-title">Sign Up</h1>
+        <form className="signup-form" onSubmit={this.onSignUp}>
           <div>
-            <label>Name</label>
-            <input
+            <label className="signup-input-label">Name:</label>
+            <input className="signup-input-field"
               type="name"
               name="name"
               value={name}
               onChange={this.onChangeInput}
             />
+            
           </div>
           <div>
-            <label>Last Name</label>
-            <input
+            <label className="signup-input-label">Last Name:</label>
+            <input className="signup-input-field"
               type="lastname"
               name="lastname"
               value={lastname}
               onChange={this.onChangeInput}
             />
+            
           </div>
           <div>
-            <label>Email</label>
-            <input
+            <label className="signup-input-label">Email:</label>
+            <input className="signup-input-field"
               type="email"
               name="email"
               value={email}
               onChange={this.onChangeInput}
             />
+            
           </div>
           <div>
-            <label>Password</label>
-            <input
+            <label className="signup-input-label">Password:</label>
+            <input className="signup-input-field"
               type="password"
               name="password"
               value={password}
               onChange={this.onChangeInput}
             />
+            
           </div>
-          <button>Sign up</button>
+          <button className="signup-btn">Sign up</button>
           {errorMessage && <p>{errorMessage}</p>}
         </form>
       </div>
     );
   }
 }
+
+export default withRouter(SignUp)

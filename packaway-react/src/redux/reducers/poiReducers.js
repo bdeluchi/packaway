@@ -18,6 +18,12 @@ export const poiReducer = (state = defaultState, action = {}) => {
             return obj;
           }, {})
       };
+      //return array vacío
+    }
+    case "RESET_CART": {
+      return {
+        pois: defaultState.pois
+      }
     }
     default: {
       return state;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { setUserInfo } from '../redux/actions/userActions';
+import { setUserInfo} from '../redux/actions/userActions';
 
 
 function withUser(WrappedComponent){

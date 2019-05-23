@@ -15,7 +15,7 @@ I hope that this way we can focus on actually enjoying the trip by easing a bit 
 
 Live demo: https://packaway-72184.firebaseapp.com/
 
-![alt text](packaway-react/public/assets/homepage_screenshot.PNG "Packaway homepage")
+![alt text](packaway-react/public/assets/homepage_screenshot.png "Packaway homepage")
 
 ## Data and API integration
 
@@ -33,7 +33,7 @@ In the Edit Pack page they can give their pack a name and select the number of d
 
 They can now go to the **My Packs page**, where they will have all of their created packs and can delete packs, edit them and, finally, go to the **View Pack page**. In here, they will need to select their point of origin and click on the build route button in order to see the generated route for each day.
 
-![alt text](packaway-react/public/assets/func_diagram.PNG "functional diagram")
+![alt text](packaway-react/public/assets/func_diagram.png "functional diagram")
 
 ## Technical Description
 

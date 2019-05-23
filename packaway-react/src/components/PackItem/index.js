@@ -48,7 +48,9 @@ class PackItem extends Component {
   deletePack = () => {
     const { packId} = this.props;
     const {userId} = this.state.pack
+    this.props.deletePackId(packId)
     DataService.deletePack(packId, userId);
+    document.removeEventListener("click", this.hideDropdownMenu)
   }
  
   getTotalDays() {
@@ -81,15 +83,7 @@ class PackItem extends Component {
       this.hideDropdownMenu()
     }
   }
-
-  // handleDropdown = () => {
-  //   this.setState(state => {
-  //     return {
-  //       open: !state.open
-  //     };
-  //   });
-  // }
-
+  
   render() {
     const { pack, displayMenu } = this.state;
     return (

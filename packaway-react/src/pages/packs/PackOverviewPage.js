@@ -23,6 +23,12 @@ class PackOverviewPage extends Component {
       this.setState({packIds})
     }
   }
+
+  deletePackId = (packId) => {
+    let {packIds} = this.state;
+    packIds = packIds.filter(pack => packId !== pack);
+    this.setState({packIds})
+  }
   
   
   async componentDidMount() {
@@ -45,7 +51,7 @@ class PackOverviewPage extends Component {
       <div className="my-packs-container">
         <h1 className="page-title">My Packs</h1>
         {packIds && <div className="my-packs-content">
-          {packIds.map(packId => <PackItem key={packId} packId={packId} getPacks={() => this.getPacks()}/>)}
+          {packIds.map(packId => <PackItem key={packId} packId={packId} deletePackId={this.deletePackId}/>)}
         </div>}
       </div>
     )

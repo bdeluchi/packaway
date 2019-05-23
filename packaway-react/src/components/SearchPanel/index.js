@@ -16,7 +16,8 @@ class SearchPanel extends Component {
       formInput: null,
       loading: false,
       page: 0,
-      hasNextPage: false
+      hasNextPage: false,
+      selectedOption: ''
     };
   }
 
@@ -49,15 +50,20 @@ class SearchPanel extends Component {
   
   async getData(lastVisible, order) {
     this.setState({loading: true});
+    const lastOption = this.state.selectedOption;
     const selectedOption = this.props.selectedOption;
+
+    console.log("last: ", lastVisible)
+
+    if (lastOption && selectedOption) {
+      if (lastOption.selectedOption !== selectedOption.selectedOption) {
+        lastVisible = undefined;
+        this.setState({page: 0})
+      }
+    }
     const city = this.props.match.params.cityId;
     const {results, queryLastVisible, queryFirstVisible, hasNextPage} = await DataService.getPOIPaginated(lastVisible, order, city, selectedOption.selectedOption);
-    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage})
-    
-    //  else {
-    //   const results = await DataService.getPoisByType(selectedOption)
-    //   this.setState({pois: results, loading: false})
-    // }  
+    this.setState({pois: results, queryLastVisible, queryFirstVisible, loading: false, hasNextPage, selectedOption: selectedOption})
   }
 
   componentDidMount() {

@@ -15,7 +15,7 @@ I hope that this way we can focus on actually enjoying the trip by easing a bit 
 
 Live demo: https://packaway-72184.firebaseapp.com/
 
-![alt text](packaway-react/public/assets/homepage_screenshot.png "Packaway homepage")
+![alt text](packaway-react/public/assets/home_screenshot.png "Packaway homepage")
 
 ## Data and API integration
 

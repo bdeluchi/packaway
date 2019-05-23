@@ -10,6 +10,7 @@ export default class MapContainer extends Component {
       <LoadScript
         id="script-loader" googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY}
         libraries={["places"]}>
+        <div>Where will you be staying?</div>
         <HotelSearch />
         <DirectionsItem waypoints={this.props.waypoints}/>
       </LoadScript>

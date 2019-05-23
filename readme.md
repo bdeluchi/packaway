@@ -18,7 +18,7 @@ Live demo: https://packaway-72184.firebaseapp.com/
 
 ## Data and API integration
 
-Data for points of interest are taken from Google's **Places API** and images from **Place Photos**.
+Data for points of interest is taken from Google's **Places API** and images from **Place Photos**.
 
 I used **react-google-maps-api** for map integration, which in turn uses **Google Maps Javascript API** to embed the map in the website and **Directions API** to generate the route between the selected points of interest. I'm also using AutoComplete from the **Places API** in order to set the origin and destination of the routes.
 

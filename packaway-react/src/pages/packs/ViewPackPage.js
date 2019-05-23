@@ -63,8 +63,9 @@ class ViewPackPage extends Component {
       <div className="view-page-container">
         {pack && (
           <React.Fragment>
+            <h1 className="view-pack-city">{pack.city}</h1>
+            <div className="view-left-panel">
             <div className="pack-info">
-              <h1 className="view-pack-city">{pack.city}</h1>
               <h4 className="view-pack-name">Pack: {pack.name}</h4>
             </div>
             <div className="input-container">
@@ -76,6 +77,7 @@ class ViewPackPage extends Component {
             <h2 className="edit-page-subtitle">Day {selectedDay.dayId}</h2>
             {Object.values(selectedDay.pois).map(poi => <FinalPOI key={poi.id} poiName={poi.name}/>)}
             </div>}
+            </div>
             {selectedDay && <div className="map-component">
               <MapContainer waypoints={this.getWaypoints(selectedDay)} />
             </div>

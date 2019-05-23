@@ -13,8 +13,6 @@ class HotelSearch extends Component {
   }
 
   onLoad(autocomplete) {
-    console.log("autocomplete: ", autocomplete);
-
     this.autocomplete = autocomplete;
 
     this.autocomplete.addListener("place_changed", this.onPlaceChanged);

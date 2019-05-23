@@ -33,7 +33,13 @@ class PackCart extends Component {
         this.props.history.push(`/packs/edit/${packId}`);
       }
     } else {
-      this.props.history.push("/login");
+      const cityId = Object.values(pois)[0].city;
+      const location = {
+        pathname: '/login',
+        state: { from: {pathname: `/poisearch/${cityId}`} }
+      }
+      this.props.history.push(location);
+      
     }
   };
 

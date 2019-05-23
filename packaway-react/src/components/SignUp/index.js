@@ -38,10 +38,11 @@ class SignUp extends Component {
           });
   
           if(success) {
-            this.props.history.push('/')
+            const {from} = this.props.location.state || {from: {pathname: '/'}}
+            this.props.history.push(from) 
           }
         } else {
-          console.log("ojo, no hay usuario")
+          console.log("no user")
         }
 
         }

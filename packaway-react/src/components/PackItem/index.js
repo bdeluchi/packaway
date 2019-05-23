@@ -48,7 +48,6 @@ class PackItem extends Component {
     const { packId} = this.props;
     const {userId} = this.state.pack
     DataService.deletePack(packId, userId);
-    this.props.getPacks()
   }
  
   getTotalDays() {

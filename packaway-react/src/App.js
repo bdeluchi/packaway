@@ -28,7 +28,7 @@ class App extends Component {
         if (userDetail) {
           this.props.setUserInfo(userDetail);
         } else {
-          console.log("ESPERAAAAAA me estoy registrando");
+          console.log("User not logged in yet");
         }
       } else {
         console.log("User is signed out");

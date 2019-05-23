@@ -83,15 +83,7 @@ class PackItem extends Component {
       this.hideDropdownMenu()
     }
   }
-
-  // handleDropdown = () => {
-  //   this.setState(state => {
-  //     return {
-  //       open: !state.open
-  //     };
-  //   });
-  // }
-
+  
   render() {
     const { pack, displayMenu } = this.state;
     return (

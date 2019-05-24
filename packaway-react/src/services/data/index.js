@@ -4,12 +4,10 @@ import * as firebase from "firebase";
 export default class DataService {
   //user functions
   static async addObjectWithId(collection, objId, data) {
-		console.log("TCL: DataService -> staticaddObjectWithId -> collection", collection)
     return await DataService.updateDetail(collection, objId, data);
   }
 
   static async getObjectDetail(collection, objId) {
-	console.log("TCL: DataService -> staticgetObjectDetail -> collection", collection)
   
     const db = firebase.firestore();
     let contact = null;
@@ -30,7 +28,6 @@ export default class DataService {
   }
 
   static async updateDetail(collection, id, data) {
-		console.log("TCL: DataService -> staticupdateDetail -> collection", collection)
     const db = firebase.firestore();
     let success = true;
 
@@ -48,7 +45,6 @@ export default class DataService {
 
   //generic item functions
   static async addItem(collection, data) {
-		console.log("TCL: DataService -> staticaddItem -> collection", collection)
     const db = firebase.firestore();
     let success = false;
 
@@ -67,7 +63,6 @@ export default class DataService {
 
   //pack functions
   static async addPack(data) {
-		console.log("TCL: DataService -> staticaddPack -> data", data)
     
     const db = firebase.firestore();
     let docRef;
@@ -92,7 +87,6 @@ export default class DataService {
   }
 
   static async getPack(packId) {
-		console.log("TCL: DataService -> staticgetPack -> packId", packId)
     const db = firebase.firestore();
     let pack = null;
     try {
@@ -110,7 +104,6 @@ export default class DataService {
   }
 
   static async deletePack(packId, userId) {
-		console.log("TCL: DataService -> staticdeletePack -> packId", packId)
     const db = firebase.firestore();
     let success = true;
     try {
@@ -126,7 +119,6 @@ export default class DataService {
   }
 
   static async updatePackData(packId, data) {
-		console.log("TCL: DataService -> staticupdatePackData -> packId", packId)
     const db = firebase.firestore();
     let success = true;
     try {
@@ -152,7 +144,6 @@ export default class DataService {
 
   //pagination
   static async getPOIPaginated(lastVisible, order, city, type) {
-		console.log("TCL: DataService -> staticgetPOIPaginated -> type", type)
     
     const db = firebase.firestore();
     let results = [];

@@ -23,7 +23,6 @@ class HotelSearch extends Component {
       const autoResults = this.autocomplete.getPlace();
       const originLocation = autoResults.geometry.location;
       this.props.setCurrentPackOrigin(originLocation);
-      console.log("yeeeee")
     } else {
       console.log("Autocomplete is not loaded yet!");
     }

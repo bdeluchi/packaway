@@ -8,6 +8,7 @@
 .my-packs-content {
   display: flex;
   align-items: center;
+  justify-content: center;
   margin: 1rem auto;
   min-height: 20vh;
   flex-direction: row;
@@ -20,6 +21,7 @@
   }
   .my-packs-content {
     margin: 1rem 0;
+    justify-content: flex-start;
 
   }
 

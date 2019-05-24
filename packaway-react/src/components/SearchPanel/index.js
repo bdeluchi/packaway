@@ -53,8 +53,6 @@ class SearchPanel extends Component {
     const lastOption = this.state.selectedOption;
     const selectedOption = this.props.selectedOption;
 
-    console.log("last: ", lastVisible)
-
     if (lastOption && selectedOption) {
       if (lastOption.selectedOption !== selectedOption.selectedOption) {
         lastVisible = undefined;

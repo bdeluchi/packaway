@@ -38,17 +38,20 @@ class MyPOIList extends Component {
   }
 
   async componentDidMount() {
+    const {packId} = this.props.match.params
+    this.props.setCurrentPack(packId);
     this.getData();
   }
 
   componentWillUnmount() {
+    this.props.resetUnassigned()
     this.props.resetDayStatus();
   }
 
   handleAddMore = () => {
     const { city } = this.state.pack;
-    this.props.history.push(`/poisearch/${city}`);
     this.props.resetUnassigned();
+    this.props.history.push(`/poisearch/${city}`);
   };
 
   render() {

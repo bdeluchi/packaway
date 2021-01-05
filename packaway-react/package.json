@@ -4,7 +4,7 @@
   "private": true,
   "dependencies": {
     "@react-google-maps/api": "^1.2.3-alpha.11",
-    "axios": "^0.18.0",
+    "axios": "^0.21.1",
     "firebase": "^5.11.1",
     "prop-types": "^15.7.2",
     "react": "^16.8.6",
